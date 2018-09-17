@@ -74,6 +74,35 @@ namespace Task1_Currency
             }
         }
 
+        public Dictionary<string, float> TotalNumAndCurrName(string pathfileName)
+        {
+            Dictionary<string, float> dict = new Dictionary<string, float>();
+            var selected = from s in _storage
+                           group s by s.CurrencyName into grp
+                           select new
+                           {
+                               name = grp.Key,
+                               total_sum = grp.Sum(x => x.Amount)
+                           };
+            foreach (var v in selected)
+            {
+                Console.WriteLine(v);
+                dict.Add(v.name, v.total_sum);
+            }
+
+            System.IO.File.WriteAllText(@pathfileName, string.Empty);
+
+            using (StreamWriter outputFile = new StreamWriter(Path.Combine(pathfileName), true))
+            {
+                foreach (var v in dict)
+                {
+                    outputFile.WriteLine(v.Key + " ----------------- " + v.Value);
+                }
+                outputFile.Close();
+            }
+            return dict;
+        }
+
 
         public void output()
         {

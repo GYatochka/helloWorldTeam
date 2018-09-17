@@ -23,6 +23,7 @@ namespace Task1_Currency
                 Console.WriteLine();
                 obj.SelectUAH();
                 Console.WriteLine();
+                currencies = obj.TotalNumAndCurrName("task_3_doc.txt");
             }
             // add other needed exceptions 
             catch(Exception e)
