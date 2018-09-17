@@ -59,6 +59,21 @@ namespace Task1_Currency
             }
         }
 
+        public void SelectUAH()
+        {
+            IEnumerable<Currency> selectedCurr = _storage.Where(x => x.CurrencyName == "UAH");
+            if (selectedCurr.Count() == 0) { Console.WriteLine("No matches found"); }
+            else
+            {
+                Console.WriteLine("SELECTED UAH: ");
+                foreach (Currency x in selectedCurr)
+                {
+                    Console.WriteLine(x);
+
+                }
+            }
+        }
+
 
         public void output()
         {
