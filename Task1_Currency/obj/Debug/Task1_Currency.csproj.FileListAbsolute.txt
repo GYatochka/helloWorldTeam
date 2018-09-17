@@ -1,0 +1,18 @@
+C:\Users\Bodya Zahirnuy\Desktop\helloWorldTeam\Task1_Currency\bin\Debug\Task1_Currency.exe.config
+C:\Users\Bodya Zahirnuy\Desktop\helloWorldTeam\Task1_Currency\bin\Debug\Task1_Currency.exe
+C:\Users\Bodya Zahirnuy\Desktop\helloWorldTeam\Task1_Currency\bin\Debug\Task1_Currency.pdb
+C:\Users\Bodya Zahirnuy\Desktop\helloWorldTeam\Task1_Currency\obj\Debug\Task1_Currency.csproj.CoreCompileInputs.cache
+C:\Users\Bodya Zahirnuy\Desktop\helloWorldTeam\Task1_Currency\obj\Debug\Task1_Currency.exe
+C:\Users\Bodya Zahirnuy\Desktop\helloWorldTeam\Task1_Currency\obj\Debug\Task1_Currency.pdb
+D:\helloWorldTeam-1-master\Task1_Currency\bin\Debug\Task1_Currency.exe.config
+D:\helloWorldTeam-1-master\Task1_Currency\obj\Debug\Task1_Currency.exe
+D:\helloWorldTeam-1-master\Task1_Currency\obj\Debug\Task1_Currency.pdb
+D:\helloWorldTeam-1-master\Task1_Currency\bin\Debug\Task1_Currency.exe
+D:\helloWorldTeam-1-master\Task1_Currency\bin\Debug\Task1_Currency.pdb
+D:\helloWorldTeam-1-master\Task1_Currency\bin\Debug\StyleCop.dll
+D:\helloWorldTeam-1-master\Task1_Currency\bin\Debug\StyleCop.xml
+D:\helloWorldTeam-1-master\Task1_Currency\obj\Debug\Task1_Currency.csprojResolveAssemblyReference.cache
+C:\Users\Bodya Zahirnuy\Desktop\helloWorldTeam\Task1_Currency\bin\Debug\StyleCop.dll
+C:\Users\Bodya Zahirnuy\Desktop\helloWorldTeam\Task1_Currency\bin\Debug\StyleCop.xml
+C:\Users\Bodya Zahirnuy\Desktop\helloWorldTeam\Task1_Currency\obj\Debug\Task1_Currency.csprojAssemblyReference.cache
+C:\Users\Bodya Zahirnuy\Desktop\helloWorldTeam\Task1_Currency\obj\Debug\Task1_Currency.csproj.CopyComplete
