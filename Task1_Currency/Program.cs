@@ -24,6 +24,7 @@ namespace Task1_Currency
                 obj.SelectUAH();
                 Console.WriteLine();
                 currencies = obj.TotalNumAndCurrName("task_3_doc.txt");
+                CurrencyConverter.Convert(currencies, "task_4_doc.txt");
             }
             // add other needed exceptions 
             catch(Exception e)

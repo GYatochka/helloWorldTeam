@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Currency.cs" />
+    <Compile Include="CurrencyConverter.cs" />
     <Compile Include="CurrencyStorage.cs" />
     <Compile Include="IReadable.cs" />
     <Compile Include="Program.cs" />
