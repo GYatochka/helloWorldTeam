@@ -37,7 +37,12 @@ namespace Task1_Currency
 
             file.Close();
         }
-
+        /// <summary>
+        /// Write data to a specific file
+        /// </summary>
+        /// <param name="l"></param>
+        /// <param name="currencyName"></param>
+        /// <param name="path"></param>
         static public void WriteInFile(List<float> l, string currencyName, string path)
         {
             try
@@ -58,7 +63,9 @@ namespace Task1_Currency
                 Console.WriteLine(e.Message);
             }
         }
-
+        /// <summary>
+        /// Selects only those banknotes of UAH currency
+        /// </summary>
         public void SelectUAH()
         {
             IEnumerable<Currency> selectedCurr = _storage.Where(x => x.CurrencyName == "UAH");
@@ -73,7 +80,11 @@ namespace Task1_Currency
                 }
             }
         }
-
+        /// <summary>
+        /// Groups by amount and currency
+        /// </summary>
+        /// <param name="pathfileName"></param>
+        /// <returns></returns>
         public Dictionary<string, float> TotalNumAndCurrName(string pathfileName)
         {
             Dictionary<string, float> dict = new Dictionary<string, float>();
@@ -103,7 +114,9 @@ namespace Task1_Currency
             return dict;
         }
 
-
+        /// <summary>
+        /// Output to console
+        /// </summary>
         public void output()
         {
             foreach (Currency c in _storage)
