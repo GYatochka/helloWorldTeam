@@ -63,29 +63,33 @@ namespace Task1_Currency
                 Console.WriteLine(e.Message);
             }
         }
+<<<<<<< HEAD
         /// <summary>
         /// Selects only those banknotes of UAH currency
         /// </summary>
         public void SelectUAH()
-        {
-            IEnumerable<Currency> selectedCurr = _storage.Where(x => x.CurrencyName == "UAH");
-            if (selectedCurr.Count() == 0) { Console.WriteLine("No matches found"); }
-            else
-            {
-                Console.WriteLine("SELECTED UAH: ");
-                foreach (Currency x in selectedCurr)
-                {
-                    Console.WriteLine(x);
+=======
 
-                }
+
+        public void output()
+>>>>>>> 8044e8225728cb85e43317f3afe915c783ed964d
+        {
+            foreach (Currency c in _storage)
+            {
+                Console.WriteLine(c);
             }
         }
+<<<<<<< HEAD
         /// <summary>
         /// Groups by amount and currency
         /// </summary>
         /// <param name="pathfileName"></param>
         /// <returns></returns>
         public Dictionary<string, float> TotalNumAndCurrName(string pathfileName)
+=======
+
+        public Dictionary<string,float> TotalNumAndCurrName(string pathfileName)
+>>>>>>> 8044e8225728cb85e43317f3afe915c783ed964d
         {
             Dictionary<string, float> dict = new Dictionary<string, float>();
             var selected = from s in _storage
@@ -114,18 +118,27 @@ namespace Task1_Currency
             return dict;
         }
 
+<<<<<<< HEAD
         /// <summary>
         /// Output to console
         /// </summary>
         public void output()
+=======
+        public void SelectUAH()
+>>>>>>> 8044e8225728cb85e43317f3afe915c783ed964d
         {
-            foreach (Currency c in _storage)
+            IEnumerable<Currency> selectedCurr = _storage.Where(x => x.CurrencyName == "UAH");
+            if (selectedCurr.Count() == 0) { Console.WriteLine("No matches found"); }
+            else
             {
-                Console.WriteLine(c);
+                Console.WriteLine("SELECTED UAH: ");
+                foreach (Currency x in selectedCurr)
+                {
+                    Console.WriteLine(x);
+
+                }
             }
         }
-
-       
     }
 }
         
