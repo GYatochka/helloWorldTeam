@@ -59,22 +59,16 @@ namespace Task1_Currency
             }
         }
 
-        public void SelectUAH()
-        {
-            IEnumerable<Currency> selectedCurr = _storage.Where(x => x.CurrencyName == "UAH");
-            if (selectedCurr.Count() == 0) { Console.WriteLine("No matches found"); }
-            else
-            {
-                Console.WriteLine("SELECTED UAH: ");
-                foreach (Currency x in selectedCurr)
-                {
-                    Console.WriteLine(x);
 
-                }
+        public void output()
+        {
+            foreach (Currency c in _storage)
+            {
+                Console.WriteLine(c);
             }
         }
 
-        public Dictionary<string, float> TotalNumAndCurrName(string pathfileName)
+        public Dictionary<string,float> TotalNumAndCurrName(string pathfileName)
         {
             Dictionary<string, float> dict = new Dictionary<string, float>();
             var selected = from s in _storage
@@ -103,16 +97,20 @@ namespace Task1_Currency
             return dict;
         }
 
-
-        public void output()
+        public void SelectUAH()
         {
-            foreach (Currency c in _storage)
+            IEnumerable<Currency> selectedCurr = _storage.Where(x => x.CurrencyName == "UAH");
+            if (selectedCurr.Count() == 0) { Console.WriteLine("No matches found"); }
+            else
             {
-                Console.WriteLine(c);
+                Console.WriteLine("SELECTED UAH: ");
+                foreach (Currency x in selectedCurr)
+                {
+                    Console.WriteLine(x);
+
+                }
             }
         }
-
-       
     }
 }
         
