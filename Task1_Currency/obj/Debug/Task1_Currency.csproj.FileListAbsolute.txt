@@ -26,3 +26,11 @@ C:\Users\Bodya Zahirnuy\Documents\GitHub\helloWorldTeam\Task1_Currency\obj\Debug
 C:\Users\Bodya Zahirnuy\Documents\GitHub\helloWorldTeam\Task1_Currency\obj\Debug\Task1_Currency.csproj.CopyComplete
 C:\Users\Bodya Zahirnuy\Documents\GitHub\helloWorldTeam\Task1_Currency\obj\Debug\Task1_Currency.exe
 C:\Users\Bodya Zahirnuy\Documents\GitHub\helloWorldTeam\Task1_Currency\obj\Debug\Task1_Currency.pdb
+C:\Users\Antoshchuk\Desktop\helloWorldTeam\Task1_Currency\bin\Debug\Task1_Currency.exe.config
+C:\Users\Antoshchuk\Desktop\helloWorldTeam\Task1_Currency\obj\Debug\Task1_Currency.exe
+C:\Users\Antoshchuk\Desktop\helloWorldTeam\Task1_Currency\obj\Debug\Task1_Currency.pdb
+C:\Users\Antoshchuk\Desktop\helloWorldTeam\Task1_Currency\bin\Debug\Task1_Currency.exe
+C:\Users\Antoshchuk\Desktop\helloWorldTeam\Task1_Currency\bin\Debug\Task1_Currency.pdb
+C:\Users\Antoshchuk\Desktop\helloWorldTeam\Task1_Currency\bin\Debug\StyleCop.dll
+C:\Users\Antoshchuk\Desktop\helloWorldTeam\Task1_Currency\bin\Debug\StyleCop.xml
+C:\Users\Antoshchuk\Desktop\helloWorldTeam\Task1_Currency\obj\Debug\Task1_Currency.csprojResolveAssemblyReference.cache
