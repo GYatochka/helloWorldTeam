@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Управление общими сведениями о сборке осуществляется посредством следующего 
 // набора атрибутов. Измените значения этих атрибутов, чтобы изменить сведения,
 // связанные со сборкой.
-[assembly: AssemblyTitle("Task1_Currency.Tests")]
+[assembly: AssemblyTitle("Task1_Currency.Test")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Task1_Currency.Tests")]
+[assembly: AssemblyProduct("Task1_Currency.Test")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Если данный проект доступен для модели COM, следующий GUID используется в качестве идентификатора библиотеки типов
-[assembly: Guid("a790f907-d7a8-42cc-94fb-a93ad91ae243")]
+[assembly: Guid("b16066d1-56bd-410e-941c-658d6a0cab69")]
 
 // Сведения о версии сборки состоят из следующих четырех значений:
 //

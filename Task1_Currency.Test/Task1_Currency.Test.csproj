@@ -3,11 +3,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A790F907-D7A8-42CC-94FB-A93AD91AE243}</ProjectGuid>
+    <ProjectGuid>{B16066D1-56BD-410E-941C-658D6A0CAB69}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Task1_Currency.Tests</RootNamespace>
-    <AssemblyName>Task1_Currency.Tests</AssemblyName>
+    <RootNamespace>Task1_Currency.Test</RootNamespace>
+    <AssemblyName>Task1_Currency.Test</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
