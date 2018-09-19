@@ -1,7 +1,8 @@
 ﻿using System;
+
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Task1_Currency.Tests
+namespace Task1_CurrencyTest.Tests
 {
     [TestClass]
     public class CurrencyTest
@@ -12,29 +13,14 @@ namespace Task1_Currency.Tests
             string currencyNameexp = "USD";
             
             float amountexp = 10;
-
-       
-            Currency c = new Currency(currencyNameexp, amountexp);
+            
+            Cur
             
             Assert.AreEqual(amountexp, c.Amount);
             Assert.AreEqual(currencyNameexp, c.CurrencyName);
         }
-        [TestMethod]
-        public 
+      //  [TestMethod]
+       // public 
     }
 
 }
-
-/*   
-        public Currency()
-        {
-            _amount = 0;
-            _currencyName = "UAH";
-        }
-        public Currency(string currencyName, float amount)
-        {
-            Amount = amount;
-            _currencyName = currencyName;
-        }
-
-}*/
