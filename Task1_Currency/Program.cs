@@ -14,8 +14,7 @@ namespace Task1_Currency
         {
             try
             {
-                //write program logic after finishing class logic
-
+                //write program logic after finishing class logic               
                 CurrencyStorage obj = new CurrencyStorage();
                 Dictionary<string, float> currencies;
                 obj.Read("doc.txt");

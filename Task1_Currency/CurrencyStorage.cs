@@ -113,8 +113,9 @@ namespace Task1_Currency
         /// Output to console
         /// </summary>
 
-        public void SelectUAH()
+        public bool SelectUAH()
         {
+            bool flag = false;
             IEnumerable<Currency> selectedCurr = _storage.Where(x => x.CurrencyName == "UAH");
             if (selectedCurr.Count() == 0) { Console.WriteLine("No matches found"); }
             else
@@ -123,9 +124,13 @@ namespace Task1_Currency
                 foreach (Currency x in selectedCurr)
                 {
                     Console.WriteLine(x);
-
+                    if(x.CurrencyName == "UAH")
+                    {
+                        flag = true;
+                    }
                 }
             }
+            return flag;
         }
     }
 }
