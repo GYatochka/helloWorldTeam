@@ -92,7 +92,6 @@ namespace Task1_Currency
                            };
             foreach (var v in selected)
             {
-                Console.WriteLine(v);
                 dict.Add(v.name, v.total_sum);
             }
 
