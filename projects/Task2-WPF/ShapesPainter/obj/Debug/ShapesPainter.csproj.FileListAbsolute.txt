@@ -63,3 +63,6 @@ E:\studing\helloWorldTeam-develop\helloWorldTeam\projects\Task2-WPF\ShapesPainte
 E:\studing\helloWorldTeam-develop\helloWorldTeam\projects\Task2-WPF\ShapesPainter\obj\Debug\ShapesPainter.csproj.CoreCompileInputs.cache
 E:\studing\helloWorldTeam-develop\helloWorldTeam\projects\Task2-WPF\ShapesPainter\obj\Debug\ShapesPainter.exe
 E:\studing\helloWorldTeam-develop\helloWorldTeam\projects\Task2-WPF\ShapesPainter\obj\Debug\ShapesPainter.pdb
+D:\helloWorldTeam-1-master\projects\Task2-WPF\ShapesPainter\bin\Debug\ShapesPainter.exe.config
+D:\helloWorldTeam-1-master\projects\Task2-WPF\ShapesPainter\obj\Debug\ShapesPainter.exe
+D:\helloWorldTeam-1-master\projects\Task2-WPF\ShapesPainter\obj\Debug\ShapesPainter.pdb
