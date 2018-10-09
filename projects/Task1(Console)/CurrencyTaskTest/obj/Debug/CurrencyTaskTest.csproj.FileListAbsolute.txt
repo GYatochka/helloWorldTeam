@@ -1,0 +1,17 @@
+E:\studing\Task1_Currency\helloWorldTeam-develop\CurrencyTaskTest\obj\Debug\CurrencyTaskTest.csproj.CoreCompileInputs.cache
+E:\studing\Task1_Currency\helloWorldTeam-develop\CurrencyTaskTest\obj\Debug\CurrencyTaskTest.csprojAssemblyReference.cache
+E:\studing\Task1_Currency\helloWorldTeam-develop\CurrencyTaskTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+E:\studing\Task1_Currency\helloWorldTeam-develop\CurrencyTaskTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+E:\studing\Task1_Currency\helloWorldTeam-develop\CurrencyTaskTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+E:\studing\Task1_Currency\helloWorldTeam-develop\CurrencyTaskTest\bin\Debug\CurrencyTaskTest.dll
+E:\studing\Task1_Currency\helloWorldTeam-develop\CurrencyTaskTest\bin\Debug\CurrencyTaskTest.pdb
+E:\studing\Task1_Currency\helloWorldTeam-develop\CurrencyTaskTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+E:\studing\Task1_Currency\helloWorldTeam-develop\CurrencyTaskTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+E:\studing\Task1_Currency\helloWorldTeam-develop\CurrencyTaskTest\bin\Debug\Task1_Currency.exe
+E:\studing\Task1_Currency\helloWorldTeam-develop\CurrencyTaskTest\bin\Debug\Task1_Currency.pdb
+E:\studing\Task1_Currency\helloWorldTeam-develop\CurrencyTaskTest\bin\Debug\Task1_Currency.exe.config
+E:\studing\Task1_Currency\helloWorldTeam-develop\CurrencyTaskTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+E:\studing\Task1_Currency\helloWorldTeam-develop\CurrencyTaskTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+E:\studing\Task1_Currency\helloWorldTeam-develop\CurrencyTaskTest\obj\Debug\CurrencyTaskTest.csproj.CopyComplete
+E:\studing\Task1_Currency\helloWorldTeam-develop\CurrencyTaskTest\obj\Debug\CurrencyTaskTest.dll
+E:\studing\Task1_Currency\helloWorldTeam-develop\CurrencyTaskTest\obj\Debug\CurrencyTaskTest.pdb
