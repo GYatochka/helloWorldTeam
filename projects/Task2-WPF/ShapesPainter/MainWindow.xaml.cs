@@ -21,12 +21,18 @@ namespace ShapesPainter
     /// </summary>
     public partial class MainWindow : Window
     {
+<<<<<<< HEAD
         private string _pictureName;
 
         private MenuBar _menuBar;
+=======
+        //Point[] mass = new Point[5];
+>>>>>>> 767a7f638d69269887ab6de5b654bb47644fac40
         public MainWindow()
         {
+          
             InitializeComponent();
+<<<<<<< HEAD
 
         }
 
@@ -62,6 +68,30 @@ namespace ShapesPainter
                  _pictureName = createWindow.getName();
                  createWindow.Close();
              //}
+=======
+          
+        }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void canvas_LeftMouseClick(object sender, MouseButtonEventArgs e)
+        {
+            Point point = e.GetPosition(canvas);
+            Ellipse elipse = new Ellipse();
+
+            elipse.Width = 4;
+            elipse.Height = 4;
+
+            elipse.StrokeThickness = 2;
+            elipse.Stroke = Brushes.Black;
+            elipse.Margin = new Thickness(point.X - 2, point.Y - 2, 0, 0);
+
+            canvas.Children.Add(elipse);
+
+>>>>>>> 767a7f638d69269887ab6de5b654bb47644fac40
         }
     }
 
