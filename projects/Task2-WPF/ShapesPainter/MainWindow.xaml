@@ -11,15 +11,16 @@
             <ToolBar>
                 <Menu>
                     <MenuItem Header="Menu">
-                        <MenuItem Header="Open"/>
-                        <MenuItem Header="Create"/>
-                        <MenuItem Header="Save" Click="MenuItem_Click"/>
+                        <MenuItem x:Name="Open" Header="Open" Click="Open_Click" />
+                        <MenuItem x:Name="Create" Header="Create" Click="Create_Click" />
+                        <MenuItem x:Name="Save" Header="Save" Click="Save_Click" />
                     </MenuItem>
                 </Menu>
             </ToolBar>
-            <Canvas Height="384" Background="#FFFFFDFD" Margin="147,0,10,0">
-                
-                   
+            <Canvas x:Name="cnv" Height="384" Background="#FFFFFDFD" Margin="147,0,10,0">
+                <Label x:Name="l1" Content="Label" Canvas.Left="67" Canvas.Top="93"/>
+
+
             </Canvas>
         </StackPanel>
         <Frame Content="Colors&#xD;&#xA;" HorizontalAlignment="Left" Height="130" Margin="10,33,0,0" VerticalAlignment="Top" Width="122" BorderBrush="Black" Background="LightGray"/>
