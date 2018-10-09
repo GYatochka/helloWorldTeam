@@ -21,13 +21,12 @@ namespace ShapesPainter
     /// </summary>
     public partial class MainWindow : Window
     {
-<<<<<<< HEAD
+
         //Point[] mass = new Point[5];
         private string _pictureName;
-=======
+
         PointCollection Points = new PointCollection();
         int clickCounter = 0;
->>>>>>> 1d85d4b20ee97aa09b30fe898b941e61e5c05cf3
         public MainWindow()
         {
           

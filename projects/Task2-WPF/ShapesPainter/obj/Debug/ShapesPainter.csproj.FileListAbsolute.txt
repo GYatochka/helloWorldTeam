@@ -27,7 +27,6 @@ C:\Users\Bodya Zahirnuy\Documents\GitHub\helloWorldTeam\projects\Task2-WPF\Shape
 C:\Users\Bodya Zahirnuy\Documents\GitHub\helloWorldTeam\projects\Task2-WPF\ShapesPainter\obj\Debug\ShapesPainter.Properties.Resources.resources
 C:\Users\Bodya Zahirnuy\Documents\GitHub\helloWorldTeam\projects\Task2-WPF\ShapesPainter\obj\Debug\ShapesPainter.csproj.GenerateResource.cache
 C:\Users\Bodya Zahirnuy\Documents\GitHub\helloWorldTeam\projects\Task2-WPF\ShapesPainter\obj\Debug\ShapesPainter.csproj.CoreCompileInputs.cache
-<<<<<<< HEAD
 E:\studing\helloWorldTeam-develop\helloWorldTeam-develop\projects\Task2-WPF\ShapesPainter\bin\Debug\ShapesPainter.exe.config
 E:\studing\helloWorldTeam-develop\helloWorldTeam-develop\projects\Task2-WPF\ShapesPainter\bin\Debug\ShapesPainter.exe
 E:\studing\helloWorldTeam-develop\helloWorldTeam-develop\projects\Task2-WPF\ShapesPainter\bin\Debug\ShapesPainter.pdb
@@ -45,6 +44,22 @@ E:\studing\helloWorldTeam-develop\helloWorldTeam-develop\projects\Task2-WPF\Shap
 E:\studing\helloWorldTeam-develop\helloWorldTeam-develop\projects\Task2-WPF\ShapesPainter\obj\Debug\ShapesPainter.csprojAssemblyReference.cache
 E:\studing\helloWorldTeam-develop\helloWorldTeam-develop\projects\Task2-WPF\ShapesPainter\obj\Debug\CreateWindow.g.cs
 E:\studing\helloWorldTeam-develop\helloWorldTeam-develop\projects\Task2-WPF\ShapesPainter\obj\Debug\CreateWindow.baml
-=======
 C:\Users\Bodya Zahirnuy\Documents\GitHub\helloWorldTeam\projects\Task2-WPF\ShapesPainter\obj\Debug\ShapesPainter.csprojAssemblyReference.cache
 >>>>>>> 1d85d4b20ee97aa09b30fe898b941e61e5c05cf3
+E:\studing\helloWorldTeam-develop\helloWorldTeam\projects\Task2-WPF\ShapesPainter\bin\Debug\ShapesPainter.exe.config
+E:\studing\helloWorldTeam-develop\helloWorldTeam\projects\Task2-WPF\ShapesPainter\bin\Debug\ShapesPainter.exe
+E:\studing\helloWorldTeam-develop\helloWorldTeam\projects\Task2-WPF\ShapesPainter\bin\Debug\ShapesPainter.pdb
+E:\studing\helloWorldTeam-develop\helloWorldTeam\projects\Task2-WPF\ShapesPainter\obj\Debug\ShapesPainter.csprojAssemblyReference.cache
+E:\studing\helloWorldTeam-develop\helloWorldTeam\projects\Task2-WPF\ShapesPainter\obj\Debug\CreateWindow.g.cs
+E:\studing\helloWorldTeam-develop\helloWorldTeam\projects\Task2-WPF\ShapesPainter\obj\Debug\MainWindow.g.cs
+E:\studing\helloWorldTeam-develop\helloWorldTeam\projects\Task2-WPF\ShapesPainter\obj\Debug\App.g.cs
+E:\studing\helloWorldTeam-develop\helloWorldTeam\projects\Task2-WPF\ShapesPainter\obj\Debug\ShapesPainter_MarkupCompile.cache
+E:\studing\helloWorldTeam-develop\helloWorldTeam\projects\Task2-WPF\ShapesPainter\obj\Debug\ShapesPainter_MarkupCompile.lref
+E:\studing\helloWorldTeam-develop\helloWorldTeam\projects\Task2-WPF\ShapesPainter\obj\Debug\CreateWindow.baml
+E:\studing\helloWorldTeam-develop\helloWorldTeam\projects\Task2-WPF\ShapesPainter\obj\Debug\MainWindow.baml
+E:\studing\helloWorldTeam-develop\helloWorldTeam\projects\Task2-WPF\ShapesPainter\obj\Debug\ShapesPainter.g.resources
+E:\studing\helloWorldTeam-develop\helloWorldTeam\projects\Task2-WPF\ShapesPainter\obj\Debug\ShapesPainter.Properties.Resources.resources
+E:\studing\helloWorldTeam-develop\helloWorldTeam\projects\Task2-WPF\ShapesPainter\obj\Debug\ShapesPainter.csproj.GenerateResource.cache
+E:\studing\helloWorldTeam-develop\helloWorldTeam\projects\Task2-WPF\ShapesPainter\obj\Debug\ShapesPainter.csproj.CoreCompileInputs.cache
+E:\studing\helloWorldTeam-develop\helloWorldTeam\projects\Task2-WPF\ShapesPainter\obj\Debug\ShapesPainter.exe
+E:\studing\helloWorldTeam-develop\helloWorldTeam\projects\Task2-WPF\ShapesPainter\obj\Debug\ShapesPainter.pdb
