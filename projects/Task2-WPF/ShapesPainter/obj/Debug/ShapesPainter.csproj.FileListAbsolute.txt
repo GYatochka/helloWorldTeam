@@ -27,3 +27,4 @@ C:\Users\Bodya Zahirnuy\Documents\GitHub\helloWorldTeam\projects\Task2-WPF\Shape
 C:\Users\Bodya Zahirnuy\Documents\GitHub\helloWorldTeam\projects\Task2-WPF\ShapesPainter\obj\Debug\ShapesPainter.Properties.Resources.resources
 C:\Users\Bodya Zahirnuy\Documents\GitHub\helloWorldTeam\projects\Task2-WPF\ShapesPainter\obj\Debug\ShapesPainter.csproj.GenerateResource.cache
 C:\Users\Bodya Zahirnuy\Documents\GitHub\helloWorldTeam\projects\Task2-WPF\ShapesPainter\obj\Debug\ShapesPainter.csproj.CoreCompileInputs.cache
+C:\Users\Bodya Zahirnuy\Documents\GitHub\helloWorldTeam\projects\Task2-WPF\ShapesPainter\obj\Debug\ShapesPainter.csprojAssemblyReference.cache
