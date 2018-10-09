@@ -37,7 +37,12 @@ namespace Task1_Currency
 
             file.Close();
         }
-
+        /// <summary>
+        /// Write data to a specific file
+        /// </summary>
+        /// <param name="l"></param>
+        /// <param name="currencyName"></param>
+        /// <param name="path"></param>
         static public void WriteInFile(List<float> l, string currencyName, string path)
         {
             try
@@ -59,6 +64,9 @@ namespace Task1_Currency
             }
         }
 
+        /// <summary>
+        /// Selects only those banknotes of UAH currency
+        /// </summary>
 
         public void output()
         {
@@ -67,8 +75,12 @@ namespace Task1_Currency
                 Console.WriteLine(c);
             }
         }
-
-        public Dictionary<string,float> TotalNumAndCurrName(string pathfileName)
+        /// <summary>
+        /// Groups by amount and currency
+        /// </summary>
+        /// <param name="pathfileName"></param>
+        /// <returns></returns>
+        public Dictionary<string, float> TotalNumAndCurrName(string pathfileName)
         {
             Dictionary<string, float> dict = new Dictionary<string, float>();
             var selected = from s in _storage
@@ -80,7 +92,6 @@ namespace Task1_Currency
                            };
             foreach (var v in selected)
             {
-                Console.WriteLine(v);
                 dict.Add(v.name, v.total_sum);
             }
 
@@ -96,9 +107,14 @@ namespace Task1_Currency
             }
             return dict;
         }
+        
+        /// <summary>
+        /// Output to console
+        /// </summary>
 
-        public void SelectUAH()
+        public bool SelectUAH()
         {
+            bool flag = false;
             IEnumerable<Currency> selectedCurr = _storage.Where(x => x.CurrencyName == "UAH");
             if (selectedCurr.Count() == 0) { Console.WriteLine("No matches found"); }
             else
@@ -107,9 +123,13 @@ namespace Task1_Currency
                 foreach (Currency x in selectedCurr)
                 {
                     Console.WriteLine(x);
-
+                    if(x.CurrencyName == "UAH")
+                    {
+                        flag = true;
+                    }
                 }
             }
+            return flag;
         }
     }
 }
