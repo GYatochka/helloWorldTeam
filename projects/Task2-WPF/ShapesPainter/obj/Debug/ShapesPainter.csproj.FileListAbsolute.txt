@@ -16,7 +16,6 @@ E:\studing\helloWorldTeam-develop\ShapesPainter\ShapesPainter\obj\Debug\ShapesPa
 C:\Users\Bodya Zahirnuy\Documents\GitHub\helloWorldTeam\projects\Task2-WPF\ShapesPainter\obj\Debug\MainWindow.g.cs
 C:\Users\Bodya Zahirnuy\Documents\GitHub\helloWorldTeam\projects\Task2-WPF\ShapesPainter\obj\Debug\App.g.cs
 C:\Users\Bodya Zahirnuy\Documents\GitHub\helloWorldTeam\projects\Task2-WPF\ShapesPainter\obj\Debug\ShapesPainter_MarkupCompile.cache
-C:\Users\Bodya Zahirnuy\Documents\GitHub\helloWorldTeam\projects\Task2-WPF\ShapesPainter\obj\Debug\ShapesPainter_MarkupCompile.lref
 C:\Users\Bodya Zahirnuy\Documents\GitHub\helloWorldTeam\projects\Task2-WPF\ShapesPainter\obj\Debug\ShapesPainter.exe
 C:\Users\Bodya Zahirnuy\Documents\GitHub\helloWorldTeam\projects\Task2-WPF\ShapesPainter\obj\Debug\ShapesPainter.pdb
 C:\Users\Bodya Zahirnuy\Documents\GitHub\helloWorldTeam\projects\Task2-WPF\ShapesPainter\bin\Debug\ShapesPainter.exe.config

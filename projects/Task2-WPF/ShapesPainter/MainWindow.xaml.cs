@@ -66,13 +66,14 @@ namespace ShapesPainter
             {
                 PointCollection Points1 = new PointCollection();
                 Polygon p = new Polygon();
-                SolidColorBrush blackBrush = new SolidColorBrush();
-                blackBrush.Color = Colors.Black;
+                SolidColorBrush Brush = new SolidColorBrush();
+                Brush.Color = Colors.Black;
                 for(int i=0;i<5;i++)
                 {
                     Points1.Add(Points[i]);
                 }
-                p.Stroke = blackBrush;
+               
+                p.Stroke = Brush;
                 p.Points = Points1;
                 canvas.Children.Add(p);
                 Points.Clear();
