@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using Microsoft.Win32;
 
 namespace ShapesPainter
 {
@@ -21,62 +21,51 @@ namespace ShapesPainter
     /// </summary>
     public partial class MainWindow : Window
     {
-<<<<<<< HEAD
-        private string _pictureName;
-
-        private MenuBar _menuBar;
-=======
         //Point[] mass = new Point[5];
->>>>>>> 767a7f638d69269887ab6de5b654bb47644fac40
+        private string _pictureName;
         public MainWindow()
         {
           
             InitializeComponent();
-<<<<<<< HEAD
-
+          
         }
 
         private void Open_Click(object sender, RoutedEventArgs e)
         {
+            OpenFileDialog opf = new OpenFileDialog();
 
         }
 
-         private void Save_Click(object sender, RoutedEventArgs e)
-         {
-            RenderTargetBitmap rtb = new RenderTargetBitmap((int)cnv.RenderSize.Width,
-                 (int)cnv.RenderSize.Height, 96d, 96d, System.Windows.Media.PixelFormats.Default);
-             rtb.Render(cnv);
-
-             var crop = new CroppedBitmap(rtb, new Int32Rect(50, 50, 250, 250));
-
-             BitmapEncoder pngEncoder = new PngBitmapEncoder();
-             pngEncoder.Frames.Add(BitmapFrame.Create(crop));
-
-             using (var fs = System.IO.File.OpenWrite("logo.png"))
-             {
-                 pngEncoder.Save(fs);
-             }
-        }
-
-
-         private void Create_Click(object sender, RoutedEventArgs e)
-         {
-             CreateWindow createWindow = new CreateWindow();
-             createWindow.Show();
-            // if (createWindow.isCreated)
-            // {
-                 _pictureName = createWindow.getName();
-                 createWindow.Close();
-             //}
-=======
-          
-        }
-
-        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        private void Save_Click(object sender, RoutedEventArgs e)
         {
+            SaveFileDialog dlg = new Microsoft.Win32.SaveFileDialog();
+            dlg.FileName = "*"; // Default file name
+            dlg.DefaultExt = "bmp"; // Default file extension
+            dlg.Filter = "Bitmap Image (.bmp)|*.bmp|Gif Image (.gif)|*.gif |JPEG Image (.jpeg)|*.jpeg |Png Image (.png)|*.png |Tiff Image (.tiff)|*.tiff |Wmf Image (.wmf)|*.wmf"; // Filter files by extension
 
+            // Show save file dialog box
+            Nullable<bool> result = dlg.ShowDialog();
+
+            // Process save file dialog box results
+            if (result == true)
+            {
+                // Save document
+                string filename = dlg.FileName;
+            }
         }
 
+
+        private void Create_Click(object sender, RoutedEventArgs e)
+        {
+            CreateWindow createWindow = new CreateWindow();
+            createWindow.Show();
+             if (createWindow.Created())
+             {
+            _pictureName = createWindow.getName();
+            createWindow.Close();
+            }
+
+        }
         private void canvas_LeftMouseClick(object sender, MouseButtonEventArgs e)
         {
             Point point = e.GetPosition(canvas);
@@ -91,10 +80,6 @@ namespace ShapesPainter
 
             canvas.Children.Add(elipse);
 
->>>>>>> 767a7f638d69269887ab6de5b654bb47644fac40
         }
     }
-
 }
-
-
