@@ -10,17 +10,14 @@
         <StackPanel>
             <ToolBar>
                 <Menu>
-                    <MenuItem Header="Menu">
+                    <MenuItem Header="Menu" Click="MenuItem_Click">
                         <MenuItem Header="Open"/>
                         <MenuItem Header="Create"/>
                         <MenuItem Header="Save" Click="MenuItem_Click"/>
                     </MenuItem>
                 </Menu>
             </ToolBar>
-            <Canvas Height="384" Background="#FFFFFDFD" Margin="147,0,10,0">
-                
-                   
-            </Canvas>
+            <Canvas x:Name="canvas" Height="384" Background="#FFFFFDFD" Margin="147,0,9.6,0" MouseLeftButtonDown="canvas_LeftMouseClick"/>
         </StackPanel>
         <Frame Content="Colors&#xD;&#xA;" HorizontalAlignment="Left" Height="130" Margin="10,33,0,0" VerticalAlignment="Top" Width="122" BorderBrush="Black" Background="LightGray"/>
 

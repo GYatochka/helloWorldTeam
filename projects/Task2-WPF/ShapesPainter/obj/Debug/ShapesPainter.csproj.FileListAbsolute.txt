@@ -13,3 +13,17 @@ E:\studing\helloWorldTeam-develop\ShapesPainter\ShapesPainter\obj\Debug\ShapesPa
 E:\studing\helloWorldTeam-develop\ShapesPainter\ShapesPainter\obj\Debug\ShapesPainter.csproj.CoreCompileInputs.cache
 E:\studing\helloWorldTeam-develop\ShapesPainter\ShapesPainter\obj\Debug\ShapesPainter.exe
 E:\studing\helloWorldTeam-develop\ShapesPainter\ShapesPainter\obj\Debug\ShapesPainter.pdb
+C:\Users\Bodya Zahirnuy\Documents\GitHub\helloWorldTeam\projects\Task2-WPF\ShapesPainter\obj\Debug\MainWindow.g.cs
+C:\Users\Bodya Zahirnuy\Documents\GitHub\helloWorldTeam\projects\Task2-WPF\ShapesPainter\obj\Debug\App.g.cs
+C:\Users\Bodya Zahirnuy\Documents\GitHub\helloWorldTeam\projects\Task2-WPF\ShapesPainter\obj\Debug\ShapesPainter_MarkupCompile.cache
+C:\Users\Bodya Zahirnuy\Documents\GitHub\helloWorldTeam\projects\Task2-WPF\ShapesPainter\obj\Debug\ShapesPainter_MarkupCompile.lref
+C:\Users\Bodya Zahirnuy\Documents\GitHub\helloWorldTeam\projects\Task2-WPF\ShapesPainter\obj\Debug\ShapesPainter.exe
+C:\Users\Bodya Zahirnuy\Documents\GitHub\helloWorldTeam\projects\Task2-WPF\ShapesPainter\obj\Debug\ShapesPainter.pdb
+C:\Users\Bodya Zahirnuy\Documents\GitHub\helloWorldTeam\projects\Task2-WPF\ShapesPainter\bin\Debug\ShapesPainter.exe.config
+C:\Users\Bodya Zahirnuy\Documents\GitHub\helloWorldTeam\projects\Task2-WPF\ShapesPainter\bin\Debug\ShapesPainter.exe
+C:\Users\Bodya Zahirnuy\Documents\GitHub\helloWorldTeam\projects\Task2-WPF\ShapesPainter\bin\Debug\ShapesPainter.pdb
+C:\Users\Bodya Zahirnuy\Documents\GitHub\helloWorldTeam\projects\Task2-WPF\ShapesPainter\obj\Debug\MainWindow.baml
+C:\Users\Bodya Zahirnuy\Documents\GitHub\helloWorldTeam\projects\Task2-WPF\ShapesPainter\obj\Debug\ShapesPainter.g.resources
+C:\Users\Bodya Zahirnuy\Documents\GitHub\helloWorldTeam\projects\Task2-WPF\ShapesPainter\obj\Debug\ShapesPainter.Properties.Resources.resources
+C:\Users\Bodya Zahirnuy\Documents\GitHub\helloWorldTeam\projects\Task2-WPF\ShapesPainter\obj\Debug\ShapesPainter.csproj.GenerateResource.cache
+C:\Users\Bodya Zahirnuy\Documents\GitHub\helloWorldTeam\projects\Task2-WPF\ShapesPainter\obj\Debug\ShapesPainter.csproj.CoreCompileInputs.cache
