@@ -21,8 +21,13 @@ namespace ShapesPainter
     /// </summary>
     public partial class MainWindow : Window
     {
+<<<<<<< HEAD
         //Point[] mass = new Point[5];
         private string _pictureName;
+=======
+        PointCollection Points = new PointCollection();
+        int clickCounter = 0;
+>>>>>>> 1d85d4b20ee97aa09b30fe898b941e61e5c05cf3
         public MainWindow()
         {
           
@@ -68,17 +73,49 @@ namespace ShapesPainter
         }
         private void canvas_LeftMouseClick(object sender, MouseButtonEventArgs e)
         {
-            Point point = e.GetPosition(canvas);
-            Ellipse elipse = new Ellipse();
+            clickCounter++;
+          if(clickCounter>=5)
+            {
+                clickCounter = clickCounter % 5;
+                if(clickCounter%5==0)
+                {
+                    clickCounter = 5;
+                }
+            }
+            if (clickCounter <= 5)
+            {
+               
+                Point point = e.GetPosition(canvas);
+                Ellipse elipse = new Ellipse();
 
-            elipse.Width = 4;
-            elipse.Height = 4;
+                elipse.Width = 4;
+                elipse.Height = 4;
 
-            elipse.StrokeThickness = 2;
-            elipse.Stroke = Brushes.Black;
-            elipse.Margin = new Thickness(point.X - 2, point.Y - 2, 0, 0);
+                elipse.StrokeThickness = 2;
+                elipse.Stroke = Brushes.Black;
+                elipse.Margin = new Thickness(point.X - 2, point.Y - 2, 0, 0);
+          
+                canvas.Children.Add(elipse);
+                Points.Add(point);
+            }
+       
+            if (clickCounter % 5 == 0)
+            {
+                PointCollection Points1 = new PointCollection();
+                Polygon p = new Polygon();
+                SolidColorBrush blackBrush = new SolidColorBrush();
+                blackBrush.Color = Colors.Black;
+                for(int i=0;i<5;i++)
+                {
+                    Points1.Add(Points[i]);
+                }
+                p.Stroke = blackBrush;
+                p.Points = Points1;
+                canvas.Children.Add(p);
+                Points.Clear();
+                  
+            }
 
-            canvas.Children.Add(elipse);
 
         }
     }
