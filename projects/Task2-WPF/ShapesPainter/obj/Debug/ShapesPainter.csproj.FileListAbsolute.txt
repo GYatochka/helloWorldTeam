@@ -97,7 +97,5 @@ E:\studing\helloWorldTeam-develop\helloWorldTeam\projects\Task2-WPF\ShapesPainte
 E:\studing\helloWorldTeam-develop\helloWorldTeam\projects\Task2-WPF\ShapesPainter\obj\Debug\colors.g.cs
 D:\helloWorldTeam-1-master\projects\Task2-WPF\ShapesPainter\obj\Debug\ShapesPainter.csprojResolveAssemblyReference.cache
 C:\Users\Bodya Zahirnuy\Documents\GitHub\helloWorldTeam\projects\Task2-WPF\ShapesPainter\obj\Debug\colors.g.cs
-C:\Users\Bodya Zahirnuy\Documents\GitHub\helloWorldTeam\projects\Task2-WPF\ShapesPainter\obj\Debug\CreateWindow.g.cs
 C:\Users\Bodya Zahirnuy\Documents\GitHub\helloWorldTeam\projects\Task2-WPF\ShapesPainter\obj\Debug\ShapesPainter_MarkupCompile.lref
 C:\Users\Bodya Zahirnuy\Documents\GitHub\helloWorldTeam\projects\Task2-WPF\ShapesPainter\obj\Debug\colors.baml
-C:\Users\Bodya Zahirnuy\Documents\GitHub\helloWorldTeam\projects\Task2-WPF\ShapesPainter\obj\Debug\CreateWindow.baml
