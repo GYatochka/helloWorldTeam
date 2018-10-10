@@ -31,12 +31,13 @@ namespace ShapesPainter
             InitializeComponent();
         }
 
-        private void EnterKey(object sender, System.Windows.Input.KeyEventArgs e)
+       
+        private void MouseDowsnEvent(object sender, System.Windows.Input.MouseEventArgs e)
         {
-            if (e.Key == Key.Enter)
+            if (e.LeftButton == MouseButtonState.Pressed)
             {
                 selected_rec.Fill = brush;
-
+                poly_brush = brush;
             }
         }
 
