@@ -33,6 +33,7 @@ namespace ShapesPainter
 
         
         //for counting angles in shape
+
         int count = 0;
 
         int z_index_count = 0;
@@ -289,15 +290,11 @@ namespace ShapesPainter
             
             if (dragging)
             {
-               
                 Canvas.SetLeft(p, e.GetPosition(canvas).X - clickV.X);
                 Canvas.SetTop(p, e.GetPosition(canvas).Y - clickV.Y);
 
-                if ((Mouse.GetPosition(this).X - e.GetPosition(canvas).X) < 147 || (Mouse.GetPosition(this).X - e.GetPosition(canvas).Y) < 10)
-                {
-                    Canvas.SetLeft(p, 150);
-                    Canvas.SetTop(p, 20);
-                }
+               
+
             }
         }
         /// <summary>
