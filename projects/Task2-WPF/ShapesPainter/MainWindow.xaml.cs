@@ -213,16 +213,16 @@ namespace ShapesPainter
                         if (canvas.Children[i].GetType() == typeof(Ellipse))
                         {
                             canvas.Children.Remove(canvas.Children[i]);
-                            ellipse_count++;     
+                            ellipse_count++;
                         }
-                        if(ellipse_count == 5) { break; }
-                        
+                        else { i++; }
+                        if (ellipse_count == 5) { break; }
                     }
 
-                   
                 }
 
                 p.MouseDown += new MouseButtonEventHandler(myPoly_MouseDown);
+
                 //poly_list.Add(p);
 
                 // var item = new TabItem { Header = count.ToString(), Name = $"layer" + count };
