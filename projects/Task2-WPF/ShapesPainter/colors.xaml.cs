@@ -22,9 +22,9 @@ namespace ShapesPainter
     {
         int x_pos = 0;
         int y_pos = 0;
-        SolidColorBrush brush;
+        public SolidColorBrush brush;
+        public SolidColorBrush poly_brush { get; set; }
         bool button_hit = false;
-        public bool select_hit = false;
 
         public colors()
         {
@@ -56,6 +56,7 @@ namespace ShapesPainter
             if (e.LeftButton == MouseButtonState.Pressed)
             {
                 selected_rec.Fill = brush;
+                poly_brush = brush;
             }
 
         }
@@ -90,11 +91,12 @@ namespace ShapesPainter
             brush.Color = Color.FromRgb(a.R, a.G, a.B);
             selected_rec.Fill = brush;
             palette_button.IsEnabled = false;
+            poly_brush = brush;
         }
 
         private void select_Click(object sender, RoutedEventArgs e)
         {
-            select_hit = true;
+            this.Close();
         }
     }
 }

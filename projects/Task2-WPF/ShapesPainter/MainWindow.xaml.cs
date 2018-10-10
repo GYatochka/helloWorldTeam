@@ -29,6 +29,7 @@ namespace ShapesPainter
         
         //Point[] mass = new Point[5];
         private string _pictureName;
+        public Brush b;
         public ManualResetEvent resetEvent = new ManualResetEvent(true);
         Thread t1;
 
@@ -163,7 +164,7 @@ namespace ShapesPainter
             if (clickCounter % 5 == 0)
             {
                 PointCollection Points1 = new PointCollection();
-                Polygon p = new Polygon();
+                Polygon  p = new Polygon();
 
                 SolidColorBrush Brush = new SolidColorBrush();
                 Brush.Color = Colors.Black;
@@ -186,20 +187,18 @@ namespace ShapesPainter
                 Points.Clear();
 
                 colors c = new colors();
-                c.Show();
-                c.Activate();
-                    if (c.select_hit == true)
-                    {
-                        p.Fill = c.selected_rec.Fill;
-                        c.Close();
-                    
-                    }
-                    
+                //c.Show();
+                c.ShowDialog();
+               
+                    p.Fill = c.poly_brush;
+                
+
             }
 
         {
 
         }
         }
+
     }
 }
