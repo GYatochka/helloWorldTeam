@@ -26,8 +26,8 @@ namespace ShapesPainter
     /// </summary>
     public partial class MainWindow : Window
     {
-        
-        //Point[] mass = new Point[5];
+
+        List<Polygon> polygons = new List<Polygon>();
         private string _pictureName;
         int count = 0;
         int z_index_count = 0;
@@ -193,14 +193,20 @@ namespace ShapesPainter
                     p.Stroke = blackBrush;
 
                     p.Points = Points1;
+                 
                     Canvas.SetZIndex(p, count);
                     canvas.Children.Add(p);
-
+                    polygons.Add(p);
+                    ComboBoxItem item = new ComboBoxItem();
+                    item.Content = "Pentagon" + polygons.Count;
+                    cmbx.Items.Add(item);
                     Points.Clear();
-
                    
+
+                 
+
                     //--------------- added by Zlata-------------------------
-                    
+
                     colors c = new colors();
                     c.ShowDialog();
                     p.Fill = c.poly_brush;
@@ -264,6 +270,19 @@ namespace ShapesPainter
             selectedShape = sender as Shape;
             clickV = e.GetPosition(selectedShape);
 
+        }
+
+        private void sel_changed(object sender, SelectionChangedEventArgs e)
+        {
+            int index = cmbx.SelectedIndex;
+            for (int i = 0; i < polygons.Count; i++)
+            {
+                if(i!=index)
+                Canvas.SetZIndex(polygons[i], 0);
+
+            }
+            Canvas.SetZIndex(polygons[index], 100);
+          
         }
     }
 }
