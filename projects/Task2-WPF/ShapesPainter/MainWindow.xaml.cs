@@ -29,10 +29,9 @@ namespace ShapesPainter
         
         //for counting angles in shape
         int count = 0;
-<<<<<<< HEAD
-=======
+
         int z_index_count = 0;
->>>>>>> 56e9d48316e7dfeb6cadeccba9e70c3946ecb34d
+
         bool dragging = false;
         PointCollection Points = new PointCollection();
         int clickCounter = 0;
@@ -227,13 +226,8 @@ namespace ShapesPainter
 
                    
                     //--------------- added by Zlata-------------------------
-<<<<<<< HEAD
                     /// create new window where user can choose color for his pentagon 
                     Canvas.SetZIndex(p, count);
-
-=======
-                    
->>>>>>> 56e9d48316e7dfeb6cadeccba9e70c3946ecb34d
                     colors c = new colors();
                     c.ShowDialog();
                     p.Fill = c.poly_brush;
