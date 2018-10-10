@@ -1,0 +1,16 @@
+<Canvas
+  Background="#FFFFFDFD"
+  Name="canvas"
+  Height="384"
+  Margin="147,0,10,0" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+  <Polygon
+    Points="249,84.04 319.4,124.84 173,220.04 107.4,102.44 169.8,48.84"
+    Fill="#FF68FF3D"
+    Stroke="#FF000000"
+    Panel.ZIndex="100" />
+  <Polygon
+    Points="98.6,191.24 202.6,40.84 295.4,22.44 362.6,48.84 149,224.84"
+    Fill="#FF6C57FF"
+    Stroke="#FF000000"
+    Panel.ZIndex="0" />
+</Canvas>
