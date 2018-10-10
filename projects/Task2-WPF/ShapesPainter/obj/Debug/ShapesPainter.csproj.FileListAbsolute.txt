@@ -96,5 +96,8 @@ D:\helloWorldTeam-1-master\projects\Task2-WPF\ShapesPainter\obj\Debug\ShapesPain
 D:\helloWorldTeam-1-master\projects\Task2-WPF\ShapesPainter\obj\Debug\ShapesPainter.Properties.Resources.resources
 D:\helloWorldTeam-1-master\projects\Task2-WPF\ShapesPainter\obj\Debug\ShapesPainter.csproj.GenerateResource.Cache
 D:\helloWorldTeam-1-master\projects\Task2-WPF\ShapesPainter\obj\Debug\ShapesPainter.csprojResolveAssemblyReference.cache
+<<<<<<< HEAD
 E:\studing\helloWorldTeam-develop\helloWorldTeam\projects\Task2-WPF\ShapesPainter\obj\Debug\colors.baml
 E:\studing\helloWorldTeam-develop\helloWorldTeam\projects\Task2-WPF\ShapesPainter\obj\Debug\colors.g.cs
+=======
+>>>>>>> d141778afd893bc111901b98e7ef8c091dd8f577
