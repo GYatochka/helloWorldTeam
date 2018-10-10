@@ -179,10 +179,11 @@ namespace ShapesPainter
 
                     SolidColorBrush Brush = new SolidColorBrush();
                     Brush.Color = Colors.Black;
+               
 
                     SolidColorBrush blackBrush = new SolidColorBrush();
                     blackBrush.Color = Colors.Black;
-
+                    
                     for (int i = 0; i < 5; i++)
                     {
                         Points1.Add(Points[i]);
@@ -195,17 +196,32 @@ namespace ShapesPainter
 
                     p.Points = Points1;
                     canvas.Children.Add(p);
-                    
+
                     Points.Clear();
 
+                   
                     //--------------- added by Zlata-------------------------
                     Canvas.SetZIndex(p, count);
 
                     colors c = new colors();
                     c.ShowDialog();
                     p.Fill = c.poly_brush;
+
+                    int ellipse_count = 0;
+                    for (int i = 0; i < canvas.Children.Count;)
+                    {
+                        if (canvas.Children[i].GetType() == typeof(Ellipse))
+                        {
+                            canvas.Children.Remove(canvas.Children[i]);
+                            ellipse_count++;     
+                        }
+                        if(ellipse_count == 5) { break; }
+                        
+                    }
+
+                   
                 }
-                
+
                 p.MouseDown += new MouseButtonEventHandler(myPoly_MouseDown);
                 //poly_list.Add(p);
 
