@@ -25,6 +25,7 @@ namespace ShapesPainter
         SolidColorBrush brush;
         bool button_hit = false;
 
+
         public colors()
         {
             InitializeComponent();
