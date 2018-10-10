@@ -14,17 +14,19 @@
         <StackPanel Grid.ColumnSpan="3">
             <ToolBar>
                 <Menu>
-                    <MenuItem Header="Menu">
+                    <MenuItem Header="File">
                         <MenuItem x:Name="Create" Header="New" Click="Create_Click" />
                         <MenuItem x:Name="Open" Header="Open" Click="Open_Click" />
                         <MenuItem x:Name="Save" Header="Save" Click="Save_Click" />
                     </MenuItem>
                 </Menu>
             </ToolBar>
-            <Canvas x:Name="canvas" Height="384" Background="#FFFFFDFD" Margin="147,0,10,0" MouseLeftButtonDown="canvas_LeftMouseClick" x:FieldModifier="public"/>
+            <Canvas x:Name="canvas" Height="384" Background="#FFFFFDFD" Margin="147,0,10,0" MouseLeftButtonDown="canvas_LeftMouseClick" x:FieldModifier="public">
+                <Label Content="Shape Manager" Canvas.Left="-136" Canvas.Top="5" Height="28" Width="123"/>
+            </Canvas>
 
         </StackPanel>
-        <ComboBox x:Name="cmbx" Grid.ColumnSpan="3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="142" Margin="0,51,0,0" Height="27" SelectionChanged="sel_changed"/>
+        <ComboBox x:Name="cmbx" Grid.ColumnSpan="3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="142" Margin="0,58,0,0" Height="27" SelectionChanged="sel_changed" RenderTransformOrigin="0.51,1.381"/>
 
     </Grid>
 </Window>
