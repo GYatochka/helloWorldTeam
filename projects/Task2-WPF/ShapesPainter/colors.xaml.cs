@@ -24,14 +24,17 @@ namespace ShapesPainter
         int y_pos = 0;
         public SolidColorBrush brush;
         public SolidColorBrush poly_brush { get; set; }
-        bool button_hit = false;
 
         public colors()
         {
             InitializeComponent();
         }
 
-       
+       /// <summary>
+       /// fill rectangle for choosing showing color in choosed color 
+       /// </summary>
+       /// <param name="sender"></param>
+       /// <param name="e"></param>
         private void MouseDowsnEvent(object sender, System.Windows.Input.MouseEventArgs e)
         {
             if (e.LeftButton == MouseButtonState.Pressed)
@@ -41,6 +44,11 @@ namespace ShapesPainter
             }
         }
 
+        /// <summary>
+        /// changing color on color elipse when you move mouse around color wheel
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void MouseMoveEvent(object sender, System.Windows.Input.MouseEventArgs e)
         {
             palette_button.IsEnabled = true;
@@ -62,6 +70,13 @@ namespace ShapesPainter
 
         }
 
+        /// <summary>
+        /// method for picking color from color wheel 
+        /// </summary>
+        /// <param name="source"></param>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <returns></returns>
         public static Color GetPixelColor(BitmapSource source, int x, int y)
         {
             Color c = Colors.White;
@@ -79,6 +94,11 @@ namespace ShapesPainter
             return c;
         }
 
+        /// <summary>
+        /// open default windows palett for choosing color and fill selected rectangle
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void palette_button_Click(object sender, RoutedEventArgs e)
         {
 
@@ -96,6 +116,11 @@ namespace ShapesPainter
             poly_brush = brush;
         }
 
+        /// <summary>
+        /// for closes window when you select color
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void select_Click(object sender, RoutedEventArgs e)
         {
             this.Close();

@@ -24,6 +24,7 @@
             <Canvas x:Name="canvas" Height="384" Background="#FFFFFDFD" MouseLeftButtonDown="canvas_LeftMouseClick" x:FieldModifier="public" ClipToBounds="true" />
 
         </StackPanel>
+        <ComboBox x:Name="cmbx" Grid.ColumnSpan="3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="142" Margin="0,51,0,0" Height="27" SelectionChanged="sel_changed"/>
 
     </Grid>
 </Window>
