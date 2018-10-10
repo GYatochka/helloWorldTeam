@@ -24,7 +24,7 @@ namespace ShapesPainter
         int y_pos = 0;
         SolidColorBrush brush;
         bool button_hit = false;
-
+        public bool select_hit = false;
 
         public colors()
         {
@@ -90,6 +90,11 @@ namespace ShapesPainter
             brush.Color = Color.FromRgb(a.R, a.G, a.B);
             selected_rec.Fill = brush;
             palette_button.IsEnabled = false;
+        }
+
+        private void select_Click(object sender, RoutedEventArgs e)
+        {
+            select_hit = true;
         }
     }
 }

@@ -16,6 +16,8 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Xml;
 using Microsoft.Win32;
+using System.Threading;
+using System.ComponentModel;
 
 namespace ShapesPainter
 {
@@ -24,9 +26,11 @@ namespace ShapesPainter
     /// </summary>
     public partial class MainWindow : Window
     {
-
+        
         //Point[] mass = new Point[5];
         private string _pictureName;
+        public ManualResetEvent resetEvent = new ManualResetEvent(true);
+        Thread t1;
 
         PointCollection Points = new PointCollection();
         int clickCounter = 0;
@@ -183,11 +187,14 @@ namespace ShapesPainter
 
                 colors c = new colors();
                 c.Show();
-
-                //if ()
-                //{
-                    p.Fill = c.selected_rec.Fill;
-                //}
+                c.Activate();
+                    if (c.select_hit == true)
+                    {
+                        p.Fill = c.selected_rec.Fill;
+                        c.Close();
+                    
+                    }
+                    
             }
 
         {
