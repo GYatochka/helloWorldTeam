@@ -29,11 +29,9 @@ namespace ShapesPainter
         
         //Point[] mass = new Point[5];
         private string _pictureName;
-        layers obj = new layers();
         int count = 0;
 
         bool dragging = false;
-        //public Brush b;
 
         PointCollection Points = new PointCollection();
         int clickCounter = 0;
@@ -220,16 +218,9 @@ namespace ShapesPainter
                     }
 
                 }
-
                 p.MouseDown += new MouseButtonEventHandler(myPoly_MouseDown);
 
-                //poly_list.Add(p);
-
-                // var item = new TabItem { Header = count.ToString(), Name = $"layer" + count };
-                // obj.layers_control.Items.Add(item);
-                // obj.z_index.Content = Convert.ToString(Canvas.GetZIndex(poly_list[count]));
-                // obj.Show();
-                // count++;
+               
             }
 
         {
