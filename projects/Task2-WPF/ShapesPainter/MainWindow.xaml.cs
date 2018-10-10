@@ -30,7 +30,7 @@ namespace ShapesPainter
         //Point[] mass = new Point[5];
         private string _pictureName;
         int count = 0;
-
+        int z_index_count = 0;
         bool dragging = false;
 
         PointCollection Points = new PointCollection();
@@ -193,17 +193,19 @@ namespace ShapesPainter
                     p.Stroke = blackBrush;
 
                     p.Points = Points1;
+                    Canvas.SetZIndex(p, count);
                     canvas.Children.Add(p);
 
                     Points.Clear();
 
                    
                     //--------------- added by Zlata-------------------------
-                    Canvas.SetZIndex(p, count);
-
+                    
                     colors c = new colors();
                     c.ShowDialog();
                     p.Fill = c.poly_brush;
+
+                    count++;
 
                     int ellipse_count = 0;
                     for (int i = 0; i < canvas.Children.Count;)
@@ -235,17 +237,24 @@ namespace ShapesPainter
         void canvas1_MouseUp(object sender, MouseButtonEventArgs e)
         {
             dragging = false;
+            
         }
 
         void canvas1_MouseMove(object sender, MouseEventArgs e)
         {
             Polygon p = selectedShape as Polygon;
-
+            
             if (dragging)
             {
+               
                 Canvas.SetLeft(p, e.GetPosition(canvas).X - clickV.X);
                 Canvas.SetTop(p, e.GetPosition(canvas).Y - clickV.Y);
 
+                if ((Mouse.GetPosition(this).X - e.GetPosition(canvas).X) < 147 || (Mouse.GetPosition(this).X - e.GetPosition(canvas).Y) < 10)
+                {
+                    Canvas.SetLeft(p, 150);
+                    Canvas.SetTop(p, 20);
+                }
             }
         }
 
