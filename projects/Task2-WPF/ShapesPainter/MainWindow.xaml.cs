@@ -30,7 +30,7 @@ namespace ShapesPainter
 
         List<Polygon> polygons = new List<Polygon>();
         private string _pictureName;
-=======
+
         
         //for counting angles in shape
 
@@ -238,12 +238,11 @@ namespace ShapesPainter
                  
 
                     //--------------- added by Zlata-------------------------
-<<<<<<< HEAD
 
-=======
+
+
                     /// create new window where user can choose color for his pentagon 
                     Canvas.SetZIndex(p, count);
->>>>>>> 3e0b828f2f2a6754d32807e6a7b9d96c53803273
                     colors c = new colors();
                     c.ShowDialog();
                     p.Fill = c.poly_brush;
