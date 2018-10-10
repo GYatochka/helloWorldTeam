@@ -15,7 +15,7 @@
         <Image x:Name="image" HorizontalAlignment="Left" Height="220" VerticalAlignment="Top" Width="220" 
                MouseMove="MouseMoveEvent" Grid.RowSpan="2" Margin="10,10,0,0">
             <Image.Source>
-                <BitmapImage UriSource="D:\other files\colorpicker\colorpicker\bin\Debug\color-wheel.png"/>
+                <BitmapImage UriSource="color-wheel.png"/>
             </Image.Source>
         </Image>
         <Ellipse x:Name="ellipse" HorizontalAlignment="Left" Height="76" Margin="246,34,0,0" VerticalAlignment="Top" Width="76" Fill="Black" Grid.RowSpan="2"/>
