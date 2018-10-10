@@ -83,6 +83,7 @@ namespace ShapesPainter
         {
 
             ColorDialog d = new ColorDialog();
+            brush = new SolidColorBrush();
             d.ShowDialog();
             Color a = new Color();
             a.R = d.Color.R;

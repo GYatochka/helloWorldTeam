@@ -29,17 +29,24 @@ namespace ShapesPainter
         
         //Point[] mass = new Point[5];
         private string _pictureName;
-        public Brush b;
-        public ManualResetEvent resetEvent = new ManualResetEvent(true);
-        Thread t1;
-
+        //public List<Polygon> poly_list  = new List<Polygon>();
+        layers obj = new layers();
+        int count = 0;
+        //public Brush b;
+       
         PointCollection Points = new PointCollection();
         int clickCounter = 0;
         public MainWindow()
         {
           
             InitializeComponent();
-          
+
+            
+
+            canvas.MouseMove += new MouseEventHandler(canvas1_MouseMove);
+
+            canvas.MouseUp += new MouseButtonEventHandler(canvas1_MouseUp);
+
         }
         // як часіки
         private void Open_Click(object sender, RoutedEventArgs e)
@@ -186,13 +193,21 @@ namespace ShapesPainter
                 canvas.Children.Add(p);
                 Points.Clear();
 
-                colors c = new colors();
-                //c.Show();
-                c.ShowDialog();
-               
-                    p.Fill = c.poly_brush;
-                
+                //--------------- added by Zlata-------------------------
+               Canvas.SetZIndex(p, count);
 
+                colors c = new colors();
+                c.ShowDialog();
+                p.Fill = c.poly_brush;
+
+                p.MouseDown += new MouseButtonEventHandler(myPoly_MouseDown);
+                //poly_list.Add(p);
+
+                // var item = new TabItem { Header = count.ToString(), Name = $"layer" + count };
+                // obj.layers_control.Items.Add(item);
+                // obj.z_index.Content = Convert.ToString(Canvas.GetZIndex(poly_list[count]));
+                // obj.Show();
+                // count++;
             }
 
         {
@@ -200,5 +215,33 @@ namespace ShapesPainter
         }
         }
 
+        bool dragging;
+        Point clickV;
+        Shape selectedShape;
+
+        void canvas1_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            dragging = false;
+        }
+
+        void canvas1_MouseMove(object sender, MouseEventArgs e)
+        {
+            Polygon p = selectedShape as Polygon;
+
+            if (dragging)
+            {
+                Canvas.SetLeft(p, e.GetPosition(canvas).X - clickV.X);
+                Canvas.SetTop(p, e.GetPosition(canvas).Y - clickV.Y);
+
+            }
+        }
+
+        void myPoly_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            dragging = true;
+            selectedShape = sender as Shape;
+            clickV = e.GetPosition(selectedShape);
+
+        }
     }
 }
