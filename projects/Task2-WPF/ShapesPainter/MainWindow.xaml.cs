@@ -29,11 +29,12 @@ namespace ShapesPainter
         
         //Point[] mass = new Point[5];
         private string _pictureName;
-        //public List<Polygon> poly_list  = new List<Polygon>();
         layers obj = new layers();
         int count = 0;
+
+        bool dragging = false;
         //public Brush b;
-       
+
         PointCollection Points = new PointCollection();
         int clickCounter = 0;
         public MainWindow()
@@ -142,6 +143,9 @@ namespace ShapesPainter
 
         private void canvas_LeftMouseClick(object sender, MouseButtonEventArgs e)
         {
+            Polygon p = new Polygon();
+            if (dragging == false)
+            { 
             clickCounter++;
           if(clickCounter>=5)
             {
@@ -167,39 +171,41 @@ namespace ShapesPainter
                 canvas.Children.Add(elipse);
                 Points.Add(point);
             }
-       
-            if (clickCounter % 5 == 0)
-            {
-                PointCollection Points1 = new PointCollection();
-                Polygon  p = new Polygon();
 
-                SolidColorBrush Brush = new SolidColorBrush();
-                Brush.Color = Colors.Black;
-
-                SolidColorBrush blackBrush = new SolidColorBrush();
-                blackBrush.Color = Colors.Black;
-
-                for(int i=0;i<5;i++)
+                if (clickCounter % 5 == 0)
                 {
-                    Points1.Add(Points[i]);
+                    PointCollection Points1 = new PointCollection();
+                    
+
+                    SolidColorBrush Brush = new SolidColorBrush();
+                    Brush.Color = Colors.Black;
+
+                    SolidColorBrush blackBrush = new SolidColorBrush();
+                    blackBrush.Color = Colors.Black;
+
+                    for (int i = 0; i < 5; i++)
+                    {
+                        Points1.Add(Points[i]);
+                    }
+
+
+                    p.Stroke = Brush;
+
+                    p.Stroke = blackBrush;
+
+                    p.Points = Points1;
+                    canvas.Children.Add(p);
+                    
+                    Points.Clear();
+
+                    //--------------- added by Zlata-------------------------
+                    Canvas.SetZIndex(p, count);
+
+                    colors c = new colors();
+                    c.ShowDialog();
+                    p.Fill = c.poly_brush;
                 }
-
-               
-                p.Stroke = Brush;
-
-                p.Stroke = blackBrush;
-
-                p.Points = Points1;
-                canvas.Children.Add(p);
-                Points.Clear();
-
-                //--------------- added by Zlata-------------------------
-               Canvas.SetZIndex(p, count);
-
-                colors c = new colors();
-                c.ShowDialog();
-                p.Fill = c.poly_brush;
-
+                
                 p.MouseDown += new MouseButtonEventHandler(myPoly_MouseDown);
                 //poly_list.Add(p);
 
@@ -215,7 +221,7 @@ namespace ShapesPainter
         }
         }
 
-        bool dragging;
+       
         Point clickV;
         Shape selectedShape;
 
