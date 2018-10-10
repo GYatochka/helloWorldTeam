@@ -188,21 +188,21 @@ namespace ShapesPainter
             if (clickCounter <= 5)
             {
                
-                Point point = e.GetPosition(canvas);
+                Point point = e.GetPosition(canvas);   //create Points 
                 Ellipse elipse = new Ellipse();
 
-                elipse.Width = 4;
+                elipse.Width = 4; 
                 elipse.Height = 4;
 
                 elipse.StrokeThickness = 2;
                 elipse.Stroke = Brushes.Black;
                 elipse.Margin = new Thickness(point.X - 2, point.Y - 2, 0, 0);
           
-                canvas.Children.Add(elipse);
+                canvas.Children.Add(elipse);   
                 Points.Add(point);
             }
 
-                if (clickCounter % 5 == 0)
+                if (clickCounter % 5 == 0)   //if we have 5 points we create Pentagon
                 {
                     PointCollection Points1 = new PointCollection();
                     
@@ -226,7 +226,7 @@ namespace ShapesPainter
 
                     p.Points = Points1;
                  
-                    Canvas.SetZIndex(p, count);
+                    Canvas.SetZIndex(p, count);    
                     canvas.Children.Add(p);
                     polygons.Add(p);
                     ComboBoxItem item = new ComboBoxItem();
@@ -309,7 +309,11 @@ namespace ShapesPainter
             clickV = e.GetPosition(selectedShape);
 
         }
-
+/// <summary>
+/// method for choosing Pentagon
+/// </summary>
+/// <param name="sender"></param>
+/// <param name="e"></param>
         private void sel_changed(object sender, SelectionChangedEventArgs e)
         {
             int index = cmbx.SelectedIndex;
