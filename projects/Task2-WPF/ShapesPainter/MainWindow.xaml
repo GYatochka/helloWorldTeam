@@ -21,7 +21,7 @@
                     </MenuItem>
                 </Menu>
             </ToolBar>
-            <Canvas x:Name="canvas" Height="384" Background="#FFFFFDFD" Margin="147,0,9.6,0" MouseLeftButtonDown="canvas_LeftMouseClick" />
+            <Canvas x:Name="canvas" Height="384" Background="#FFFFFDFD" Margin="147,0,9.6,0" MouseLeftButtonDown="canvas_LeftMouseClick"/>
             
         </StackPanel>
         <Frame Content="Colors&#xD;&#xA;" HorizontalAlignment="Left" Height="130" Margin="0,33,0,0" VerticalAlignment="Top" Width="122" BorderBrush="Black" Background="LightGray" Grid.ColumnSpan="2" Grid.Column="1"/>

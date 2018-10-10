@@ -180,10 +180,14 @@ namespace ShapesPainter
                 p.Points = Points1;
                 canvas.Children.Add(p);
                 Points.Clear();
-                  
+                colors c = new colors();
+                c.Show();
             }
 
+        {
 
         }
+        }
+
     }
 }
