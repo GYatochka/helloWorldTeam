@@ -26,14 +26,14 @@ namespace ShapesPainter
     /// </summary>
     public partial class MainWindow : Window
     {
-<<<<<<< HEAD
+
 
         List<Polygon> polygons = new List<Polygon>();
         private string _pictureName;
-=======
+
         
         //for counting angles in shape
->>>>>>> 3e0b828f2f2a6754d32807e6a7b9d96c53803273
+
         int count = 0;
 
         int z_index_count = 0;
@@ -188,21 +188,21 @@ namespace ShapesPainter
             if (clickCounter <= 5)
             {
                
-                Point point = e.GetPosition(canvas);
+                Point point = e.GetPosition(canvas);   //create Points 
                 Ellipse elipse = new Ellipse();
 
-                elipse.Width = 4;
+                elipse.Width = 4; 
                 elipse.Height = 4;
 
                 elipse.StrokeThickness = 2;
                 elipse.Stroke = Brushes.Black;
                 elipse.Margin = new Thickness(point.X - 2, point.Y - 2, 0, 0);
           
-                canvas.Children.Add(elipse);
+                canvas.Children.Add(elipse);   
                 Points.Add(point);
             }
 
-                if (clickCounter % 5 == 0)
+                if (clickCounter % 5 == 0)   //if we have 5 points we create Pentagon
                 {
                     PointCollection Points1 = new PointCollection();
                     
@@ -226,7 +226,7 @@ namespace ShapesPainter
 
                     p.Points = Points1;
                  
-                    Canvas.SetZIndex(p, count);
+                    Canvas.SetZIndex(p, count);    
                     canvas.Children.Add(p);
                     polygons.Add(p);
                     ComboBoxItem item = new ComboBoxItem();
@@ -238,12 +238,11 @@ namespace ShapesPainter
                  
 
                     //--------------- added by Zlata-------------------------
-<<<<<<< HEAD
 
-=======
+
+
                     /// create new window where user can choose color for his pentagon 
                     Canvas.SetZIndex(p, count);
->>>>>>> 3e0b828f2f2a6754d32807e6a7b9d96c53803273
                     colors c = new colors();
                     c.ShowDialog();
                     p.Fill = c.poly_brush;
@@ -291,15 +290,11 @@ namespace ShapesPainter
             
             if (dragging)
             {
-               
                 Canvas.SetLeft(p, e.GetPosition(canvas).X - clickV.X);
                 Canvas.SetTop(p, e.GetPosition(canvas).Y - clickV.Y);
 
-                if ((Mouse.GetPosition(this).X - e.GetPosition(canvas).X) < 147 || (Mouse.GetPosition(this).X - e.GetPosition(canvas).Y) < 10)
-                {
-                    Canvas.SetLeft(p, 150);
-                    Canvas.SetTop(p, 20);
-                }
+               
+
             }
         }
         /// <summary>
@@ -314,7 +309,11 @@ namespace ShapesPainter
             clickV = e.GetPosition(selectedShape);
 
         }
-
+/// <summary>
+/// method for choosing Pentagon
+/// </summary>
+/// <param name="sender"></param>
+/// <param name="e"></param>
         private void sel_changed(object sender, SelectionChangedEventArgs e)
         {
             int index = cmbx.SelectedIndex;
