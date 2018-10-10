@@ -27,18 +27,16 @@ namespace ShapesPainter
     public partial class MainWindow : Window
     {
 
-
         List<Polygon> polygons = new List<Polygon>();
-        private string _pictureName;
 
         
         //for counting angles in shape
-
         int count = 0;
 
         int z_index_count = 0;
 
         bool dragging = false;
+
         PointCollection Points = new PointCollection();
         int clickCounter = 0;
         Point clickV;
@@ -88,15 +86,36 @@ namespace ShapesPainter
 
                 Canvas wp = (Canvas) System.Windows.Markup.XamlReader.Load(xmlReader);
 
-                canvas.Children.Clear(); // clear the existing children
+                canvas.Children.Clear();// clear the existing children
+                foreach (UIElement child in wp.Children)
+                {
+                   
+                    polygons.Add((Polygon)child);
+                    ComboBoxItem item = new ComboBoxItem();
+                    item.Content = "Pentagon" + polygons.Count;
+                    cmbx.Items.Add(item);
+                    
+                }
 
-                foreach (FrameworkElement child in wp.Children
+                Canvas wpClone = new Canvas();
+                  wpClone  = wp;
+                Polygon p = new Polygon();
+                for (int i = 0; i < wp.Children.Count; i++)
+                {
+                    p = (Polygon) wpClone.Children[i];
+                    wpClone.Children.Remove(wp.Children[i]);
+                    canvas.Children.Add(p);
+                }
+
+              /* foreach (FrameworkElement child in wp.Children
                 ) // and for each child in the WrapPanel we just loaded (wp)
                 {
                     canvas.Children.Add(
                         CloneFrameworkElement(child)); // clone the child and add it to our existing wrap panel
-                }
+                }*/
             }
+            
+            
         }
 
         /// <summary>
