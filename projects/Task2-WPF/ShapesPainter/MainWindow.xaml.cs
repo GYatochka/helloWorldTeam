@@ -27,27 +27,34 @@ namespace ShapesPainter
     public partial class MainWindow : Window
     {
         
-        //Point[] mass = new Point[5];
-        private string _pictureName;
+        //for counting angles in shape
         int count = 0;
-
+<<<<<<< HEAD
+=======
+        int z_index_count = 0;
+>>>>>>> 56e9d48316e7dfeb6cadeccba9e70c3946ecb34d
         bool dragging = false;
-
         PointCollection Points = new PointCollection();
         int clickCounter = 0;
+        Point clickV;
+        Shape selectedShape;
+
         public MainWindow()
-        {
-          
-            InitializeComponent();
+        {            
+            InitializeComponent();           
 
-            
-
+            //event for moving shapes
             canvas.MouseMove += new MouseEventHandler(canvas1_MouseMove);
-
+            //event for choosing shapes
             canvas.MouseUp += new MouseButtonEventHandler(canvas1_MouseUp);
 
         }
-        // як часіки
+       
+        /// <summary>
+        /// method for open xaml files from folder by using dialog window and loading to the canvas
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Open_Click(object sender, RoutedEventArgs e)
         {           
             //Open FileDialog
@@ -86,6 +93,12 @@ namespace ShapesPainter
                 }
             }
         }
+
+        /// <summary>
+        /// method for saving canvas in xaml file by using dialog window
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Save_Click(object sender, RoutedEventArgs e)
         {
             StringBuilder outstr = new StringBuilder();
@@ -120,14 +133,23 @@ namespace ShapesPainter
             }
 
         }
-        //
 
-        //глянути, мб вийде зробити якось краще
+        /// <summary>
+        /// Clear canvas in other words creating new picture 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Create_Click(object sender, RoutedEventArgs e)
         {
             canvas.Children.Clear();
 
         }
+
+        /// <summary>
+        /// method for loading xaml content to the canvas
+        /// </summary>
+        /// <param name="originalElement"></param>
+        /// <returns></returns>
         FrameworkElement CloneFrameworkElement(FrameworkElement originalElement)
         {
             string elementString = XamlWriter.Save(originalElement);
@@ -139,6 +161,11 @@ namespace ShapesPainter
             return clonedElement;
         }
 
+        /// <summary>
+        /// method for creating and drawing pentagons on the canvas
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void canvas_LeftMouseClick(object sender, MouseButtonEventArgs e)
         {
             Polygon p = new Polygon();
@@ -193,17 +220,25 @@ namespace ShapesPainter
                     p.Stroke = blackBrush;
 
                     p.Points = Points1;
+                    Canvas.SetZIndex(p, count);
                     canvas.Children.Add(p);
 
                     Points.Clear();
 
                    
                     //--------------- added by Zlata-------------------------
+<<<<<<< HEAD
+                    /// create new window where user can choose color for his pentagon 
                     Canvas.SetZIndex(p, count);
 
+=======
+                    
+>>>>>>> 56e9d48316e7dfeb6cadeccba9e70c3946ecb34d
                     colors c = new colors();
                     c.ShowDialog();
                     p.Fill = c.poly_brush;
+
+                    count++;
 
                     int ellipse_count = 0;
                     for (int i = 0; i < canvas.Children.Count;)
@@ -223,32 +258,45 @@ namespace ShapesPainter
                
             }
 
-        {
-
         }
-        }
-
        
-        Point clickV;
-        Shape selectedShape;
-
+       /// <summary>
+       /// for leaving your shape at new coordinates
+       /// </summary>
+       /// <param name="sender"></param>
+       /// <param name="e"></param>
         void canvas1_MouseUp(object sender, MouseButtonEventArgs e)
         {
             dragging = false;
+            
         }
-
+        /// <summary>
+        /// for moving your shape to the new coordinates
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void canvas1_MouseMove(object sender, MouseEventArgs e)
         {
             Polygon p = selectedShape as Polygon;
-
+            
             if (dragging)
             {
+               
                 Canvas.SetLeft(p, e.GetPosition(canvas).X - clickV.X);
                 Canvas.SetTop(p, e.GetPosition(canvas).Y - clickV.Y);
 
+                if ((Mouse.GetPosition(this).X - e.GetPosition(canvas).X) < 147 || (Mouse.GetPosition(this).X - e.GetPosition(canvas).Y) < 10)
+                {
+                    Canvas.SetLeft(p, 150);
+                    Canvas.SetTop(p, 20);
+                }
             }
         }
-
+        /// <summary>
+        /// for choosing your shape 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void myPoly_MouseDown(object sender, MouseButtonEventArgs e)
         {
             dragging = true;

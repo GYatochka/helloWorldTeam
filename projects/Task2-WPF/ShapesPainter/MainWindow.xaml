@@ -21,7 +21,7 @@
                     </MenuItem>
                 </Menu>
             </ToolBar>
-            <Canvas x:Name="canvas" Height="384" Background="#FFFFFDFD" Margin="147,0,9.6,0" MouseLeftButtonDown="canvas_LeftMouseClick" x:FieldModifier="public"/>
+            <Canvas x:Name="canvas" Height="384" Background="#FFFFFDFD" Margin="147,0,10,0" MouseLeftButtonDown="canvas_LeftMouseClick" x:FieldModifier="public"/>
 
         </StackPanel>
 
