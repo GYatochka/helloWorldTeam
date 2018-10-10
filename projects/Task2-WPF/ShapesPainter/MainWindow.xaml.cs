@@ -146,7 +146,10 @@ namespace ShapesPainter
         /// <param name="e"></param>
         private void Create_Click(object sender, RoutedEventArgs e)
         {
+            cmbx.Items.Clear();
             canvas.Children.Clear();
+            polygons.Clear();
+           
 
         }
 
@@ -317,14 +320,16 @@ namespace ShapesPainter
         private void sel_changed(object sender, SelectionChangedEventArgs e)
         {
             int index = cmbx.SelectedIndex;
-            for (int i = 0; i < polygons.Count; i++)
+            if (index >= 0)
             {
-                if(i!=index)
-                Canvas.SetZIndex(polygons[i], 0);
+                for (int i = 0; i < polygons.Count; i++)
+                {
+                    if (i != index)
+                        Canvas.SetZIndex(polygons[i], 0);
 
+                }
+                Canvas.SetZIndex(polygons[index], 100);
             }
-            Canvas.SetZIndex(polygons[index], 100);
-          
         }
     }
 }
