@@ -13,7 +13,7 @@ namespace Task3_WPF_
         private Product p;
         private string ticket_name;
         private int count;
-        FileDataChange() { obj = new Ticket(); p = new Product(); ticket_name = "ticket"; count = 0; }
+        public FileDataChange() { obj = new Ticket(); ticket_name = "ticket"; count = 0; }
 
         public void ReadFromFile()
         {
@@ -22,6 +22,7 @@ namespace Task3_WPF_
            
             while ((line = file.ReadLine()) != null)
             {
+                p = new Product();
                 string[] vars = line.Split(' ');
                 p.Name = vars[0];
                 p.Price = (float)Convert.ToDouble(vars[1]);

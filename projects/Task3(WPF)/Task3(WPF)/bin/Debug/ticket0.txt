@@ -1,0 +1,7 @@
+=====================================
+Name: pidor Price: 23
+Name: suka Price: 12,5
+Name: pizdaIbana Price: 69
+Name: pidorPitukh Price: 33,45
+TOTAL SUM: 137,95
+=====================================

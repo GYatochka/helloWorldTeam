@@ -20,6 +20,7 @@ namespace Task3_WPF_
         public Ticket()
         {
             totalSum = 0;
+            Sushies = new ObservableCollection<Product>();
         }
 
         public float calculateTotalSum()

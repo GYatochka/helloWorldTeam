@@ -25,6 +25,9 @@ namespace Task3_WPF_
         {
             InitializeComponent();
             DataContext = new Ticket();
+            FileDataChange obj = new FileDataChange();
+            obj.ReadFromFile();
+            obj.WriteToFile();
         }
     }
 }
