@@ -39,6 +39,8 @@ namespace Task3_WPF_
                     throw new Exception("Invalid value!");
                 }
             }
+
+            get { return _price; }
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -50,7 +52,7 @@ namespace Task3_WPF_
 
         public override string ToString()
         {
-            return "Name: "+ _name + " Price: " + _price;
+            return "Name: "+ _name + "          Price: " + _price;
         }
     }
 }

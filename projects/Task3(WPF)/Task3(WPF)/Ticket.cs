@@ -15,9 +15,32 @@ namespace Task3_WPF_
     class Ticket : INotifyPropertyChanged
     {
         private Product _selectedProduct;
+        private float totalSum;
+        private string _cashier;
 
         public ObservableCollection<Product> SushiesList { get; set; }
         public ObservableCollection<Product> selectedSushiesList { get; set; }
+
+        public Ticket()
+        {
+            totalSum = 0;
+            Sushies = new ObservableCollection<Product>();
+            _cashier = "Natasha";
+        }
+        public string Cashier
+        {
+            set { _cashier = value; }get { return _cashier; }
+        }
+        public float calculateTotalSum()
+        {
+            for(int i=0; i<Sushies.Count; i++)
+            {
+                totalSum += SushiesList[i].Price;
+            }
+
+            return totalSum;
+        }
+
 
         public Product SelectedProduct
         {

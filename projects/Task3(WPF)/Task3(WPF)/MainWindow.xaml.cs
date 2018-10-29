@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace Task3_WPF_
 {
     /// <summary>
@@ -24,6 +25,9 @@ namespace Task3_WPF_
         {
             InitializeComponent();
             DataContext = new Ticket();
+            FileDataChange obj = new FileDataChange();
+            obj.ReadFromFile();
+            obj.WriteToFile();
         }
     }
 }
