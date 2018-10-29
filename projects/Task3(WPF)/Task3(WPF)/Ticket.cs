@@ -16,7 +16,8 @@ namespace Task3_WPF_
     {
         private Product _selectedProduct;
 
-        public ObservableCollection<Product> Sushies { get; set; }
+        public ObservableCollection<Product> SushiesList { get; set; }
+        public ObservableCollection<Product> selectedSushiesList { get; set; }
 
         public Product SelectedProduct
         {
@@ -32,7 +33,25 @@ namespace Task3_WPF_
         {
 
         }
-    public event PropertyChangedEventHandler PropertyChanged;
+        /// <summary>
+        /// command add new object to the selected shushi list
+        /// </summary>
+        private RelayCommand addCommand;
+        public RelayCommand AddCommand
+        {
+            get
+            {
+                return addCommand ??
+                       (addCommand = new RelayCommand(obj =>
+                       {
+                           Product product = new Product();
+                           selectedSushiesList.Insert(0, product);
+                           SelectedProduct = product;
+                       }));
+            }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
         public void OnPropertyChanged([CallerMemberName]string prop = "")
         {
             if (PropertyChanged != null)
