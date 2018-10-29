@@ -23,6 +23,7 @@ namespace Task3_WPF_
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = new Ticket();
         }
     }
 }

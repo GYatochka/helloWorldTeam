@@ -28,6 +28,10 @@ namespace Task3_WPF_
             }
         }
 
+        public Ticket()
+        {
+
+        }
     public event PropertyChangedEventHandler PropertyChanged;
         public void OnPropertyChanged([CallerMemberName]string prop = "")
         {
