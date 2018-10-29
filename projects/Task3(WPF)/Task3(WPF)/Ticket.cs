@@ -32,7 +32,7 @@ namespace Task3_WPF_
         {
             for(int i=0; i<Sushies.Count; i++)
             {
-                totalSum += Sushies[i].Price;
+                totalSum += (Sushies[i].Price * Sushies[i].Quantity);
             }
 
             return totalSum;

@@ -15,6 +15,14 @@ namespace Task3_WPF_
     {
         private string _name;
         private float _price;
+        private int _quantity;
+
+        public Product() { _name = ""; _price = 0; _quantity = 1; }
+        public int Quantity
+        {
+            set { _quantity = value; }
+            get { return _quantity; }
+        }
 
         public string Name
         {
@@ -52,7 +60,7 @@ namespace Task3_WPF_
 
         public override string ToString()
         {
-            return "Name: "+ _name + "          Price: " + _price;
+            return "Name: "+ _name +"  X"+_quantity + "          Price: " + _price;
         }
     }
 }
