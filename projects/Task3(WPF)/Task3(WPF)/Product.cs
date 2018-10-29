@@ -39,6 +39,8 @@ namespace Task3_WPF_
                     throw new Exception("Invalid value!");
                 }
             }
+
+            get { return _price; }
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

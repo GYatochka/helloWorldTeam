@@ -1,4 +1,3 @@
-
 D:\helloWorldTeam-1-master\hello_world\projects\Task3(WPF)\Task3(WPF)\bin\Debug\Task3(WPF).exe.config
 D:\helloWorldTeam-1-master\hello_world\projects\Task3(WPF)\Task3(WPF)\bin\Debug\Task3(WPF).exe
 D:\helloWorldTeam-1-master\hello_world\projects\Task3(WPF)\Task3(WPF)\bin\Debug\Task3(WPF).pdb
@@ -13,7 +12,6 @@ D:\helloWorldTeam-1-master\hello_world\projects\Task3(WPF)\Task3(WPF)\obj\Debug\
 D:\helloWorldTeam-1-master\hello_world\projects\Task3(WPF)\Task3(WPF)\obj\Debug\Task3(WPF).csproj.GenerateResource.Cache
 D:\helloWorldTeam-1-master\hello_world\projects\Task3(WPF)\Task3(WPF)\obj\Debug\Task3(WPF).exe
 D:\helloWorldTeam-1-master\hello_world\projects\Task3(WPF)\Task3(WPF)\obj\Debug\Task3(WPF).pdb
-
 C:\Users\Bodya Zahirnuy\Documents\GitHub\helloWorldTeam\projects\Task3(WPF)\Task3(WPF)\bin\Debug\Task3(WPF).exe.config
 C:\Users\Bodya Zahirnuy\Documents\GitHub\helloWorldTeam\projects\Task3(WPF)\Task3(WPF)\bin\Debug\Task3(WPF).exe
 C:\Users\Bodya Zahirnuy\Documents\GitHub\helloWorldTeam\projects\Task3(WPF)\Task3(WPF)\bin\Debug\Task3(WPF).pdb
@@ -29,4 +27,3 @@ C:\Users\Bodya Zahirnuy\Documents\GitHub\helloWorldTeam\projects\Task3(WPF)\Task
 C:\Users\Bodya Zahirnuy\Documents\GitHub\helloWorldTeam\projects\Task3(WPF)\Task3(WPF)\obj\Debug\Task3(WPF).csproj.CoreCompileInputs.cache
 C:\Users\Bodya Zahirnuy\Documents\GitHub\helloWorldTeam\projects\Task3(WPF)\Task3(WPF)\obj\Debug\Task3(WPF).exe
 C:\Users\Bodya Zahirnuy\Documents\GitHub\helloWorldTeam\projects\Task3(WPF)\Task3(WPF)\obj\Debug\Task3(WPF).pdb
-
