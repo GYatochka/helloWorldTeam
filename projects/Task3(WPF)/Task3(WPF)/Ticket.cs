@@ -16,6 +16,10 @@ namespace Task3_WPF_
     {
         private Product _selectedProduct;
 
+        public Ticket()
+        {
+
+        }
         public ObservableCollection<Product> Sushies { get; set; }
 
         public Product SelectedProduct

@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace Task3_WPF_
 {
     /// <summary>
@@ -23,6 +24,7 @@ namespace Task3_WPF_
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = new Ticket();
         }
     }
 }
