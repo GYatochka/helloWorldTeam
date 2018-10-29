@@ -18,6 +18,9 @@ namespace Task3_WPF_
         private float totalSum;
         private string _cashier;
 
+        public ObservableCollection<Product> SushiesList { get; set; }
+        public ObservableCollection<Product> selectedSushiesList { get; set; }
+
         public Ticket()
         {
             totalSum = 0;
@@ -32,12 +35,16 @@ namespace Task3_WPF_
         {
             for(int i=0; i<Sushies.Count; i++)
             {
+
                 totalSum += (Sushies[i].Price * Sushies[i].Quantity);
+
+                totalSum += SushiesList[i].Price;
+
             }
 
             return totalSum;
         }
-        public ObservableCollection<Product> Sushies { get; set; }
+
 
         public Product SelectedProduct
         {
@@ -49,7 +56,29 @@ namespace Task3_WPF_
             }
         }
 
-    public event PropertyChangedEventHandler PropertyChanged;
+        public Ticket()
+        {
+
+        }
+        /// <summary>
+        /// command add new object to the selected shushi list
+        /// </summary>
+        private RelayCommand addCommand;
+        public RelayCommand AddCommand
+        {
+            get
+            {
+                return addCommand ??
+                       (addCommand = new RelayCommand(obj =>
+                       {
+                           Product product = new Product();
+                           selectedSushiesList.Insert(0, product);
+                           SelectedProduct = product;
+                       }));
+            }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
         public void OnPropertyChanged([CallerMemberName]string prop = "")
         {
             if (PropertyChanged != null)

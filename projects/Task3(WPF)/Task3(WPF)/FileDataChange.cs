@@ -25,7 +25,7 @@ namespace Task3_WPF_
                 string[] vars = line.Split(' ');
                 p.Name = vars[0];
                 p.Price = (float)Convert.ToDouble(vars[1]);
-                obj.Sushies.Add(p);
+                obj.SushiesList.Add(p);
             }
 
             file.Close();
@@ -37,9 +37,9 @@ namespace Task3_WPF_
             using (StreamWriter outputFile = new StreamWriter(Path.Combine(ticket_name), true))
             {
                 outputFile.WriteLine("=====================================");
-                for (int i = 0; i < obj.Sushies.Count; i++)
+                for (int i = 0; i < obj.SushiesList.Count; i++)
                 {
-                    outputFile.WriteLine(obj.Sushies[i]);
+                    outputFile.WriteLine(obj.SushiesList[i]);
                 }
                 outputFile.WriteLine("Cashier: " + obj.Cashier);
                 outputFile.WriteLine("TOTAL SUM: " + obj.calculateTotalSum());
