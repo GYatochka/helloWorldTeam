@@ -52,7 +52,7 @@ namespace Task3_WPF_
 
         public override string ToString()
         {
-            return "Name: "+ _name + " Price: " + _price;
+            return "Name: "+ _name + "          Price: " + _price;
         }
     }
 }

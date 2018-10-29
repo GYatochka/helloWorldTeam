@@ -16,13 +16,18 @@ namespace Task3_WPF_
     {
         private Product _selectedProduct;
         private float totalSum;
+        private string _cashier;
 
         public Ticket()
         {
             totalSum = 0;
             Sushies = new ObservableCollection<Product>();
+            _cashier = "Natasha";
         }
-
+        public string Cashier
+        {
+            set { _cashier = value; }get { return _cashier; }
+        }
         public float calculateTotalSum()
         {
             for(int i=0; i<Sushies.Count; i++)

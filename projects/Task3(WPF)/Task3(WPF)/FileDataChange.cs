@@ -12,8 +12,7 @@ namespace Task3_WPF_
         private Ticket obj;
         private Product p;
         private string ticket_name;
-        private int count;
-        public FileDataChange() { obj = new Ticket(); ticket_name = "ticket"; count = 0; }
+        public FileDataChange() { obj = new Ticket(); ticket_name = "ticket"; }
 
         public void ReadFromFile()
         {
@@ -34,7 +33,7 @@ namespace Task3_WPF_
 
         public void WriteToFile()
         {
-            ticket_name = ticket_name + count + ".txt";
+            ticket_name = ticket_name + ".txt";
             using (StreamWriter outputFile = new StreamWriter(Path.Combine(ticket_name), true))
             {
                 outputFile.WriteLine("=====================================");
@@ -42,12 +41,12 @@ namespace Task3_WPF_
                 {
                     outputFile.WriteLine(obj.Sushies[i]);
                 }
-
+                outputFile.WriteLine("Cashier: " + obj.Cashier);
                 outputFile.WriteLine("TOTAL SUM: " + obj.calculateTotalSum());
 
                 outputFile.WriteLine("=====================================");
             }
-            count++;
+            
         }
     }
 }
