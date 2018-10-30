@@ -1,0 +1,21 @@
+=====================================
+Name: octopusBriz  X1          Price: 54,5
+Name: oninashi  X1          Price: 12
+Name: avocadoSplash  X1          Price: 13,5
+Cashier: Natasha
+TOTAL SUM: 160
+=====================================
+=====================================
+Name: octopusBriz  X1          Price: 54,5
+Name: oninashi  X1          Price: 12
+Name: avocadoSplash  X1          Price: 13,5
+Cashier: Natasha
+TOTAL SUM: 160
+=====================================
+=====================================
+Name: octopusBriz  X1          Price: 54,5
+Name: oninashi  X1          Price: 12
+Name: avocadoSplash  X1          Price: 13,5
+Cashier: Natasha
+TOTAL SUM: 160
+=====================================

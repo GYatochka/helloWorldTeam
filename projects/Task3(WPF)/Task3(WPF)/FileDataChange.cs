@@ -7,7 +7,7 @@ using System.IO;
 
 namespace Task3_WPF_
 {
-    class FileDataChange
+    public class FileDataChange
     {
         private Ticket obj;
         private Product p;
