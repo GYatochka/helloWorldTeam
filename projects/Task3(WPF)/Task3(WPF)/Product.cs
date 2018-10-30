@@ -11,7 +11,7 @@ namespace Task3_WPF_
     /// <summary>
     /// Model realization from MVVM pattern
     /// </summary>
-    class Product : INotifyPropertyChanged
+    public class Product : INotifyPropertyChanged
     {
         private string _name;
         private float _price;

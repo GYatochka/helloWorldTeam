@@ -12,7 +12,7 @@ namespace Task3_WPF_
     /// <summary>
     /// This class is viewmodel realization in our program.
     /// </summary>
-    class Ticket : INotifyPropertyChanged
+     class Ticket : INotifyPropertyChanged
     {
         private Product _selectedProduct;
         private float totalSum;

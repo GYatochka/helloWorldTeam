@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using System.Runtime.CompilerServices;
+using System.Collections.ObjectModel;
 
 namespace Task3_WPF_
 {
@@ -12,9 +14,9 @@ namespace Task3_WPF_
         private Ticket obj;
         private Product p;
         private string ticket_name;
-        public FileDataChange() { obj = new Ticket(); ticket_name = "ticket"; }
+        public FileDataChange() { /*obj = new Ticket();*/ ticket_name = "ticket"; }
 
-        public void ReadFromFile()
+        public void ReadFromFile(ObservableCollection<Product> SushiesList)
         {
             System.IO.StreamReader file = new System.IO.StreamReader("sushiList.txt");
             string line;
@@ -25,13 +27,14 @@ namespace Task3_WPF_
                 string[] vars = line.Split(' ');
                 p.Name = vars[0];
                 p.Price = (float)Convert.ToDouble(vars[1]);
-                obj.SushiesList.Add(p);
+                //obj.SushiesList.Add(p);
+                SushiesList.Add(p);
             }
 
             file.Close();
         }
 
-        public void WriteToFile()
+        public void WriteToFile(string cashier, float calculatedSum)
         {
             ticket_name = ticket_name + ".txt";
             using (StreamWriter outputFile = new StreamWriter(Path.Combine(ticket_name), true))
@@ -41,8 +44,10 @@ namespace Task3_WPF_
                 {
                     outputFile.WriteLine(obj.SushiesList[i]);
                 }
-                outputFile.WriteLine("Cashier: " + obj.Cashier);
-                outputFile.WriteLine("TOTAL SUM: " + obj.calculateTotalSum());
+                //outputFile.WriteLine("Cashier: " + obj.Cashier);
+                //outputFile.WriteLine("TOTAL SUM: " + obj.calculateTotalSum());
+                outputFile.WriteLine("Cashier: " + cashier);
+                outputFile.WriteLine("TOTAL SUM: " + calculatedSum);
 
                 outputFile.WriteLine("=====================================");
             }
