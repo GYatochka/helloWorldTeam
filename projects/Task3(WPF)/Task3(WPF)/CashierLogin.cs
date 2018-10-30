@@ -11,19 +11,49 @@ namespace Task3_WPF_
 {
     class CashierLogin : INotifyPropertyChanged
     {
-        public  string CashierName { set; get; }
+        private string cashierName;
+        public Action CloseAction { get; set; } //для закриття вікна CashierLoginWindow
+        public string CashierName
+        {
+            get { return cashierName; }
+            set
+            {
+                cashierName = value;
+                OnPropertyChanged("CashierName");
+              
+            }
+        }
+      
         private RelayCommand addName;
-        // Дописати команду, щоб пересилала ім'я в головне вікно й закривала вікно логування,
-        // а також написати логіку для кнопки відміни
+        /// <summary>
+        /// Командає пересилає ім'я Касира в клас Ticket
+        /// </summary>
         public RelayCommand AddName
         {
             get
             {
                 return addName ??
-                       (addName = new RelayCommand(obj => { Ticket.Cashier = CashierName; }));
+                       (addName = new RelayCommand(obj => {
+                                    
+                                     Ticket.Cashier = CashierName;
+                           CloseAction();
+                       }));
             }
         }
-       
+        private RelayCommand cancelCommand;
+        /// <summary>
+        /// Командає cancel, яка закриває вікно
+        /// </summary>
+        public RelayCommand CancelCommand
+        {
+            get
+            {
+                return cancelCommand ??
+                       (cancelCommand = new RelayCommand(obj => {
+                          CloseAction();
+                       }));
+            }
+        }
         public event PropertyChangedEventHandler PropertyChanged;
         public void OnPropertyChanged([CallerMemberName]string prop = "")
         {

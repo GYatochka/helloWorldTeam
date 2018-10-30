@@ -214,6 +214,25 @@ namespace Task3_WPF_
                        }));
             }
         }
+        /// <summary>
+        /// Команда для зміни імені касира
+        /// </summary>
+        private RelayCommand changeKashierNameCommand;
+        public RelayCommand ChangeKashierNameCommand
+        {
+            get
+            {
+                return changeKashierNameCommand ??
+                       (changeKashierNameCommand = new RelayCommand(obj =>
+                       {
+                           CashierLoginWindow cashierLogin = new CashierLoginWindow();
+                           cashierLogin.Owner = App.Current.MainWindow;
+                           cashierLogin.Topmost = true;
+                           cashierLogin.Show();                    
+                       }));
+                           
+            }
+        }
 
         public event PropertyChangedEventHandler PropertyChanged;
         public void OnPropertyChanged([CallerMemberName]string prop = "")

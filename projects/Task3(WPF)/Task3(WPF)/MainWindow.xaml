@@ -50,10 +50,9 @@
             </Label.Background>
         </Label>
         <Button x:Name="getCheckButton" Content="ЧЕК" HorizontalAlignment="Left" Margin="648,368,0,0" VerticalAlignment="Top" Width="84" FontSize="14" Height="38" Command="{Binding PrintTicketCommand}"/>
-        <Label x:Name="cashierLabel_Copy" Content="Нема" HorizontalAlignment="Left" Margin="83,315,0,0" VerticalAlignment="Top" FontSize="22" Foreground="White" Background="#FF1D1515"/>
+        <Label x:Name="cashierNameLabel"  HorizontalAlignment="Left" Margin="83,315,0,0" VerticalAlignment="Top" FontSize="22" Foreground="White" Background="#FF1D1515" Content="Нема" />
         <Label x:Name="cashierLabel_Copy1" Content ="{Binding Path=TotalSumText, UpdateSourceTrigger=PropertyChanged,Mode=OneWay}" HorizontalAlignment="Left" Margin="670,315,0,0" VerticalAlignment="Top" FontSize="22" Foreground="White" Background="#FF0F0E0E" Height="39" Width="40" RenderTransformOrigin="0.25,-0.846"/>
-        <Button x:Name="getCheckButton_Copy" Content="Змінити користувача
-                " HorizontalAlignment="Left" Margin="10,371,0,0" VerticalAlignment="Top" Width="144" Height="35" FontSize="14"/>
+        <Button x:Name="changeCashierButton" Content="Змінити користувача" HorizontalAlignment="Left" Margin="10,371,0,0" VerticalAlignment="Top" Width="144" Height="35" FontSize="14" Command="{Binding ChangeKashierNameCommand}"/>
 
     </Grid>
 </Window>

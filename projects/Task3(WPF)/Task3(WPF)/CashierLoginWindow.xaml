@@ -7,9 +7,9 @@
         mc:Ignorable="d"
         Title="CashierLoginWindow" Height="222" Width="420">
     <Grid Margin="0,0,0,-2" Width="420" Height="222" Background="#FFF9F7F7">
-        <TextBox Height="32" Margin="24,64,0,0" TextWrapping="Wrap" Text="{Binding CashierName, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" HorizontalAlignment="Left" Width="369"/>
-        <Button Content="OK" Margin="272,130,52,60" IsCancel="True" Command="{Binding AddName}"/>
-        <Button Content="Cancel" Margin="134,130,186,60" IsCancel="True"  Command="{Binding CloseAction}"/>
+        <TextBox x:Name="cashierNameTextBox" Height="32" Margin="24,64,0,0" TextWrapping="Wrap" Text="{Binding CashierName, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" HorizontalAlignment="Left" Width="369"/>
+        <Button x:Name="casierNameOkButton" Content="OK" Margin="272,130,52,60" IsCancel="True" Command="{Binding AddName}"/>
+        <Button Content="Cancel" Margin="134,130,186,60" IsCancel="True"  Command="{Binding CancelCommand}"/>
         <Label Content="Enter name:" HorizontalAlignment="Left" Margin="24,28,0,0" VerticalAlignment="Top" Width="100" FontSize="16"/>
 
     </Grid>

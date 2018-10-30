@@ -24,7 +24,17 @@ namespace Task3_WPF_
         public MainWindow()
         {
             InitializeComponent();
-            DataContext = new Ticket();      
+            CashierLoginWindow cashierLogin;
+            this.Show();
+            cashierLogin = new CashierLoginWindow();
+            cashierLogin.Owner = this;
+            cashierLogin.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            cashierLogin.Topmost = true;
+            cashierLogin.Show();
+            DataContext = new Ticket();
+          
         }
+
+  
     }
 }
