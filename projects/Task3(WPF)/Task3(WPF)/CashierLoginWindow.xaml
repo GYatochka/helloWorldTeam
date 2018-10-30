@@ -1,0 +1,16 @@
+﻿<Window x:Class="Task3_WPF_.CashierLoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Task3_WPF_"
+        mc:Ignorable="d"
+        Title="CashierLoginWindow" Height="222" Width="420">
+    <Grid Margin="0,0,0,-2" Width="420" Height="222" Background="#FFF9F7F7">
+        <TextBox Height="32" Margin="24,64,0,0" TextWrapping="Wrap" Text="{Binding CashierName, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" HorizontalAlignment="Left" Width="369"/>
+        <Button Content="OK" Margin="272,130,52,60" IsCancel="True" Command="{Binding AddName}"/>
+        <Button Content="Cancel" Margin="134,130,186,60" IsCancel="True"  Command="{Binding CloseAction}"/>
+        <Label Content="Enter name:" HorizontalAlignment="Left" Margin="24,28,0,0" VerticalAlignment="Top" Width="100" FontSize="16"/>
+
+    </Grid>
+</Window>

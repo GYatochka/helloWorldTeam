@@ -10,24 +10,37 @@
         <ImageBrush ImageSource="image/sushi.jpg" />
     </Window.Background>
     <Grid x:Name="grid">
-        <Label x:Name="cashierLabel" Content="Касир:" HorizontalAlignment="Left" Margin="8,348,0,0" VerticalAlignment="Top" FontSize="22" Foreground="White" Background="#FF1D1515"/>
-        <ListBox x:Name="goodsList" HorizontalAlignment="Left" Height="214" Margin="119,77,0,0" VerticalAlignment="Top" Width="188" ItemsSource="{Binding SushiesList}" SelectedItem="{Binding SelectedProduct}">
-            u<ListBox.ItemTemplate>
+        <Label x:Name="cashierLabel" Content="Касир:" HorizontalAlignment="Left" Margin="8,313,0,0" VerticalAlignment="Top" FontSize="22" Foreground="White" Background="#FF1D1515"/>
+        <ListBox x:Name="goodsList" HorizontalAlignment="Left" Height="233" Margin="110,77,0,0" VerticalAlignment="Top" Width="202" ItemsSource="{Binding SushiesList}" SelectedItem="{Binding SelectedProduct}">
+
+            <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Margin="5">
-                        <TextBlock FontSize="18" Text="{Binding Path=Title}" />
-                        <TextBlock Text="{Binding Path=Company}" />
+                        <TextBlock FontSize="18" Text="{Binding Path=Name}" />
+                        <TextBlock Text ="Price: "/>
                         <TextBlock Text="{Binding Path=Price}" />
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-        <ListBox x:Name="orderList" HorizontalAlignment="Left" Height="214" Margin="463,77,0,0" VerticalAlignment="Top" Width="188"/>
-        <Label x:Name="sumLabel" Content="Сума:" HorizontalAlignment="Left" Margin="605,345,0,0" VerticalAlignment="Top" FontSize="22" Foreground="White" Background="#FF0F0E0E"/>
-        <Button x:Name="addButton" Content="=&gt;" HorizontalAlignment="Left" Margin="367,138,0,0" VerticalAlignment="Top" Width="35" Height="33" FontSize="20" RenderTransformOrigin="0.651,-0.127"/>
-        <Button x:Name="undoButton" Content="&lt;=" HorizontalAlignment="Left" Margin="367,193,0,0" VerticalAlignment="Top" Width="35" Height="33" FontSize="20"/>
+        <ListBox x:Name="orderList" HorizontalAlignment="Left" Height="214" Margin="463,77,0,0" VerticalAlignment="Top" Width="202" ItemsSource="{Binding OrderList}" SelectedItem="{Binding SelectedOrder}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Margin="5">
+                        <TextBlock FontSize="18" Text="{Binding Path=Name}" />
+                        <TextBlock Text ="Quantity: "/>
+                        <TextBlock Text="{Binding Path=Quantity}" />
+                        <TextBlock Text ="Price: "/>
+                        <TextBlock Text="{Binding Path=Price}" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Label x:Name="sumLabel" Content="Сума:" HorizontalAlignment="Left" Margin="599,315,0,0" VerticalAlignment="Top" FontSize="22" Foreground="White" Background="Black"/>
+        <Button x:Name="addButton" Content="&gt;" HorizontalAlignment="Left" Margin="367,138,0,0" VerticalAlignment="Top" Width="35" Height="33" FontSize="20" RenderTransformOrigin="0.651,-0.127" Command="{Binding AddCommand}"/>
+        <Button x:Name="undoButton" Content="&lt;" HorizontalAlignment="Left" Margin="367,193,0,0" VerticalAlignment="Top" Width="35" Height="33" FontSize="20" Command="{Binding RemoveCommand}"/>
         <Label x:Name="amountLabel" Content="К-сть" HorizontalAlignment="Left" Margin="356,77,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.448,0.305" Foreground="White" FontWeight="Bold" FontSize="16" Width="63"/>
-        <TextBox x:Name="amount" HorizontalAlignment="Left" Height="25" Margin="367,103,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35" Text="1" TextAlignment="Center"/>
+        <TextBox x:Name="amount" HorizontalAlignment="Left" Height="25" Margin="367,103,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35" TextAlignment="Center" Text="{Binding ProductAmount, UpdateSourceTrigger=PropertyChanged}"/>
         <Label x:Name="Title" Content="Суші-Бар &quot;Богданова рибка&quot;" Margin="142,0,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.552,-0.156" HorizontalContentAlignment="Center" FontSize="36" HorizontalAlignment="Left" Foreground="#FFFFE1E1" FontFamily="Segoe Print" Height="67">
             <Label.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -36,10 +49,11 @@
                 </LinearGradientBrush>
             </Label.Background>
         </Label>
-        <Button x:Name="getCheckButton" Content="Видати чек" HorizontalAlignment="Left" Margin="343,273,0,0" VerticalAlignment="Top" Width="85" FontSize="14" Height="26"/>
-        <Label x:Name="cashierLabel_Copy" Content="Нема" HorizontalAlignment="Left" Margin="83,350,0,0" VerticalAlignment="Top" FontSize="22" Foreground="White" Background="#FF1D1515"/>
-        <Label x:Name="cashierLabel_Copy1" Content="0" HorizontalAlignment="Left" Margin="671,345,0,0" VerticalAlignment="Top" FontSize="22" Foreground="White" Background="#FF0F0E0E"/>
-        <Button x:Name="getCheckButton_Copy" Content="Поміняти касира" HorizontalAlignment="Left" Margin="331,315,0,0" VerticalAlignment="Top" Width="115" Height="26" FontSize="14"/>
+        <Button x:Name="getCheckButton" Content="ЧЕК" HorizontalAlignment="Left" Margin="648,368,0,0" VerticalAlignment="Top" Width="84" FontSize="14" Height="38" Command="{Binding PrintTicketCommand}"/>
+        <Label x:Name="cashierLabel_Copy" Content="Нема" HorizontalAlignment="Left" Margin="83,315,0,0" VerticalAlignment="Top" FontSize="22" Foreground="White" Background="#FF1D1515"/>
+        <Label x:Name="cashierLabel_Copy1" Content ="{Binding Path=TotalSumText, UpdateSourceTrigger=PropertyChanged,Mode=OneWay}" HorizontalAlignment="Left" Margin="670,315,0,0" VerticalAlignment="Top" FontSize="22" Foreground="White" Background="#FF0F0E0E" Height="39" Width="40" RenderTransformOrigin="0.25,-0.846"/>
+        <Button x:Name="getCheckButton_Copy" Content="Змінити користувача
+                " HorizontalAlignment="Left" Margin="10,371,0,0" VerticalAlignment="Top" Width="144" Height="35" FontSize="14"/>
 
     </Grid>
 </Window>
