@@ -24,7 +24,7 @@ namespace Task3_WPF_
         public Ticket()
         {
             totalSum = 0;
-            Sushies = new ObservableCollection<Product>();
+            SushiesList = new ObservableCollection<Product>();
             _cashier = "Natasha";
         }
         public string Cashier
@@ -33,10 +33,10 @@ namespace Task3_WPF_
         }
         public float calculateTotalSum()
         {
-            for(int i=0; i<Sushies.Count; i++)
+            for(int i=0; i< SushiesList.Count; i++)
             {
 
-                totalSum += (Sushies[i].Price * Sushies[i].Quantity);
+                totalSum += (SushiesList[i].Price * SushiesList[i].Quantity);
 
                 totalSum += SushiesList[i].Price;
 
@@ -56,10 +56,6 @@ namespace Task3_WPF_
             }
         }
 
-        public Ticket()
-        {
-
-        }
         /// <summary>
         /// command add new object to the selected shushi list
         /// </summary>
