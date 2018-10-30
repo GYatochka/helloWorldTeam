@@ -55,6 +55,8 @@ namespace Task3_WPF_
                 OnPropertyChanged("SelectedProduct");
             }
         }
+
+
         /// <summary>
         /// command add new object to the selected shushi list
         /// </summary>
