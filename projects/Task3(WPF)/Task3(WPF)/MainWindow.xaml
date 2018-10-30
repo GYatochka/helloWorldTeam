@@ -11,7 +11,17 @@
     </Window.Background>
     <Grid x:Name="grid">
         <Label x:Name="cashierLabel" Content="Касир:" HorizontalAlignment="Left" Margin="8,348,0,0" VerticalAlignment="Top" FontSize="22" Foreground="White" Background="#FF1D1515"/>
-        <ListBox x:Name="goodsList" HorizontalAlignment="Left" Height="214" Margin="119,77,0,0" VerticalAlignment="Top" Width="188"/>
+        <ListBox x:Name="goodsList" HorizontalAlignment="Left" Height="214" Margin="119,77,0,0" VerticalAlignment="Top" Width="188" ItemsSource="{Binding SushiesList}" SelectedItem="{Binding SelectedProduct}">
+            u<ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Margin="5">
+                        <TextBlock FontSize="18" Text="{Binding Path=Title}" />
+                        <TextBlock Text="{Binding Path=Company}" />
+                        <TextBlock Text="{Binding Path=Price}" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
         <ListBox x:Name="orderList" HorizontalAlignment="Left" Height="214" Margin="463,77,0,0" VerticalAlignment="Top" Width="188"/>
         <Label x:Name="sumLabel" Content="Сума:" HorizontalAlignment="Left" Margin="605,345,0,0" VerticalAlignment="Top" FontSize="22" Foreground="White" Background="#FF0F0E0E"/>
         <Button x:Name="addButton" Content="=&gt;" HorizontalAlignment="Left" Margin="367,138,0,0" VerticalAlignment="Top" Width="35" Height="33" FontSize="20" RenderTransformOrigin="0.651,-0.127"/>

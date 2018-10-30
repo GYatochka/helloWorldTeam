@@ -25,7 +25,7 @@ namespace Task3_WPF_
         {
             totalSum = 0;
             SushiesList = new ObservableCollection<Product>();
-            _cashier = "Natasha";
+            _cashier = "Natasha";            
         }
         public string Cashier
         {
