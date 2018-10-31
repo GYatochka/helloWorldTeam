@@ -148,7 +148,7 @@ namespace Task3_WPF_
                                if (OrderList[i].Name == SelectedProduct.Name)
                                {
                                   
-                                   OrderList[i].Quantity += Convert.ToInt32(ProductAmount);
+                                   OrderList[i].Quantity += 1;
                                  
                                    flag = true;
                                }
@@ -157,7 +157,7 @@ namespace Task3_WPF_
                            if (flag == false)
                            {
                                OrderList.Insert(0, SelectedProduct);
-                               OrderList[0].Quantity += Convert.ToInt32(ProductAmount)-1;
+                              // OrderList[0].Quantity += 1;
                            }
                            _totalSum += SelectedProduct.Price * Convert.ToInt32(ProductAmount);
                            foreach (Window window in Application.Current.Windows)
@@ -189,15 +189,30 @@ namespace Task3_WPF_
                                    {
                                        if (OrderList[i].Name == SelectedOrder.Name && OrderList[i].Quantity > 1)
                                        {
-                                           OrderList[i].Quantity -= Convert.ToInt32(ProductAmount);
+
+                                           OrderList[i].Quantity -= 1;
+                                           if (_totalSum > 0)
+                                               _totalSum -= OrderList[i].Price;
                                        }
                                        else if (OrderList[i].Quantity <= 1)
                                        {
+                                           if (_totalSum > 0)
+                                               _totalSum -= OrderList[i].Price;
                                            OrderList.Remove(SelectedOrder);
+                                          
                                        }
+                                      
+                                     
+                                      
+
                                    }
+                                   
                                }
-                               _totalSum -= SelectedProduct.Price * Convert.ToInt32(ProductAmount);
+                               else
+                               {
+                                
+                               }
+                             
                                foreach (Window window in Application.Current.Windows)
                                {
                                    if (window.GetType() == typeof(MainWindow))
