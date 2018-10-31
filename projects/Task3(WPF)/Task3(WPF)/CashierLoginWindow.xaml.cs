@@ -22,8 +22,13 @@ namespace Task3_WPF_
         public CashierLoginWindow()
         {
             InitializeComponent();
-            this.DataContext = new CashierLogin();
-            
+            CashierLogin cashierLogin = new CashierLogin();
+            this.DataContext = cashierLogin;
+            if (cashierLogin.CloseAction == null)
+                cashierLogin.CloseAction = new Action(this.Close);
+
         }
-    }
+       
+  
+}
 }
