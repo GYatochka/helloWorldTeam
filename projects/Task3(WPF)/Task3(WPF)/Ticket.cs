@@ -195,7 +195,7 @@ namespace Task3_WPF_
                                            if (_totalSum > 0)
                                                _totalSum -= OrderList[i].Price;
                                        }
-                                       else if (OrderList[i].Quantity <= 1)
+                                       else if (OrderList[i].Name == SelectedOrder.Name && OrderList[i].Quantity <= 1)
                                        {
                                            if (_totalSum > 0)
                                                _totalSum -= OrderList[i].Price;
