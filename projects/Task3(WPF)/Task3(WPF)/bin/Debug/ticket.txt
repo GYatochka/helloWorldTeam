@@ -196,3 +196,25 @@ Cashier: Natasha
 	
 TOTAL SUM: 25,5
 =====================================
+=====================================
+Name: oninashi	x2		Price: 12
+Name: avocadoSplash	x1		Price: 13,5
+Cashier: Natasha
+	
+TOTAL SUM: 37,5
+=====================================
+=====================================
+Name: oninashi	x1		Price: 12
+Name: avocadoSplash	x1		Price: 13,5
+Cashier: Natasha
+	
+TOTAL SUM: 25,5
+=====================================
+=====================================
+Name: octopusBriz	x3		Price: 54,5
+Name: oninashi	x1		Price: 12
+Name: avocadoSplash	x1		Price: 13,5
+Cashier: alina
+	
+TOTAL SUM: 189
+=====================================
