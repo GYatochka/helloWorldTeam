@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Collections.ObjectModel;
+using System.Windows;
 
 namespace Task3_WPF_
 {
@@ -45,7 +46,17 @@ namespace Task3_WPF_
 
         public static string Cashier
         {
-            set { _cashier = value; }
+            set
+            { _cashier = value;
+                foreach (Window window in Application.Current.Windows)
+                {
+                    if (window.GetType() == typeof(MainWindow))
+                    {
+                        (window as MainWindow).cashierNameLabel.Content = value;
+                    }
+                }
+
+            }
             get { return _cashier; }
         }
         public Product SelectedProduct
@@ -75,23 +86,7 @@ namespace Task3_WPF_
             ProductAmount = "1";
             _totalSum = 0;
             _fileChanger = new FileDataChange();
-            //SushiesList = _fileChanger.ReadFromFile();
-            SushiesList = new ObservableCollection<Product>()
-            {
-               
-                new Product()
-                {
-                    Name = "Oniyashi",
-                    Price = 22,
-                    Quantity = 1,
-                },
-                new Product()
-                {
-                    Name = "OctopusBriz",
-                    Price = 15.2f ,
-                    Quantity = 1,
-                }
-            };
+            SushiesList = _fileChanger.ReadFromFile(SushiesList);
             OrderList = new ObservableCollection<Product>();
             _cashier = "Natasha";
 
@@ -233,7 +228,7 @@ namespace Task3_WPF_
                            
             }
         }
-
+        
         public event PropertyChangedEventHandler PropertyChanged;
         public void OnPropertyChanged([CallerMemberName]string prop = "")
         {

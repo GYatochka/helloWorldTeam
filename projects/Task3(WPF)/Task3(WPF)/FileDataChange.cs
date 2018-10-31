@@ -19,7 +19,7 @@ namespace Task3_WPF_
         /// Метод для зчитування даних із файлу.
         /// </summary>
         /// <param name="SushiesList"></param>
-        public void ReadFromFile( ObservableCollection<Product> SushiesList)
+        public ObservableCollection<Product> ReadFromFile( ObservableCollection<Product> SushiesList)
         {
             System.IO.StreamReader file = new System.IO.StreamReader("sushiList.txt");
             string line;
@@ -34,6 +34,7 @@ namespace Task3_WPF_
             }
 
             file.Close();
+            return SushiesList;
         }
         /// <summary>
         /// Метод, для вводу даних чека у файл.
