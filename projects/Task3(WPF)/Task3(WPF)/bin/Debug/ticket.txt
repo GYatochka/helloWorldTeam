@@ -189,3 +189,10 @@ Cashier: Bohdan
 TOTAL SUM: 519
 
 =====================================
+=====================================
+Name: oninashi	x1		Price: 12
+Name: avocadoSplash	x1		Price: 13,5
+Cashier: Natasha
+	
+TOTAL SUM: 25,5
+=====================================
