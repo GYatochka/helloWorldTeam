@@ -97,6 +97,7 @@ namespace Task3_WPF_
         /// </summary>
         public float calculateTotalSum()
         {
+            _totalSum = 0;
             for(int i=0; i< OrderList.Count; i++)
             {
                 _totalSum += (OrderList[i].Price * OrderList[i].Quantity);
