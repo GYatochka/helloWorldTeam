@@ -188,19 +188,22 @@ namespace Task3_WPF_
                                {
                                    for (int i = 0; i < OrderList.Count; i++)
                                    {
-                                       if (OrderList[i].Name == SelectedOrder.Name && OrderList[i].Quantity > 1)
+                                       if (SelectedOrder != null)
                                        {
+                                           if (OrderList[i].Name == SelectedOrder.Name && OrderList[i].Quantity > 1)
+                                           {
 
-                                           OrderList[i].Quantity -= 1;
-                                           if (_totalSum > 0)
-                                               _totalSum -= OrderList[i].Price;
-                                       }
-                                       else if (OrderList[i].Name == SelectedOrder.Name && OrderList[i].Quantity <= 1)
-                                       {
-                                           if (_totalSum > 0)
-                                               _totalSum -= OrderList[i].Price;
-                                           OrderList.Remove(SelectedOrder);
-                                          
+                                               OrderList[i].Quantity -= 1;
+                                               if (_totalSum > 0)
+                                                   _totalSum -= OrderList[i].Price;
+                                           }
+                                           else if (OrderList[i].Name == SelectedOrder.Name && OrderList[i].Quantity <= 1)
+                                           {
+                                               if (_totalSum > 0)
+                                                   _totalSum -= OrderList[i].Price;
+                                               OrderList.Remove(SelectedOrder);
+
+                                           }
                                        }
                                       
                                      
