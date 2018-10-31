@@ -8,6 +8,7 @@ using System.Runtime.CompilerServices;
 using System.Collections.ObjectModel;
 using System.Runtime.Remoting;
 using System.Windows;
+using System.Diagnostics;
 
 namespace Task3_WPF_
 {
@@ -205,6 +206,7 @@ namespace Task3_WPF_
                        (printTicketCommand = new RelayCommand(obj =>
                        {
                            _fileChanger.WriteToFile(_cashier,calculateTotalSum(),OrderList);
+                           Process.Start("ticket.txt");
                        }));
             }
         }
