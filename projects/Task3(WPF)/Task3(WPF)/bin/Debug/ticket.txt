@@ -160,9 +160,32 @@ Cashier:
 TOTAL SUM: 0
 =====================================
 =====================================
+
+Name: oninashi	x1		Price: 12
+Name: avocadoSplash	x2		Price: 13,5
+Cashier: appolinariy
+	
+TOTAL SUM: 78
+=====================================
+=====================================
+Name: oninashi	x2		Price: 12
+Name: octopusBriz	x1		Price: 54,5
+Cashier: Аксінія
+	
+TOTAL SUM: 78,5
+=====================================
+=====================================
+Name: avocadoSplash	x1		Price: 13,5
+Name: oninashi	x2		Price: 12
+Name: octopusBriz	x1		Price: 54,5
+Cashier: Аксінія
+	
+TOTAL SUM: 92
+=======
 Name: oninashi	x11		Price: 12
 Name: avocadoSplash	x9		Price: 13,5
 Cashier: Bohdan
 	
 TOTAL SUM: 519
+
 =====================================
