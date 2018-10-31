@@ -158,7 +158,7 @@ namespace Task3_WPF_
                            {
                                OrderList.Insert(0, SelectedProduct);
                            }
-                           _totalSum += SelectedProduct.Price;
+                           _totalSum += SelectedProduct.Price * Convert.ToInt32(ProductAmount);
                            foreach (Window window in Application.Current.Windows)
                            {
                                if (window.GetType() == typeof(MainWindow))
@@ -196,7 +196,7 @@ namespace Task3_WPF_
                                        }
                                    }
                                }
-                               _totalSum -= SelectedProduct.Price;
+                               _totalSum -= SelectedProduct.Price * Convert.ToInt32(ProductAmount);
                                foreach (Window window in Application.Current.Windows)
                                {
                                    if (window.GetType() == typeof(MainWindow))
