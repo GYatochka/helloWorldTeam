@@ -149,17 +149,24 @@ namespace Task3_WPF_
                                {
                                   
                                    OrderList[i].Quantity += Convert.ToInt32(ProductAmount);
+                                 
                                    flag = true;
                                }
                            }
 
                            if (flag == false)
                            {
-                               
                                OrderList.Insert(0, SelectedProduct);
                            }
-
-                           calculateTotalSum();
+                           _totalSum += SelectedProduct.Price;
+                           foreach (Window window in Application.Current.Windows)
+                           {
+                               if (window.GetType() == typeof(MainWindow))
+                               {
+                                   (window as MainWindow).cashierLabel_value.Content = Convert.ToSingle(_totalSum);
+                               }
+                           }
+                           //calculateTotalSum();
                        }));
             }
         }
@@ -189,7 +196,15 @@ namespace Task3_WPF_
                                        }
                                    }
                                }
-                               calculateTotalSum();
+                               _totalSum -= SelectedProduct.Price;
+                               foreach (Window window in Application.Current.Windows)
+                               {
+                                   if (window.GetType() == typeof(MainWindow))
+                                   {
+                                       (window as MainWindow).cashierLabel_value.Content = Convert.ToSingle(_totalSum);
+                                   }
+                               }
+                               // calculateTotalSum();
                            },
                            (obj) => OrderList.Count > 0));
             }
