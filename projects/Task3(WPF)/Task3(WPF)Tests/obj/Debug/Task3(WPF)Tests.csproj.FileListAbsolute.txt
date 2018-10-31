@@ -1,0 +1,8 @@
+D:\helloWorldTeam-1-master\hello_world\projects\Task3(WPF)\Task3(WPF)Tests\bin\Debug\Task3(WPF)Tests.dll
+D:\helloWorldTeam-1-master\hello_world\projects\Task3(WPF)\Task3(WPF)Tests\bin\Debug\Task3(WPF)Tests.pdb
+D:\helloWorldTeam-1-master\hello_world\projects\Task3(WPF)\Task3(WPF)Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\helloWorldTeam-1-master\hello_world\projects\Task3(WPF)\Task3(WPF)Tests\bin\Debug\Task3(WPF).exe
+D:\helloWorldTeam-1-master\hello_world\projects\Task3(WPF)\Task3(WPF)Tests\bin\Debug\Task3(WPF).pdb
+D:\helloWorldTeam-1-master\hello_world\projects\Task3(WPF)\Task3(WPF)Tests\obj\Debug\Task3(WPF)Tests.csprojResolveAssemblyReference.cache
+D:\helloWorldTeam-1-master\hello_world\projects\Task3(WPF)\Task3(WPF)Tests\obj\Debug\Task3(WPF)Tests.dll
+D:\helloWorldTeam-1-master\hello_world\projects\Task3(WPF)\Task3(WPF)Tests\obj\Debug\Task3(WPF)Tests.pdb

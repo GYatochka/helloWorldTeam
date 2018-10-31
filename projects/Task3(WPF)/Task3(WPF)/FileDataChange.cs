@@ -23,11 +23,11 @@ namespace Task3_WPF_
         /// Метод для зчитування даних із файлу.
         /// </summary>
         /// <param name="SushiesList"></param>
-        public ObservableCollection<Product> ReadFromFile( ObservableCollection<Product> SushiesList)
+        public ObservableCollection<Product> ReadFromFile()
         {
             System.IO.StreamReader file = new System.IO.StreamReader("sushiList.txt");
             string line;
-            SushiesList = new ObservableCollection<Product>();
+            ObservableCollection<Product> SushiesList = new ObservableCollection<Product>();
             while ((line = file.ReadLine()) != null)
             {
                 p = new Product();
@@ -52,7 +52,7 @@ namespace Task3_WPF_
         /// <param name="SushiesList">
         /// Список замовлених суші.
         /// </param>
-        public void WriteToFile(string cashier, float calculatedSum, ObservableCollection<Product> SushiesList)
+        public bool WriteToFile(string cashier, float calculatedSum, ObservableCollection<Product> SushiesList)
         {      
             using (StreamWriter outputFile = new StreamWriter(Path.Combine(_ticketName+".txt"), true))
             {
@@ -66,6 +66,7 @@ namespace Task3_WPF_
                 outputFile.WriteLine("TOTAL SUM: " + calculatedSum);
                 outputFile.WriteLine("=====================================");
             }
+            return true;
             
         }
     }

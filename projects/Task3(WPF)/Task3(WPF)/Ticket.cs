@@ -15,7 +15,7 @@ namespace Task3_WPF_
     /// <summary>
     /// Даний клас є реалізацією ViewModel, із патерну MVVM, в даній програмі.
     /// </summary>
-     class Ticket : INotifyPropertyChanged
+     public class Ticket : INotifyPropertyChanged
     {
         /// <summary>
         /// Продукт вибраний на ListView  із запропонованих в SushiesList 
@@ -85,7 +85,7 @@ namespace Task3_WPF_
             ProductAmount = "1";
             _totalSum = 0;
             _fileChanger = new FileDataChange();
-            SushiesList = _fileChanger.ReadFromFile(SushiesList);
+            SushiesList = _fileChanger.ReadFromFile();
             OrderList = new ObservableCollection<Product>();
             _cashier = "Natasha";
         }

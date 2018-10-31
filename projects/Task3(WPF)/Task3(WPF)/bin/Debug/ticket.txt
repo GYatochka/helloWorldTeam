@@ -1,234 +1,32 @@
-=====================================
-Name: octopusBriz  X1          Price: 54,5
-Name: oninashi  X1          Price: 12
-Name: avocadoSplash  X1          Price: 13,5
-Cashier: Natasha
-TOTAL SUM: 160
-=====================================
-=====================================
-Name: octopusBriz  X1          Price: 54,5
-Name: oninashi  X1          Price: 12
-Name: avocadoSplash  X1          Price: 13,5
-Cashier: Natasha
-TOTAL SUM: 160
-=====================================
-=====================================
-Name: octopusBriz  X1          Price: 54,5
-Name: oninashi  X1          Price: 12
-Name: avocadoSplash  X1          Price: 13,5
-Cashier: Natasha
-TOTAL SUM: 160
-Cashier: Natasha
-TOTAL SUM: 0
-=====================================
-=====================================
-Name: octopusBriz  X1          Price: 54,5
-Name: oninashi  X1          Price: 12
-Name: avocadoSplash  X1          Price: 13,5
-Cashier: Natasha
-TOTAL SUM: 160
-=====================================
-=====================================
-Name: Oniyashi  X2          Price: 22
-Name: Oniyashi  X2          Price: 22
-Name: Oniyashi  X2          Price: 22
-Cashier: Natasha
-TOTAL SUM: 142
-=====================================
-=====================================
-Name: OctopusBriz  X27          Price: 15,2
-Name: Oniyashi  X30          Price: 22
-Cashier: Natasha
-TOTAL SUM: 1107,6
-=====================================
-=====================================
-Name: OctopusBriz  X7          Price: 15,2
-Cashier: Natasha
-TOTAL SUM: 1005,6
-=====================================
-=====================================
-Name: Oniyashi  X4          Price: 22
-Cashier: Natasha
-	
-TOTAL SUM: 308
-=====================================
-=====================================
-Name: OctopusBriz  X114          Price: 15,2
-Name: Oniyashi  X4          Price: 22
-Cashier: Natasha
-	
-TOTAL SUM: 19624
-=====================================
-=====================================
-Name: OctopusBriz	x11	Price: 15,2
-Name: Oniyashi	x107	Price: 22
-Cashier: Natasha
-	
-TOTAL SUM: 10381,6
-=====================================
-=====================================
-Name: OctopusBriz	x1		Price: 15,2
-Name: Oniyashi	x51		Price: 22
-Cashier: Natasha
-	
-TOTAL SUM: 21369,2
-=====================================
-=====================================
-Name: OctopusBriz	x2		Price: 15,2
-Name: Oniyashi	x7		Price: 22
-Cashier: Natasha
-	
-TOTAL SUM: 2546
-Cashier: Natasha
-	
-TOTAL SUM: 0
-=====================================
-=====================================
-Cashier: Natasha
-	
-TOTAL SUM: 0
-=====================================
-=====================================
-Name: OctopusBriz	x1		Price: 15,2
-Cashier: Natasha
-	
-TOTAL SUM: 30,4
-=====================================
-=====================================
-Name: OctopusBriz	x1		Price: 15,2
-Cashier: Natasha
-	
-TOTAL SUM: 30,4
-=====================================
-=====================================
-Name: OctopusBriz	x1		Price: 15,2
-Cashier: Natasha
-	
-TOTAL SUM: 45,6
-=====================================
-=====================================
-Name: OctopusBriz	x1		Price: 15,2
-Cashier: Natasha
-	
-TOTAL SUM: 60,8
-=====================================
-=====================================
-Name: OctopusBriz	x1		Price: 15,2
-Cashier: Natasha
-	
-TOTAL SUM: 76
-=====================================
-=====================================
-Name: OctopusBriz	x1		Price: 15,2
-Cashier: Natasha
-	
-TOTAL SUM: 91,2
-=====================================
-=====================================
-Name: OctopusBriz	x1		Price: 15,2
-Cashier: Natasha
-	
-TOTAL SUM: 106,4
-=====================================
-=====================================
-Name: OctopusBriz	x15		Price: 15,2
-Cashier: Natasha
-	
-TOTAL SUM: 5528,8
-=====================================
-=====================================
-Name: OctopusBriz	x15		Price: 15,2
-Cashier: Natasha
-	
-TOTAL SUM: 5756,8
-=====================================
-=====================================
-Name: OctopusBriz	x15		Price: 15,2
-Cashier: Natasha
-	
-TOTAL SUM: 5984,8
-=====================================
-=====================================
-Name: OctopusBriz	x1		Price: 15,2
-Cashier: Natasha
-	
-TOTAL SUM: 89,6
-=====================================
-=====================================
-Cashier: 
-	
-TOTAL SUM: 0
-=====================================
-=====================================
-
+﻿=====================================
+Name: octopusBriz	x1		Price: 54
 Name: oninashi	x1		Price: 12
-Name: avocadoSplash	x2		Price: 13,5
-Cashier: appolinariy
+Name: avocadoSplash	x1		Price: 13
+Cashier: Natasha
 	
-TOTAL SUM: 78
+TOTAL SUM: 79
 =====================================
 =====================================
-Name: oninashi	x2		Price: 12
-Name: octopusBriz	x1		Price: 54,5
-Cashier: Аксінія
+Name: octopusBriz	x1		Price: 54
+Name: avocadoSplash	x1		Price: 13
+Cashier: Natasha
 	
-TOTAL SUM: 78,5
-=====================================
-=====================================
-Name: avocadoSplash	x1		Price: 13,5
-Name: oninashi	x2		Price: 12
-Name: octopusBriz	x1		Price: 54,5
-Cashier: Аксінія
-	
-TOTAL SUM: 92
-=======
-Name: oninashi	x11		Price: 12
-Name: avocadoSplash	x9		Price: 13,5
-Cashier: Bohdan
-	
-TOTAL SUM: 519
-
+TOTAL SUM: 67
 =====================================
 =====================================
 Name: oninashi	x1		Price: 12
-Name: avocadoSplash	x1		Price: 13,5
+Name: octopusBriz	x1		Price: 54
+Name: avocadoSplash	x1		Price: 13
 Cashier: Natasha
 	
-TOTAL SUM: 25,5
+TOTAL SUM: 79
 =====================================
 =====================================
-Name: oninashi	x2		Price: 12
-Name: avocadoSplash	x1		Price: 13,5
-Cashier: Natasha
-	
-TOTAL SUM: 37,5
-=====================================
-=====================================
+Name: Iwashi	x1		Price: 32
 Name: oninashi	x1		Price: 12
-Name: avocadoSplash	x1		Price: 13,5
+Name: octopusBriz	x1		Price: 54
+Name: avocadoSplash	x1		Price: 13
 Cashier: Natasha
 	
-TOTAL SUM: 25,5
-=====================================
-=====================================
-Name: octopusBriz	x3		Price: 54,5
-Name: oninashi	x1		Price: 12
-Name: avocadoSplash	x1		Price: 13,5
-Cashier: alina
-	
-TOTAL SUM: 189
-=====================================
-=====================================
-Name: oninashi	x1		Price: 12
-Name: avocadoSplash	x1		Price: 13,5
-Cashier: Natasha
-	
-TOTAL SUM: 25,5
-=====================================
-=====================================
-Name: oninashi	x2		Price: 12
-Name: avocadoSplash	x1		Price: 13,5
-Cashier: Natasha
-	
-TOTAL SUM: 37,5
+TOTAL SUM: 111
 =====================================
