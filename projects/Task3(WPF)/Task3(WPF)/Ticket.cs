@@ -157,6 +157,7 @@ namespace Task3_WPF_
                            if (flag == false)
                            {
                                OrderList.Insert(0, SelectedProduct);
+                               OrderList[0].Quantity += Convert.ToInt32(ProductAmount)-1;
                            }
                            _totalSum += SelectedProduct.Price * Convert.ToInt32(ProductAmount);
                            foreach (Window window in Application.Current.Windows)
