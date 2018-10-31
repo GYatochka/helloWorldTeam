@@ -73,3 +73,10 @@ Cashier: Natasha
 	
 TOTAL SUM: 21369,2
 =====================================
+=====================================
+Name: OctopusBriz	x2		Price: 15,2
+Name: Oniyashi	x7		Price: 22
+Cashier: Natasha
+	
+TOTAL SUM: 2546
+=====================================
