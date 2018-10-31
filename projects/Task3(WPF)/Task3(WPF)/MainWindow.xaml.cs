@@ -31,10 +31,7 @@ namespace Task3_WPF_
             cashierLogin.WindowStartupLocation = WindowStartupLocation.CenterScreen;
             cashierLogin.Topmost = true;
             DataContext = new Ticket();
-            cashierLogin.ShowDialog();
-            
-        }
-
-  
+            cashierLogin.ShowDialog();           
+        }  
     }
 }

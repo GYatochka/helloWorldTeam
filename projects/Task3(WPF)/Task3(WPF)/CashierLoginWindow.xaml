@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Task3_WPF_"
         mc:Ignorable="d"
-        Title="CashierLoginWindow" Height="222" Width="420">
+        Title="Login" Height="222" Width="420">
     <Grid Margin="0,0,0,-2" Width="420" Height="222" Background="#FFF9F7F7">
         <TextBox x:Name="cashierNameTextBox" Height="32" Margin="24,64,0,0" TextWrapping="Wrap" Text="{Binding CashierName, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" HorizontalAlignment="Left" Width="369"/>
         <Button x:Name="casierNameOkButton" Content="OK" Margin="272,130,52,60" IsCancel="True" Command="{Binding AddName}"/>

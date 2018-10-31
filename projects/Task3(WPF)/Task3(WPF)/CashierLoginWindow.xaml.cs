@@ -26,9 +26,6 @@ namespace Task3_WPF_
             this.DataContext = cashierLogin;
             if (cashierLogin.CloseAction == null)
                 cashierLogin.CloseAction = new Action(this.Close);
-
-        }
-       
-  
-}
+        }        
+    }
 }

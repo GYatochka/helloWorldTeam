@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Collections.ObjectModel;
+using System.Runtime.Remoting;
 using System.Windows;
 
 namespace Task3_WPF_
@@ -26,14 +27,14 @@ namespace Task3_WPF_
         private float _totalSum;
         private static string _cashier;
         private FileDataChange _fileChanger;
+
         /// <summary>
         /// Змінна для зчитування числа замовлених продуктів із View
         /// </summary>
         public string ProductAmount { get; set; }
         /// <summary>
         /// Змінна для зміни загальної суми на View
-        /// </summary>     
-        // Доробити, аби суму змінювало динамічно        
+        /// </summary>            
         public string TotalSumText { get; set; }
         /// <summary>
         /// Колекція для демонстрації списку запропонованих закладом наборів на View
@@ -65,7 +66,6 @@ namespace Task3_WPF_
             set
             {
                 _selectedProduct = value;
-
                 OnPropertyChanged("SelectedProduct");
             }
         }
@@ -75,11 +75,9 @@ namespace Task3_WPF_
             set
             {
                 _selectedOrder = value;
-
                 OnPropertyChanged("SelectedOrder");
             }
         }
-        // зробити, аби SushiesList заповнювало з файлу і виводило на ListView 
         public Ticket()
         {
             TotalSumText = "0";
@@ -89,7 +87,6 @@ namespace Task3_WPF_
             SushiesList = _fileChanger.ReadFromFile(SushiesList);
             OrderList = new ObservableCollection<Product>();
             _cashier = "Natasha";
-
         }
 
         /// <summary>
@@ -106,27 +103,65 @@ namespace Task3_WPF_
             TotalSumText = ""+ _totalSum;
             return _totalSum;
         }
-        //метод має робти те, що робиться в AddCommand, але чомусь ref не працює для ObservableCollection<Т>
-        //подивитись, якщо буде час
-        private void addProduct(ref ObservableCollection<Product> selectedSushies, Product selected)
+        
+        private void addOrder()
         {
             bool flag = false;
-            foreach (var product in selectedSushies)
+            for (int i = 0; i < OrderList.Count; i++)
             {
-                if (product.Name == selected.Name)
+                if (OrderList[i].Name == SelectedProduct.Name)
                 {
-                    product.Quantity += Convert.ToInt32(ProductAmount);
-                    product.Price += selected.Price;
+                    OrderList[i].Quantity += 1;
                     flag = true;
                 }
             }
 
             if (flag == false)
             {
-                selectedSushies.Insert(0, selected);
+                OrderList.Insert(0, SelectedProduct);
+            }
+            _totalSum += SelectedProduct.Price * Convert.ToInt32(ProductAmount);
+            foreach (Window window in Application.Current.Windows)
+            {
+                if (window.GetType() == typeof(MainWindow))
+                {
+                    (window as MainWindow).cashierLabel_value.Content = Convert.ToSingle(_totalSum);
+                }
             }
         }
-        
+        private void removeOrder()
+        {
+            if (SelectedOrder != null)
+            {
+                for (int i = 0; i < OrderList.Count; i++)
+                {
+                    if (SelectedOrder != null)
+                    {
+                        if (OrderList[i].Name == SelectedOrder.Name && OrderList[i].Quantity > 1)
+                        {
+                            OrderList[i].Quantity -= 1;
+                            if (_totalSum > 0)
+                                _totalSum -= OrderList[i].Price;
+                        }
+                        else if (OrderList[i].Name == SelectedOrder.Name && OrderList[i].Quantity <= 1)
+                        {
+                            if (_totalSum > 0)
+                                _totalSum -= OrderList[i].Price;
+                            OrderList.Remove(SelectedOrder);
+                        }
+                    }
+                }
+            }
+
+            foreach (Window window in Application.Current.Windows)
+            {
+                if (window.GetType() == typeof(MainWindow))
+                {
+                    (window as MainWindow).cashierLabel_value.Content = Convert.ToSingle(_totalSum);
+                }
+            }
+        }
+
         /// <summary>
         /// Команда додає новий об'єкт до списку замовлень
         /// </summary>
@@ -138,37 +173,7 @@ namespace Task3_WPF_
                 return addCommand ??
                        (addCommand = new RelayCommand(obj =>
                        {
-                           //addProduct(ref OrderList, SelectedProduct);
-                           //OrderList.Insert(0, SelectedProduct);
-                           //SelectedProduct = product;
-                           
-                           //Спробувати винести наступний код в окремий метод
-                           bool flag = false;
-                           for (int i = 0; i < OrderList.Count;i++)
-                           {
-                               if (OrderList[i].Name == SelectedProduct.Name)
-                               {
-                                  
-                                   OrderList[i].Quantity += 1;
-                                 
-                                   flag = true;
-                               }
-                           }
-
-                           if (flag == false)
-                           {
-                               OrderList.Insert(0, SelectedProduct);
-                              // OrderList[0].Quantity += 1;
-                           }
-                           _totalSum += SelectedProduct.Price * Convert.ToInt32(ProductAmount);
-                           foreach (Window window in Application.Current.Windows)
-                           {
-                               if (window.GetType() == typeof(MainWindow))
-                               {
-                                   (window as MainWindow).cashierLabel_value.Content = Convert.ToSingle(_totalSum);
-                               }
-                           }
-                           //calculateTotalSum();
+                          addOrder();            
                        }));
             }
         }
@@ -183,48 +188,7 @@ namespace Task3_WPF_
                 return removeCommand ??
                        (removeCommand = new RelayCommand(obj =>
                            {
-
-                               if (SelectedOrder != null)
-                               {
-                                   for (int i = 0; i < OrderList.Count; i++)
-                                   {
-                                       if (SelectedOrder != null)
-                                       {
-                                           if (OrderList[i].Name == SelectedOrder.Name && OrderList[i].Quantity > 1)
-                                           {
-
-                                               OrderList[i].Quantity -= 1;
-                                               if (_totalSum > 0)
-                                                   _totalSum -= OrderList[i].Price;
-                                           }
-                                           else if (OrderList[i].Name == SelectedOrder.Name && OrderList[i].Quantity <= 1)
-                                           {
-                                               if (_totalSum > 0)
-                                                   _totalSum -= OrderList[i].Price;
-                                               OrderList.Remove(SelectedOrder);
-
-                                           }
-                                       }
-                                      
-                                     
-                                      
-
-                                   }
-                                   
-                               }
-                               else
-                               {
-                                
-                               }
-                             
-                               foreach (Window window in Application.Current.Windows)
-                               {
-                                   if (window.GetType() == typeof(MainWindow))
-                                   {
-                                       (window as MainWindow).cashierLabel_value.Content = Convert.ToSingle(_totalSum);
-                                   }
-                               }
-                               // calculateTotalSum();
+                               removeOrder();                                                     
                            },
                            (obj) => OrderList.Count > 0));
             }

@@ -11,49 +11,54 @@ namespace Task3_WPF_
 {
     class CashierLogin : INotifyPropertyChanged
     {
-        private string cashierName;
-        public Action CloseAction { get; set; } //для закриття вікна CashierLoginWindow
+        private string _cashierName;
+
+        /// <summary>
+        /// для закриття вікна CashierLoginWindow
+        /// </summary>
+        public Action CloseAction { get; set; } 
         public string CashierName
         {
-            get { return cashierName; }
+            get { return _cashierName; }
             set
             {
-                cashierName = value;
-                OnPropertyChanged("CashierName");
-              
+                _cashierName = value;
+                OnPropertyChanged("CashierName");              
             }
         }
-      
-        private RelayCommand addName;
+
         /// <summary>
         /// Командає пересилає ім'я Касира в клас Ticket
         /// </summary>
+        private RelayCommand addName;      
         public RelayCommand AddName
         {
             get
             {
                 return addName ??
-                       (addName = new RelayCommand(obj => {
-                                    
-                                     Ticket.Cashier = CashierName;
+                       (addName = new RelayCommand(obj => 
+                       {                                  
+                           Ticket.Cashier = CashierName;
                            CloseAction();
                        }));
             }
         }
-        private RelayCommand cancelCommand;
         /// <summary>
         /// Командає cancel, яка закриває вікно
         /// </summary>
+        private RelayCommand cancelCommand;      
         public RelayCommand CancelCommand
         {
             get
             {
                 return cancelCommand ??
-                       (cancelCommand = new RelayCommand(obj => {
+                       (cancelCommand = new RelayCommand(obj => 
+                       {
                           CloseAction();
                        }));
             }
         }
+
         public event PropertyChangedEventHandler PropertyChanged;
         public void OnPropertyChanged([CallerMemberName]string prop = "")
         {

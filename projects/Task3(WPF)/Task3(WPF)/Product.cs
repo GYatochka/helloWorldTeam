@@ -17,14 +17,6 @@ namespace Task3_WPF_
         private float _price;
         private int _quantity;
 
-        public Product()
-        {
-            _name = "";
-            _price = 0;
-            _quantity = 1;
-
-        }
-
         public int Quantity
         {
             set
@@ -59,6 +51,14 @@ namespace Task3_WPF_
             }
 
             get { return _price; }
+        }
+
+        public Product()
+        {
+            _name = "";
+            _price = 0;
+            _quantity = 1;
+
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

@@ -11,6 +11,7 @@ namespace Task3_WPF_
     {
         private Action<object> execute;
         private Func<object, bool> canExecute;
+
         /// <summary>
         /// overriding EventHandler form ICommand
         /// </summary>

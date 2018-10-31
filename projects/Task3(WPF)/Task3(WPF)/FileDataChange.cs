@@ -13,7 +13,11 @@ namespace Task3_WPF_
     {
         private Product p;
         private string _ticketName;
-        public FileDataChange() { _ticketName = "Ticket"; }
+
+        public FileDataChange()
+        {
+            _ticketName = "Ticket";
+        }
 
         /// <summary>
         /// Метод для зчитування даних із файлу.
