@@ -1,0 +1,7 @@
+C:\Users\Bodya Zahirnuy\source\repos\Task4(ADO.NET)\Task4(ADO.NET)\bin\Debug\Task4(ADO.NET).exe.config
+C:\Users\Bodya Zahirnuy\source\repos\Task4(ADO.NET)\Task4(ADO.NET)\bin\Debug\Task4(ADO.NET).exe
+C:\Users\Bodya Zahirnuy\source\repos\Task4(ADO.NET)\Task4(ADO.NET)\bin\Debug\Task4(ADO.NET).pdb
+C:\Users\Bodya Zahirnuy\source\repos\Task4(ADO.NET)\Task4(ADO.NET)\obj\Debug\Task4(ADO.NET).csprojAssemblyReference.cache
+C:\Users\Bodya Zahirnuy\source\repos\Task4(ADO.NET)\Task4(ADO.NET)\obj\Debug\Task4(ADO.NET).csproj.CoreCompileInputs.cache
+C:\Users\Bodya Zahirnuy\source\repos\Task4(ADO.NET)\Task4(ADO.NET)\obj\Debug\Task4(ADO.NET).exe
+C:\Users\Bodya Zahirnuy\source\repos\Task4(ADO.NET)\Task4(ADO.NET)\obj\Debug\Task4(ADO.NET).pdb
