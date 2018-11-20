@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using System.Data;
 
 namespace Task4_ADO.NET_
 {
+
     class Program
     {
         static void Main(string[] args)
@@ -17,10 +19,12 @@ namespace Task4_ADO.NET_
             {
                 connection.Open();
                 PrintInfo(connection);
-                
-              
+                SELECTCommandReader("SELECT * FROM Employees ", connection);
+
             }
-            catch(Exception e)
+
+
+            catch (Exception e)
             {
                 Console.Write(e.Message);
 
@@ -28,7 +32,7 @@ namespace Task4_ADO.NET_
             finally
             {
                 connection.Close();
-                PrintInfo(connection);
+
             }
             Console.ReadKey();
         }
@@ -40,5 +44,55 @@ namespace Task4_ADO.NET_
             Console.WriteLine("State: " + connection.State);
 
         }
+        static void SELECTCommand(string commandStr, SqlConnection connection)
+        {
+            SqlCommand command = new SqlCommand();
+
+            command.CommandText = commandStr;
+            command.Connection = connection;
+            SqlDataAdapter adapter = new SqlDataAdapter(command.CommandText, connection);
+            DataSet ds = new DataSet();
+            adapter.Fill(ds);
+
+
+
+
+            Console.WriteLine();
+            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+            {
+                for (int j = 0; j < ds.Tables[0].Rows[i].ItemArray.Count(); j++)
+                {
+                    Console.Write(ds.Tables[0].Columns[j] + ": ");
+                    Console.WriteLine(ds.Tables[0].Rows[i].ItemArray[j] + "  ");
+
+                }
+
+                Console.WriteLine("==========================================================================================");
+            }
+        }
+        static void SELECTCommandReader(string commandStr, SqlConnection connection)
+        {
+            SqlCommand command = new SqlCommand();
+            command.CommandText = commandStr;
+            command.Connection = connection;
+            SqlDataReader reader = command.ExecuteReader();
+            string dividation = "===================";
+            Console.WriteLine();
+          while( reader.Read())
+            {
+                for(int i=0;i<reader.FieldCount;i++)
+                {
+                    Console.Write(reader.GetName(i) + ": ");
+                    Console.WriteLine(reader.GetValue(i));
+                }
+                Console.WriteLine(dividation);
+
+            }
+
+
+
+        }
     }
-}
+
+    }
+
