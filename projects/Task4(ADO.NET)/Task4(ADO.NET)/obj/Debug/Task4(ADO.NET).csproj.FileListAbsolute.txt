@@ -12,3 +12,10 @@ C:\Users\Bodya Zahirnuy\Documents\GitHub\helloWorldTeam\projects\Task4(ADO.NET)\
 C:\Users\Bodya Zahirnuy\Documents\GitHub\helloWorldTeam\projects\Task4(ADO.NET)\Task4(ADO.NET)\obj\Debug\Task4(ADO.NET).csproj.CoreCompileInputs.cache
 C:\Users\Bodya Zahirnuy\Documents\GitHub\helloWorldTeam\projects\Task4(ADO.NET)\Task4(ADO.NET)\obj\Debug\Task4(ADO.NET).exe
 C:\Users\Bodya Zahirnuy\Documents\GitHub\helloWorldTeam\projects\Task4(ADO.NET)\Task4(ADO.NET)\obj\Debug\Task4(ADO.NET).pdb
+E:\studing\helloWorldTeam-develop\helloWorldTeam\projects\Task4(ADO.NET)\Task4(ADO.NET)\bin\Debug\Task4(ADO.NET).exe.config
+E:\studing\helloWorldTeam-develop\helloWorldTeam\projects\Task4(ADO.NET)\Task4(ADO.NET)\bin\Debug\Task4(ADO.NET).exe
+E:\studing\helloWorldTeam-develop\helloWorldTeam\projects\Task4(ADO.NET)\Task4(ADO.NET)\bin\Debug\Task4(ADO.NET).pdb
+E:\studing\helloWorldTeam-develop\helloWorldTeam\projects\Task4(ADO.NET)\Task4(ADO.NET)\obj\Debug\Task4(ADO.NET).csprojAssemblyReference.cache
+E:\studing\helloWorldTeam-develop\helloWorldTeam\projects\Task4(ADO.NET)\Task4(ADO.NET)\obj\Debug\Task4(ADO.NET).csproj.CoreCompileInputs.cache
+E:\studing\helloWorldTeam-develop\helloWorldTeam\projects\Task4(ADO.NET)\Task4(ADO.NET)\obj\Debug\Task4(ADO.NET).exe
+E:\studing\helloWorldTeam-develop\helloWorldTeam\projects\Task4(ADO.NET)\Task4(ADO.NET)\obj\Debug\Task4(ADO.NET).pdb
