@@ -116,6 +116,25 @@ namespace Task4_ADO.NET_
                                      " Products.ProductID = x.ProductID", connection);
                 //29
                 SELECTCommandReader("select a.Title, b.EmployeeID from Employees as a left join Employees as b on a.EmployeeID = b.EmployeeID", connection);
+                //30
+                SELECTCommandReader("select distinct City from (select Customers.City from Customers" +
+                                    " inner join Employees on Customers.City = Employees.City) as x " +
+                                    "inner join Orders on x.City = Orders.ShipCity", connection);
+                //31
+                SELECTCommandReader("INSERT INTO Employees(LastName, FirstName, BirthDate, HireDate, Address, City, Country, Notes)" +
+                                    " VALUES('Ivanov', 'Ivan', '1999.08.01', '2018.08.01', 'Hrubenka,5', 'Kiyv', 'Ukraine', 'Zahirnuy Bohdan')," +
+                                    "('Petrenko', 'Petro', '1999.07.21', '2018.05.11', 'Kaprenka,21', 'Kiyv', 'Ukraine', 'Pankovec Zlata')," +
+                                    "('Makliuk', 'Maria', '1979.05.10', '2002.06.12', 'Rudenka,48', 'Lviv', 'Ukraine', 'Benko Muhailo')," +
+                                    "('Dankevuch', 'Andriy', '1987.01.09', '2005.09.06', 'Svobodu,8', 'Chernivci', 'Ukraine', 'Pankovec Zlata')," +
+                                    "('Tarekaniuk', 'Petro', '1996.11.02', '2018.10.11', 'Vasuliuka,26', 'Kiyv', 'Ukraine', 'Zahirnuy Bohdan')", connection);
+                //32
+                SELECTCommandReader("SELECT * FROM Employees WHERE Country = 'Ukraine'", connection);
+                //33
+                SELECTCommandReader("UPDATE Employees SET City = 'IvanoFrankivsk' WHERE FirstName = 'Andriy'", connection);
+                //34
+                SELECTCommandReader("UPDATE Employees SET HireDate = GETDATE()", connection);
+                //35
+                SELECTCommandReader("DELETE FROM Employees WHERE FirstName = 'Andriy'", connection);
             }
             catch (Exception e)
             {
