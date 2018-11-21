@@ -50,6 +50,26 @@ namespace Task4_ADO.NET_
                  //12
                  SELECTCommandReader("select FirstName, LastName, BirthDate from Employees" +
                                      " where Month(BirthDate) =  Month(getdate())", connection); //1", connection);
+                   //13                                                                              
+                SELECTCommandReader("select distinct FirstName, LastName from Employees " +
+                                    "inner join Orders on Employees.EmployeeID = Orders.EmployeeID where ShipCity = 'Madrid'", connection);
+                //14
+                SELECTCommandReader("select distinct  FirstName, LastName, count(OrderID) as 'Number of orders' from Employees " +
+                                    "left join  Orders on Employees.EmployeeID = Orders.EmployeeID where  YEAR(ShippedDate) = 1997 group by FirstName, LastName", connection);
+                //15
+                SELECTCommandReader("select distinct  FirstName, LastName, count(OrderID) as 'Number of orders' from Employees " +
+                                    "inner join  Orders on Employees.EmployeeID = Orders.EmployeeID where  YEAR(ShippedDate) = 1997 group by FirstName, LastName", connection);
+                //16
+                SELECTCommandReader("select distinct  FirstName, LastName, count(OrderID) as 'Number of orders' from Employees " +
+                                    "left join  Orders on Employees.EmployeeID = Orders.EmployeeID where  YEAR(ShippedDate) = 1997 and " +
+                                    "Orders.ShippedDate > Orders.RequiredDate group by FirstName, LastName", connection);
+                //17
+                SELECTCommandReader("select count(OrderID) as 'France costumers' from Orders " +
+                                    "inner join Customers on Orders.CustomerID = Customers.CustomerID where Customers.Country = 'France'", connection);
+                //18
+                SELECTCommandReader("select Customers.ContactName, count(Orders.OrderID) as 'Orders' from Customers " +
+                                    "inner join Orders on Customers.CustomerID = Orders.CustomerID where Customers.Country = 'France' " +
+                                    "group by Customers.ContactName having count(Orders.OrderID) > 1 ", connection);
             }
             catch (Exception e)
             {
