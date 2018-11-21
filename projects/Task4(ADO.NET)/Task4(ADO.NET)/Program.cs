@@ -50,7 +50,7 @@ namespace Task4_ADO.NET_
                  //12
                  SELECTCommandReader("select FirstName, LastName, BirthDate from Employees" +
                                      " where Month(BirthDate) =  Month(getdate())", connection); //1", connection);
-                   //13                                                                              
+                //13                                                                              
                 SELECTCommandReader("select distinct FirstName, LastName from Employees " +
                                     "inner join Orders on Employees.EmployeeID = Orders.EmployeeID where ShipCity = 'Madrid'", connection);
                 //14
@@ -70,6 +70,31 @@ namespace Task4_ADO.NET_
                 SELECTCommandReader("select Customers.ContactName, count(Orders.OrderID) as 'Orders' from Customers " +
                                     "inner join Orders on Customers.CustomerID = Orders.CustomerID where Customers.Country = 'France' " +
                                     "group by Customers.ContactName having count(Orders.OrderID) > 1 ", connection);
+                //19
+                SELECTCommandReader("select Customers.ContactName, count(Orders.OrderID) as 'Orders' from Customers " +
+                                    "inner join Orders on Customers.CustomerID = Orders.CustomerID where Customers.Country = 'France' " +
+                                    "group by Customers.ContactName having count(Orders.OrderID) > 1 ", connection);
+
+                //20
+                SELECTCommandReader("SELECT DISTINCT CompanyName FROM Customers,Orders,OrderDetails " +
+                                    "WHERE OrderDetails.ProductID=14 AND  Orders.CustomerID = Customers.CustomerID AND" +
+                                    " OrderDetails.OrderID = Orders.OrderID", connection);
+                //21
+                SELECTCommandReader("SELECT DISTINCT CompanyName, OrderDetails.Quantity, OrderDetails.Quantity*OrderDetails.UnitPrice as Sum FROM Customers,Orders,OrderDetails " +
+                                    "WHERE OrderDetails.ProductID=14 AND  Orders.CustomerID = Customers.CustomerID AND OrderDetails.OrderID = Orders.OrderID", connection);
+                //22
+                //SELECTCommandReader("", connection);
+                //23
+                SELECTCommandReader("SELECT DISTINCT Customers.CompanyName FROM Customers,Orders,OrderDetails,Suppliers,Products" +
+                                    " WHERE Customers.Country='France'AND OrderDetails.ProductID=Products.ProductID AND " +
+                                    " Orders.CustomerID = Customers.CustomerID AND OrderDetails.OrderID = Orders.OrderID AND " +
+                                    "Products.SupplierID=Suppliers.SupplierID AND Suppliers.Country!='France'", connection);
+
+                //24
+                SELECTCommandReader("SELECT DISTINCT Customers.CompanyName FROM Customers,Orders,OrderDetails,Suppliers,Products" +
+                                    " WHERE Customers.Country='France'AND OrderDetails.ProductID=Products.ProductID AND " +
+                                    " Orders.CustomerID = Customers.CustomerID AND OrderDetails.OrderID = Orders.OrderID AND" +
+                                    " Products.SupplierID=Suppliers.SupplierID AND Suppliers.Country='France'", connection);
             }
             catch (Exception e)
             {
