@@ -1,0 +1,30 @@
+=====================================
+Name: Bogodashi	x1		Price: 69
+Name: Zolatoshi	x1		Price: 666
+Name: Mishani	x1		Price: 13,37
+Name: Unagi	x1		Price: 40,5
+Name: Tsubugai	x1		Price: 18,75
+Name: Tai	x1		Price: 10
+Name: Iwashi	x1		Price: 32,4
+Name: avocadoSplash	x1		Price: 13,5
+Name: oninashi	x1		Price: 12
+Name: octopusBriz	x1		Price: 54,5
+Cashier: natasha
+	
+TOTAL SUM: 80
+=====================================
+=====================================
+Name: Bogodashi	x1		Price: 69
+Name: Zolatoshi	x1		Price: 666
+Name: Mishani	x1		Price: 1337
+Name: Unagi	x1		Price: 40
+Name: Tsubugai	x1		Price: 18
+Name: Tai	x1		Price: 10
+Name: Iwashi	x1		Price: 32
+Name: avocadoSplash	x1		Price: 13
+Name: oninashi	x1		Price: 12
+Name: octopusBriz	x1		Price: 54
+Cashier: natasha
+	
+TOTAL SUM: 80
+=====================================

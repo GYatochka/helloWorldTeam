@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2019
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShapesPainter", "ShapesPainter\ShapesPainter.csproj", "{CFA99D0E-DC03-41AC-8B08-8ADED9E964D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{5281C230-DBF9-4DC8-80F5-7A92FEAC9E10}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CFA99D0E-DC03-41AC-8B08-8ADED9E964D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFA99D0E-DC03-41AC-8B08-8ADED9E964D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFA99D0E-DC03-41AC-8B08-8ADED9E964D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFA99D0E-DC03-41AC-8B08-8ADED9E964D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5281C230-DBF9-4DC8-80F5-7A92FEAC9E10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5281C230-DBF9-4DC8-80F5-7A92FEAC9E10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5281C230-DBF9-4DC8-80F5-7A92FEAC9E10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5281C230-DBF9-4DC8-80F5-7A92FEAC9E10}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {14F2202E-1A12-4182-9435-E01BD3858610}
+	EndGlobalSection
+EndGlobal

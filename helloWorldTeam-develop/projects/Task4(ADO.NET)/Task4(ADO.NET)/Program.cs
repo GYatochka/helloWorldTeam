@@ -19,45 +19,20 @@ namespace Task4_ADO.NET_
             {
                 connection.Open();
                 PrintInfo(connection);
-                //1
-                SELECTCommandReader("select * from employees where EmployeeId = 8", connection);
-                //2
-                SELECTCommandReader("select LastName, FirstName from Employees where City = 'London'", connection);
-                //3
-                SELECTCommandReader("select LastName, FirstName from Employees  where FirstName LIKE 'A%'", connection);
-                //4
-                SELECTCommandReader("SELECT DATEDIFF(yy,BirthDate,getdate()) AS 'Age In Years', LastName, FirstName" +
-                                    " FROM Employees where DATEDIFF(yy,BirthDate,getdate())  > 55 Order by LastName", connection);
-                //5
-                SELECTCommandReader("select count(EmployeeID) as 'Live in London' from Employees where City='London'", connection);
-                //6
-                SELECTCommandReader("select Min( DATEDIFF(yy,BirthDate,getdate())) as 'min age', Max( DATEDIFF(yy,BirthDate,getdate())) as 'max age', " +
-                                    "avg( DATEDIFF(yy,BirthDate,getdate())) as 'avg age' from Employees where city='London'", connection);
-				//7
-                 SELECTCommandReader("select Min( DATEDIFF(yy,BirthDate,getdate())) as 'min age', Max( DATEDIFF(yy,BirthDate,getdate())) as 'max age', " +
-                                     "avg( DATEDIFF(yy,BirthDate,getdate())) as 'avg age', City from Employees group by City", connection);
-                 //8
-                 SELECTCommandReader("select avg( DATEDIFF(yy,BirthDate,getdate())) as 'avg age', City from Employees" +
-                                     " group by City having avg( DATEDIFF(yy,BirthDate,getdate())) > 60 ", connection);
-                 //9
-                 SELECTCommandReader("Select LastName, FirstName from Employees" +
-                                     " where  DATEDIFF(yy,BirthDate,getdate()) = (select Max( DATEDIFF(yy,BirthDate,getdate())) from Employees)", connection);
-                 //10
-                 SELECTCommandReader("Select top 3 LastName,  FirstName,  DATEDIFF(yy,BirthDate,getdate()) as 'age' from Employees " +
-                                     "order by DATEDIFF(yy,BirthDate,getdate()) desc ", connection);
-                 //11          
-                 SELECTCommandReader("select distinct City from Employees", connection);
-                 //12
-                 SELECTCommandReader("select FirstName, LastName, BirthDate from Employees" +
-                                     " where Month(BirthDate) =  Month(getdate())", connection); //1", connection);
+                SELECTCommandReader("SELECT * FROM Employees ", connection);
+
             }
+
+
             catch (Exception e)
             {
                 Console.Write(e.Message);
+
             }
             finally
             {
                 connection.Close();
+
             }
             Console.ReadKey();
         }
@@ -79,6 +54,9 @@ namespace Task4_ADO.NET_
             DataSet ds = new DataSet();
             adapter.Fill(ds);
 
+
+
+
             Console.WriteLine();
             for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
             {
@@ -86,7 +64,9 @@ namespace Task4_ADO.NET_
                 {
                     Console.Write(ds.Tables[0].Columns[j] + ": ");
                     Console.WriteLine(ds.Tables[0].Rows[i].ItemArray[j] + "  ");
+
                 }
+
                 Console.WriteLine("==========================================================================================");
             }
         }
@@ -106,9 +86,13 @@ namespace Task4_ADO.NET_
                     Console.WriteLine(reader.GetValue(i));
                 }
                 Console.WriteLine(dividation);
+
             }
-            reader.Close();
+
+
+
         }
     }
-}
+
+    }
 
