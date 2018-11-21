@@ -95,6 +95,27 @@ namespace Task4_ADO.NET_
                                     " WHERE Customers.Country='France'AND OrderDetails.ProductID=Products.ProductID AND " +
                                     " Orders.CustomerID = Customers.CustomerID AND OrderDetails.OrderID = Orders.OrderID AND" +
                                     " Products.SupplierID=Suppliers.SupplierID AND Suppliers.Country='France'", connection);
+				
+				 //25
+                 SELECTCommandReader("SELECT Customers.Country,SUM(OrderDetails.UnitPrice) as Sum FROM Customers,OrderDetails,Orders " +
+                                     "WHERE   Orders.CustomerID = Customers.CustomerID AND OrderDetails.OrderID = Orders.OrderID  " +
+                                     "GROUP BY  Customers.Country  ", connection);
+                  //26
+                 SELECTCommandReader("SELECT Customers.Country, SUM(OrderDetails.UnitPrice) as Sum, " +
+                                     "56500.9100 - SUM(OrderDetails.UnitPrice) as NondomesticSum  FROM Customers, OrderDetails, Orders " +
+                                     "WHERE   Orders.CustomerID = Customers.CustomerID AND OrderDetails.OrderID = Orders.OrderID  " +
+                                     "GROUP BY  Customers.Country  ", connection);
+                 //27
+                 SELECTCommandReader("SELECT Categories.CategoryName, SUM(OrderDetails.UnitPrice) FROM Categories, OrderDetails, Orders " +
+                                     "WHERE OrderDetails.OrderID = Orders.OrderID AND Orders.OrderDate > '1998.01.01' AND Orders.OrderDate < '1998.12.31' " +
+                                     "GROUP BY Categories.CategoryName", connection);
+                 //28
+                 SELECTCommandReader("select distinct ProductName, x.UnitPrice from Products" +
+                                     " inner join (select ShippedDate, ProductID , UnitPrice from Orders " +
+                                     "inner join OrderDetails on Orders.OrderID = OrderDetails.OrderID ) as x on" +
+                                     " Products.ProductID = x.ProductID", connection);
+                //29
+                SELECTCommandReader("select a.Title, b.EmployeeID from Employees as a left join Employees as b on a.EmployeeID = b.EmployeeID", connection);
             }
             catch (Exception e)
             {
