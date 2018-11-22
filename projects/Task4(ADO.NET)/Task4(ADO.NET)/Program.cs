@@ -20,121 +20,121 @@ namespace Task4_ADO.NET_
                 connection.Open();
                 PrintInfo(connection);
                 //1
-                SELECTCommandReader("select * from employees where EmployeeId = 8", connection);
+                CommandReader("select * from employees where EmployeeId = 8", connection,1);
                 //2
-                SELECTCommandReader("select LastName, FirstName from Employees where City = 'London'", connection);
+                CommandReader("select LastName, FirstName from Employees where City = 'London'", connection,2);
                 //3
-                SELECTCommandReader("select LastName, FirstName from Employees  where FirstName LIKE 'A%'", connection);
+                CommandReader("select LastName, FirstName from Employees  where FirstName LIKE 'A%'", connection,3);
                 //4
-                SELECTCommandReader("SELECT DATEDIFF(yy,BirthDate,getdate()) AS 'Age In Years', LastName, FirstName" +
-                                    " FROM Employees where DATEDIFF(yy,BirthDate,getdate())  > 55 Order by LastName", connection);
+                CommandReader("SELECT DATEDIFF(yy,BirthDate,getdate()) AS 'Age In Years', LastName, FirstName" +
+                                    " FROM Employees where DATEDIFF(yy,BirthDate,getdate())  > 55 Order by LastName", connection,4);
                 //5
-                SELECTCommandReader("select count(EmployeeID) as 'Live in London' from Employees where City='London'", connection);
+                CommandReader("select count(EmployeeID) as 'Live in London' from Employees where City='London'", connection,5);
                 //6
-                SELECTCommandReader("select Min( DATEDIFF(yy,BirthDate,getdate())) as 'min age', Max( DATEDIFF(yy,BirthDate,getdate())) as 'max age', " +
-                                    "avg( DATEDIFF(yy,BirthDate,getdate())) as 'avg age' from Employees where city='London'", connection);
+                CommandReader("select Min( DATEDIFF(yy,BirthDate,getdate())) as 'min age', Max( DATEDIFF(yy,BirthDate,getdate())) as 'max age', " +
+                                    "avg( DATEDIFF(yy,BirthDate,getdate())) as 'avg age' from Employees where city='London'", connection,6);
 				//7
-                 SELECTCommandReader("select Min( DATEDIFF(yy,BirthDate,getdate())) as 'min age', Max( DATEDIFF(yy,BirthDate,getdate())) as 'max age', " +
-                                     "avg( DATEDIFF(yy,BirthDate,getdate())) as 'avg age', City from Employees group by City", connection);
+                 CommandReader("select Min( DATEDIFF(yy,BirthDate,getdate())) as 'min age', Max( DATEDIFF(yy,BirthDate,getdate())) as 'max age', " +
+                                     "avg( DATEDIFF(yy,BirthDate,getdate())) as 'avg age', City from Employees group by City", connection,7);
                  //8
-                 SELECTCommandReader("select avg( DATEDIFF(yy,BirthDate,getdate())) as 'avg age', City from Employees" +
-                                     " group by City having avg( DATEDIFF(yy,BirthDate,getdate())) > 60 ", connection);
+                 CommandReader("select avg( DATEDIFF(yy,BirthDate,getdate())) as 'avg age', City from Employees" +
+                                     " group by City having avg( DATEDIFF(yy,BirthDate,getdate())) > 60 ", connection,8);
                  //9
-                 SELECTCommandReader("Select LastName, FirstName from Employees" +
-                                     " where  DATEDIFF(yy,BirthDate,getdate()) = (select Max( DATEDIFF(yy,BirthDate,getdate())) from Employees)", connection);
+                 CommandReader("Select LastName, FirstName from Employees" +
+                                     " where  DATEDIFF(yy,BirthDate,getdate()) = (select Max( DATEDIFF(yy,BirthDate,getdate())) from Employees)", connection,9);
                  //10
-                 SELECTCommandReader("Select top 3 LastName,  FirstName,  DATEDIFF(yy,BirthDate,getdate()) as 'age' from Employees " +
-                                     "order by DATEDIFF(yy,BirthDate,getdate()) desc ", connection);
+                 CommandReader("Select top 3 LastName,  FirstName,  DATEDIFF(yy,BirthDate,getdate()) as 'age' from Employees " +
+                                     "order by DATEDIFF(yy,BirthDate,getdate()) desc ", connection,10);
                  //11          
-                 SELECTCommandReader("select distinct City from Employees", connection);
+                 CommandReader("select distinct City from Employees", connection,11);
                  //12
-                 SELECTCommandReader("select FirstName, LastName, BirthDate from Employees" +
-                                     " where Month(BirthDate) =  Month(getdate())", connection); //1", connection);
+                 CommandReader("select FirstName, LastName, BirthDate from Employees" +
+                                     " where Month(BirthDate) =  Month(getdate())", connection,12); //1", connection);
                 //13                                                                              
-                SELECTCommandReader("select distinct FirstName, LastName from Employees " +
-                                    "inner join Orders on Employees.EmployeeID = Orders.EmployeeID where ShipCity = 'Madrid'", connection);
+                CommandReader("select distinct FirstName, LastName from Employees " +
+                                    "inner join Orders on Employees.EmployeeID = Orders.EmployeeID where ShipCity = 'Madrid'", connection,13);
                 //14
-                SELECTCommandReader("select distinct  FirstName, LastName, count(OrderID) as 'Number of orders' from Employees " +
-                                    "left join  Orders on Employees.EmployeeID = Orders.EmployeeID where  YEAR(ShippedDate) = 1997 group by FirstName, LastName", connection);
+                CommandReader("select distinct  FirstName, LastName, count(OrderID) as 'Number of orders' from Employees " +
+                                    "left join  Orders on Employees.EmployeeID = Orders.EmployeeID where  YEAR(ShippedDate) = 1997 group by FirstName, LastName", connection,14);
                 //15
-                SELECTCommandReader("select distinct  FirstName, LastName, count(OrderID) as 'Number of orders' from Employees " +
-                                    "inner join  Orders on Employees.EmployeeID = Orders.EmployeeID where  YEAR(ShippedDate) = 1997 group by FirstName, LastName", connection);
+                CommandReader("select distinct  FirstName, LastName, count(OrderID) as 'Number of orders' from Employees " +
+                                    "inner join  Orders on Employees.EmployeeID = Orders.EmployeeID where  YEAR(ShippedDate) = 1997 group by FirstName, LastName", connection,15);
                 //16
-                SELECTCommandReader("select distinct  FirstName, LastName, count(OrderID) as 'Number of orders' from Employees " +
+                CommandReader("select distinct  FirstName, LastName, count(OrderID) as 'Number of orders' from Employees " +
                                     "left join  Orders on Employees.EmployeeID = Orders.EmployeeID where  YEAR(ShippedDate) = 1997 and " +
-                                    "Orders.ShippedDate > Orders.RequiredDate group by FirstName, LastName", connection);
+                                    "Orders.ShippedDate > Orders.RequiredDate group by FirstName, LastName", connection,16);
                 //17
-                SELECTCommandReader("select count(OrderID) as 'France costumers' from Orders " +
-                                    "inner join Customers on Orders.CustomerID = Customers.CustomerID where Customers.Country = 'France'", connection);
+                CommandReader("select count(OrderID) as 'France costumers' from Orders " +
+                                    "inner join Customers on Orders.CustomerID = Customers.CustomerID where Customers.Country = 'France'", connection,17);
                 //18
-                SELECTCommandReader("select Customers.ContactName, count(Orders.OrderID) as 'Orders' from Customers " +
+                CommandReader("select Customers.ContactName, count(Orders.OrderID) as 'Orders' from Customers " +
                                     "inner join Orders on Customers.CustomerID = Orders.CustomerID where Customers.Country = 'France' " +
-                                    "group by Customers.ContactName having count(Orders.OrderID) > 1 ", connection);
+                                    "group by Customers.ContactName having count(Orders.OrderID) > 1 ", connection,18);
                 //19
-                SELECTCommandReader("select Customers.ContactName, count(Orders.OrderID) as 'Orders' from Customers " +
+                CommandReader("select Customers.ContactName, count(Orders.OrderID) as 'Orders' from Customers " +
                                     "inner join Orders on Customers.CustomerID = Orders.CustomerID where Customers.Country = 'France' " +
-                                    "group by Customers.ContactName having count(Orders.OrderID) > 1 ", connection);
+                                    "group by Customers.ContactName having count(Orders.OrderID) > 1 ", connection,19);
 
                 //20
-                SELECTCommandReader("SELECT DISTINCT CompanyName FROM Customers,Orders,OrderDetails " +
+                CommandReader("SELECT DISTINCT CompanyName FROM Customers,Orders,OrderDetails " +
                                     "WHERE OrderDetails.ProductID=14 AND  Orders.CustomerID = Customers.CustomerID AND" +
-                                    " OrderDetails.OrderID = Orders.OrderID", connection);
+                                    " OrderDetails.OrderID = Orders.OrderID", connection,20);
                 //21
-                SELECTCommandReader("SELECT DISTINCT CompanyName, OrderDetails.Quantity, OrderDetails.Quantity*OrderDetails.UnitPrice as Sum FROM Customers,Orders,OrderDetails " +
-                                    "WHERE OrderDetails.ProductID=14 AND  Orders.CustomerID = Customers.CustomerID AND OrderDetails.OrderID = Orders.OrderID", connection);
+                CommandReader("SELECT DISTINCT CompanyName, OrderDetails.Quantity, OrderDetails.Quantity*OrderDetails.UnitPrice as Sum FROM Customers,Orders,OrderDetails " +
+                                    "WHERE OrderDetails.ProductID=14 AND  Orders.CustomerID = Customers.CustomerID AND OrderDetails.OrderID = Orders.OrderID", connection,21);
                 //22
-                //SELECTCommandReader("", connection);
+                //CommandReader("", connection);
                 //23
-                SELECTCommandReader("SELECT DISTINCT Customers.CompanyName FROM Customers,Orders,OrderDetails,Suppliers,Products" +
+                CommandReader("SELECT DISTINCT Customers.CompanyName FROM Customers,Orders,OrderDetails,Suppliers,Products" +
                                     " WHERE Customers.Country='France'AND OrderDetails.ProductID=Products.ProductID AND " +
                                     " Orders.CustomerID = Customers.CustomerID AND OrderDetails.OrderID = Orders.OrderID AND " +
-                                    "Products.SupplierID=Suppliers.SupplierID AND Suppliers.Country!='France'", connection);
+                                    "Products.SupplierID=Suppliers.SupplierID AND Suppliers.Country!='France'", connection,23);
 
                 //24
-                SELECTCommandReader("SELECT DISTINCT Customers.CompanyName FROM Customers,Orders,OrderDetails,Suppliers,Products" +
+                CommandReader("SELECT DISTINCT Customers.CompanyName FROM Customers,Orders,OrderDetails,Suppliers,Products" +
                                     " WHERE Customers.Country='France'AND OrderDetails.ProductID=Products.ProductID AND " +
                                     " Orders.CustomerID = Customers.CustomerID AND OrderDetails.OrderID = Orders.OrderID AND" +
-                                    " Products.SupplierID=Suppliers.SupplierID AND Suppliers.Country='France'", connection);
+                                    " Products.SupplierID=Suppliers.SupplierID AND Suppliers.Country='France'", connection,24);
 				
 				 //25
-                 SELECTCommandReader("SELECT Customers.Country,SUM(OrderDetails.UnitPrice) as Sum FROM Customers,OrderDetails,Orders " +
+                 CommandReader("SELECT Customers.Country,SUM(OrderDetails.UnitPrice) as Sum FROM Customers,OrderDetails,Orders " +
                                      "WHERE   Orders.CustomerID = Customers.CustomerID AND OrderDetails.OrderID = Orders.OrderID  " +
-                                     "GROUP BY  Customers.Country  ", connection);
+                                     "GROUP BY  Customers.Country  ", connection,25);
                   //26
-                 SELECTCommandReader("SELECT Customers.Country, SUM(OrderDetails.UnitPrice) as Sum, " +
+                 CommandReader("SELECT Customers.Country, SUM(OrderDetails.UnitPrice) as Sum, " +
                                      "56500.9100 - SUM(OrderDetails.UnitPrice) as NondomesticSum  FROM Customers, OrderDetails, Orders " +
                                      "WHERE   Orders.CustomerID = Customers.CustomerID AND OrderDetails.OrderID = Orders.OrderID  " +
-                                     "GROUP BY  Customers.Country  ", connection);
+                                     "GROUP BY  Customers.Country  ", connection,26);
                  //27
-                 SELECTCommandReader("SELECT Categories.CategoryName, SUM(OrderDetails.UnitPrice) FROM Categories, OrderDetails, Orders " +
+                 CommandReader("SELECT Categories.CategoryName, SUM(OrderDetails.UnitPrice) FROM Categories, OrderDetails, Orders " +
                                      "WHERE OrderDetails.OrderID = Orders.OrderID AND Orders.OrderDate > '1998.01.01' AND Orders.OrderDate < '1998.12.31' " +
-                                     "GROUP BY Categories.CategoryName", connection);
+                                     "GROUP BY Categories.CategoryName", connection,27);
                  //28
-                 SELECTCommandReader("select distinct ProductName, x.UnitPrice from Products" +
+                 CommandReader("select distinct ProductName, x.UnitPrice from Products" +
                                      " inner join (select ShippedDate, ProductID , UnitPrice from Orders " +
                                      "inner join OrderDetails on Orders.OrderID = OrderDetails.OrderID ) as x on" +
-                                     " Products.ProductID = x.ProductID", connection);
+                                     " Products.ProductID = x.ProductID", connection,28);
                 //29
-                SELECTCommandReader("select a.Title, b.EmployeeID from Employees as a left join Employees as b on a.EmployeeID = b.EmployeeID", connection);
+                CommandReader("select a.Title, b.EmployeeID from Employees as a left join Employees as b on a.EmployeeID = b.EmployeeID", connection,29);
                 //30
-                SELECTCommandReader("select distinct City from (select Customers.City from Customers" +
+                CommandReader("select distinct City from (select Customers.City from Customers" +
                                     " inner join Employees on Customers.City = Employees.City) as x " +
-                                    "inner join Orders on x.City = Orders.ShipCity", connection);
+                                    "inner join Orders on x.City = Orders.ShipCity", connection,30);
                 //31
-                SELECTCommandReader("INSERT INTO Employees(LastName, FirstName, BirthDate, HireDate, Address, City, Country, Notes)" +
+                CommandReader("INSERT INTO Employees(LastName, FirstName, BirthDate, HireDate, Address, City, Country, Notes)" +
                                     " VALUES('Ivanov', 'Ivan', '1999.08.01', '2018.08.01', 'Hrubenka,5', 'Kiyv', 'Ukraine', 'Zahirnuy Bohdan')," +
                                     "('Petrenko', 'Petro', '1999.07.21', '2018.05.11', 'Kaprenka,21', 'Kiyv', 'Ukraine', 'Pankovec Zlata')," +
                                     "('Makliuk', 'Maria', '1979.05.10', '2002.06.12', 'Rudenka,48', 'Lviv', 'Ukraine', 'Benko Muhailo')," +
                                     "('Dankevuch', 'Andriy', '1987.01.09', '2005.09.06', 'Svobodu,8', 'Chernivci', 'Ukraine', 'Pankovec Zlata')," +
-                                    "('Tarekaniuk', 'Petro', '1996.11.02', '2018.10.11', 'Vasuliuka,26', 'Kiyv', 'Ukraine', 'Zahirnuy Bohdan')", connection);
+                                    "('Tarekaniuk', 'Petro', '1996.11.02', '2018.10.11', 'Vasuliuka,26', 'Kiyv', 'Ukraine', 'Zahirnuy Bohdan')", connection,31);
                 //32
-                SELECTCommandReader("SELECT * FROM Employees WHERE Country = 'Ukraine'", connection);
+                CommandReader("SELECT * FROM Employees WHERE Country = 'Ukraine'", connection,32);
                 //33
-                SELECTCommandReader("UPDATE Employees SET City = 'IvanoFrankivsk' WHERE FirstName = 'Andriy'", connection);
+                CommandReader("UPDATE Employees SET City = 'IvanoFrankivsk' WHERE FirstName = 'Andriy'", connection,33);
                 //34
-                SELECTCommandReader("UPDATE Employees SET HireDate = GETDATE()", connection);
+                CommandReader("UPDATE Employees SET HireDate = GETDATE()", connection,34);
                 //35
-                SELECTCommandReader("DELETE FROM Employees WHERE FirstName = 'Andriy'", connection);
+                CommandReader("DELETE FROM Employees WHERE FirstName = 'Andriy'", connection,35);
             }
             catch (Exception e)
             {
@@ -154,34 +154,14 @@ namespace Task4_ADO.NET_
             Console.WriteLine("State: " + connection.State);
 
         }
-        static void SELECTCommand(string commandStr, SqlConnection connection)
-        {
-            SqlCommand command = new SqlCommand();
-
-            command.CommandText = commandStr;
-            command.Connection = connection;
-            SqlDataAdapter adapter = new SqlDataAdapter(command.CommandText, connection);
-            DataSet ds = new DataSet();
-            adapter.Fill(ds);
-
-            Console.WriteLine();
-            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
-            {
-                for (int j = 0; j < ds.Tables[0].Rows[i].ItemArray.Count(); j++)
-                {
-                    Console.Write(ds.Tables[0].Columns[j] + ": ");
-                    Console.WriteLine(ds.Tables[0].Rows[i].ItemArray[j] + "  ");
-                }
-                Console.WriteLine("==========================================================================================");
-            }
-        }
-        static void SELECTCommandReader(string commandStr, SqlConnection connection)
+      
+        static void CommandReader(string commandStr, SqlConnection connection,int task)
         {
             SqlCommand command = new SqlCommand();
             command.CommandText = commandStr;
             command.Connection = connection;
             SqlDataReader reader = command.ExecuteReader();
-            string dividation = "===================";
+            string dividation = "========= " + task + " =========";
             Console.WriteLine();
           while( reader.Read())
             {
