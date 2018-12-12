@@ -8,25 +8,37 @@ namespace Task3_WPF_
 {
     class UnitOfWork : IDisposable
     {
-        private ProductContext db = new ProductContext(); 
-        private ProductRepository orderRepository;
+        private ProductContext dbProducts = new ProductContext();
+        private ProductRepository productRepository;
+        private CheckRepository checkRepository;
 
-        public ProductRepository Orders
+        public ProductRepository Products
         {
             get
             {
-                if(orderRepository == null)
+                if(productRepository == null)
                 {
-                    orderRepository = new ProductRepository(db);
+                    productRepository = new ProductRepository(dbProducts);
                 }
-                return orderRepository;
+                return productRepository;
 
             }
         }
+        public CheckRepository Checks
+        {
+            get
+            {
+                if (checkRepository == null)
+                {
+                    checkRepository = new CheckRepository(dbProducts);
+                }
+                return checkRepository;
 
+            }
+        }
         public void Save()
         {
-            db.SaveChanges();
+            dbProducts.SaveChanges();
         }
 
         private bool disposed = false;
@@ -37,7 +49,7 @@ namespace Task3_WPF_
             {
                 if (disposing)
                 {
-                    db.Dispose();
+                    dbProducts.Dispose();
                 }
                 this.disposed = true;
             }

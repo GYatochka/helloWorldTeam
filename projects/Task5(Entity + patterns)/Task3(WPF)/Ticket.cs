@@ -27,7 +27,7 @@ namespace Task3_WPF_
         private Product _selectedOrder;
         private float _totalSum;
         private static string _cashier;
-        private FileDataChange _fileChanger;
+  
 
         /// <summary>
         /// Змінна для зчитування числа замовлених продуктів із View
@@ -84,8 +84,8 @@ namespace Task3_WPF_
             TotalSumText = "0";
             ProductAmount = "1";
             _totalSum = 0;
-            _fileChanger = new FileDataChange();
-            SushiesList = _fileChanger.ReadFromFile();
+         
+            SushiesList = WorkWithData.GetProducts();
             OrderList = new ObservableCollection<Product>();
             _cashier = "Natasha";
         }
@@ -205,8 +205,9 @@ namespace Task3_WPF_
                 return printTicketCommand ??
                        (printTicketCommand = new RelayCommand(obj =>
                        {
-                           _fileChanger.WriteToFile(_cashier,calculateTotalSum(),OrderList);
-                           Process.Start("ticket.txt");
+                          
+                           WorkWithData.WriteCheckInDB(_cashier, calculateTotalSum(), OrderList);
+                       
                        }));
             }
         }
@@ -229,7 +230,7 @@ namespace Task3_WPF_
                            
             }
         }
-        
+      
         public event PropertyChangedEventHandler PropertyChanged;
         public void OnPropertyChanged([CallerMemberName]string prop = "")
         {

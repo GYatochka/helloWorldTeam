@@ -14,5 +14,7 @@ namespace Task3_WPF_
 
         }
         public DbSet<Product> Products { get; set; }
+        public DbSet<Check> Checks { get; set; }
+
     }
 }

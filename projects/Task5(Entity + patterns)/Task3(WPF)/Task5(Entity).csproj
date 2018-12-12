@@ -66,13 +66,16 @@
     <Compile Include="CashierLoginWindow.xaml.cs">
       <DependentUpon>CashierLoginWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Check.cs" />
+    <Compile Include="CheckRepository.cs" />
     <Compile Include="IRepository.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="ProductContext.cs" />
+    <Compile Include="ProductRepository.cs" />
     <Compile Include="RelayCommand.cs" />
-    <Compile Include="FileDataChange.cs" />
     <Compile Include="Ticket.cs" />
     <Compile Include="UnitOfWork.cs" />
+    <Compile Include="WorkWithData.cs" />
     <Page Include="CashierLoginWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
