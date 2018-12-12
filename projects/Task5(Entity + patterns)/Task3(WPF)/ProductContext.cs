@@ -7,7 +7,7 @@ using System.Data.Entity;
 
 namespace Task3_WPF_
 {
-    class ProductContext : DbContext
+    public class ProductContext : DbContext
     {
         public ProductContext() : base("SushiBarDB")
         {
