@@ -67,6 +67,7 @@
       <DependentUpon>CashierLoginWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Product.cs" />
+    <Compile Include="ProductContext.cs" />
     <Compile Include="RelayCommand.cs" />
     <Compile Include="FileDataChange.cs" />
     <Compile Include="Ticket.cs" />

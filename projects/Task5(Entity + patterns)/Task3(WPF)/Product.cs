@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.Data.Entity;
+using System.ComponentModel.DataAnnotations;
 
 namespace Task3_WPF_
 {
@@ -13,7 +15,9 @@ namespace Task3_WPF_
     /// </summary>
     public class Product : INotifyPropertyChanged
     {
+    
         private string _name;
+
         private float _price;
         private int _quantity;
 
@@ -26,6 +30,7 @@ namespace Task3_WPF_
             }
             get { return _quantity; }
         }
+        [Key]
         public string Name
         {
             set

@@ -31,7 +31,15 @@ namespace Task3_WPF_
             cashierLogin.WindowStartupLocation = WindowStartupLocation.CenterScreen;
             cashierLogin.Topmost = true;
             DataContext = new Ticket();
-            cashierLogin.ShowDialog();           
+           // cashierLogin.ShowDialog();
+            using (ProductContext db = new ProductContext())
+            {
+                var products= db.Products;
+                foreach (Product u in products)
+                {
+                    MessageBox.Show(  u.Name,u.Price.ToString());
+                }
+            }
         }  
     }
 }
