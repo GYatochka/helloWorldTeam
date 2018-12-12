@@ -66,6 +66,7 @@
     <Compile Include="CashierLoginWindow.xaml.cs">
       <DependentUpon>CashierLoginWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="IRepository.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="ProductContext.cs" />
     <Compile Include="RelayCommand.cs" />
