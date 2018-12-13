@@ -11,3 +11,6 @@ C:\Users\Bodya Zahirnuy\Documents\GitHub\helloWorldTeam\projects\Task5(Entity + 
 C:\Users\Bodya Zahirnuy\Documents\GitHub\helloWorldTeam\projects\Task5(Entity + patterns)\Task3(WPF)Tests\obj\Debug\Task5(Entity)Tests.csproj.CopyComplete
 C:\Users\Bodya Zahirnuy\Documents\GitHub\helloWorldTeam\projects\Task5(Entity + patterns)\Task3(WPF)Tests\obj\Debug\Task3(WPF)Tests.dll
 C:\Users\Bodya Zahirnuy\Documents\GitHub\helloWorldTeam\projects\Task5(Entity + patterns)\Task3(WPF)Tests\obj\Debug\Task3(WPF)Tests.pdb
+C:\Users\Bodya Zahirnuy\Documents\GitHub\helloWorldTeam\projects\Task5(Entity + patterns)\Task3(WPF)Tests\bin\Debug\Task3(WPF)Tests.dll.config
+C:\Users\Bodya Zahirnuy\Documents\GitHub\helloWorldTeam\projects\Task5(Entity + patterns)\Task3(WPF)Tests\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Bodya Zahirnuy\Documents\GitHub\helloWorldTeam\projects\Task5(Entity + patterns)\Task3(WPF)Tests\bin\Debug\EntityFramework.SqlServer.xml

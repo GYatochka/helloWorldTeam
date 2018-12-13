@@ -207,6 +207,7 @@ namespace Task3_WPF_
                        {
                           
                            WorkWithData.WriteCheckInDB(_cashier, calculateTotalSum(), OrderList);
+                           MessageBox.Show("Check is printed!");
                        
                        }));
             }

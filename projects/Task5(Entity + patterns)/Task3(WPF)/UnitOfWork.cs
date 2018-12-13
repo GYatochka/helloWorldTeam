@@ -6,12 +6,27 @@ using System.Threading.Tasks;
 
 namespace Task3_WPF_
 {
-    class UnitOfWork : IDisposable
+    /// <summary>
+    /// реалізація патерну Unit of work
+    /// </summary>
+  public  class UnitOfWork : IDisposable
     {
+        /// <summary>
+        /// ініціалізація контексту для зв'язку з бд
+        /// </summary>
         private ProductContext dbProducts = new ProductContext();
+        /// <summary>
+        /// репозиторій продуктів
+        /// </summary>
         private ProductRepository productRepository;
+        /// <summary>
+        /// репозиторій чеків
+        /// </summary>
         private CheckRepository checkRepository;
 
+        /// <summary>
+        /// перевіряємо чи репозиторії існують
+        /// </summary>
         public ProductRepository Products
         {
             get
@@ -36,11 +51,16 @@ namespace Task3_WPF_
 
             }
         }
+        /// <summary>
+        /// збереження змін в БД
+        /// </summary>
         public void Save()
         {
             dbProducts.SaveChanges();
         }
-
+        /// <summary>
+        /// перевантаження методів з інтерфейсу IDisposable 
+        /// </summary>
         private bool disposed = false;
 
         public virtual void Dispose(bool disposing)

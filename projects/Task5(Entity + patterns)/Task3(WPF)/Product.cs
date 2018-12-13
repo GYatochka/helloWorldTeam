@@ -7,29 +7,21 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Data.Entity;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Task3_WPF_
 {
     /// <summary>
     /// Даний клас є реалізацією Model, із патерну MVVM, в даній програмі.
+    /// І також реалізацією патерну(моделлю)
     /// </summary>
+    
+        [Table("Products")]
     public class Product : INotifyPropertyChanged
     {
-    
         private string _name;
-
         private float _price;
         private int _quantity;
-
-        public int Quantity
-        {
-            set
-            {
-                _quantity = value;
-                OnPropertyChanged("Quantity");
-            }
-            get { return _quantity; }
-        }
         [Key]
         public string Name
         {
@@ -40,6 +32,17 @@ namespace Task3_WPF_
             }
             get { return _name; }
         }
+        [Required]
+        public int Quantity
+        {
+            set
+            {
+                _quantity = value;
+                OnPropertyChanged("Quantity");
+            }
+            get { return _quantity; }
+        }
+        [Required]
         public float Price
         {
             set

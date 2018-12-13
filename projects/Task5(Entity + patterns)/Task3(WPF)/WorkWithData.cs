@@ -8,10 +8,15 @@ using System.Windows;
 
 namespace Task3_WPF_
 {
-   
-   class WorkWithData
+   /// <summary>
+   /// клас для доступу до даних
+   /// </summary>
+  public class WorkWithData
     {
-    
+    /// <summary>
+    /// метод отримання продуктів із БД
+    /// </summary>
+    /// <returns></returns>
         public static  ObservableCollection<Product> GetProducts()
         {
             ProductContext db = new ProductContext();
@@ -20,13 +25,19 @@ namespace Task3_WPF_
 
             var products = un.Products.GetAll();
             ObservableCollection<Product> l = new ObservableCollection<Product>();
-
             foreach (Product u in products)
             {
                 l.Add(u);
             }
+           
             return l;
         }
+        /// <summary>
+        /// метод запису чеків в БД
+        /// </summary>
+        /// <param name="cashier"></param>
+        /// <param name="calculatedSum"></param>
+        /// <param name="SushiesList"></param>
         static public void WriteCheckInDB(string cashier,float calculatedSum, ObservableCollection<Product> SushiesList)
         {
             Check check = new Check();

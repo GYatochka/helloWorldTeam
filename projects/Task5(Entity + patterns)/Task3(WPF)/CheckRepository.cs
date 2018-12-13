@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 using System.Data.Entity;
 
 namespace Task3_WPF_
-{
+{/// <summary>
+/// клас патерну "репозиторій" для моделі "чек"
+/// </summary>
     public class CheckRepository : IRepository<Check>
     {
         private ProductContext db;
@@ -36,9 +38,9 @@ namespace Task3_WPF_
             db.Entry(p).State = EntityState.Modified;
         }
 
-        public void DeleteById(string sushi_name)
+        public void DeleteById(string id)
         {
-            Check p = db.Checks.Find(sushi_name);
+            Check p = db.Checks.Find(Convert.ToInt32(id));
             if (p != null)
                 db.Checks.Remove(p);
         }
@@ -47,7 +49,7 @@ namespace Task3_WPF_
             db.SaveChanges();
         }
 
-        private bool disposed = false;
+      /*  private bool disposed = false;
 
         public virtual void Dispose(bool disposing)
         {
@@ -65,6 +67,6 @@ namespace Task3_WPF_
         {
             Dispose(true);
             GC.SuppressFinalize(this);
-        }
+        }*/
     }
 }

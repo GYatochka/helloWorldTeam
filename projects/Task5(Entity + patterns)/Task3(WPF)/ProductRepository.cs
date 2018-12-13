@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 using System.Data.Entity;
 namespace Task3_WPF_
 {
+    /// <summary>
+    ///realisation of interface Irepositoy in this class
+    /// </summary>
     public class ProductRepository : IRepository<Product>
     {
         private ProductContext db;
@@ -46,9 +49,9 @@ namespace Task3_WPF_
             db.SaveChanges();
         }
 
-        private bool disposed = false;
+        //private bool disposed = false;
 
-        public virtual void Dispose(bool disposing)
+        /*public virtual void Dispose(bool disposing)
         {
             if (!this.disposed)
             {
@@ -64,6 +67,6 @@ namespace Task3_WPF_
         {
             Dispose(true);
             GC.SuppressFinalize(this);
-        }
+        }*/
     }
 }

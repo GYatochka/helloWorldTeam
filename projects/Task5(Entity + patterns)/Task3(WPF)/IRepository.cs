@@ -7,6 +7,10 @@ using System.Data.Entity;
 
 namespace Task3_WPF_
 {
+    /// <summary>
+    /// interface IRepository to work with database
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     interface IRepository<T> where  T: class
     {
         IEnumerable<T> GetAll();
